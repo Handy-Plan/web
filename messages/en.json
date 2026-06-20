@@ -1,0 +1,351 @@
+{
+  "meta": {
+    "title": "HandyPlan — Booking Software for Craftsmen",
+    "description": "The simple, mobile-first booking platform built for German craftsmen. Let customers book 24/7, cut no-shows by 40% with automatic reminders, and manage your day from your phone.",
+    "ogDescription": "More bookings. Less stress. Zero missed calls. Built for German craftsmen."
+  },
+  "nav": {
+    "features": "Features",
+    "howItWorks": "How it works",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "cta": "Start Free Trial",
+    "login": "Log in"
+  },
+  "hero": {
+    "badge": "The #1 booking solution for craftsmen in Germany",
+    "titleLead": "More bookings. Less stress.",
+    "titleAccent": "Zero missed calls.",
+    "subtitle": "HandyPlan is the booking platform built specifically for German craftsmen. Your customers book online 24/7 — even when you're up a ladder or in a basement.",
+    "bullets": [
+      "40% fewer no-shows with automatic reminders",
+      "Save 5 hours a week — no more phone tag",
+      "Set up in 10 minutes, no complicated software"
+    ],
+    "primaryCta": "Start 14-Day Free Trial",
+    "secondaryCta": "Watch demo",
+    "trust": ["No credit card required", "Cancel anytime", "GDPR compliant"]
+  },
+  "stats": {
+    "items": [
+      "Appointments booked",
+      "Craftsmen on board",
+      "Fewer no-shows",
+      "Average rating"
+    ]
+  },
+  "problem": {
+    "eyebrow": "The daily reality",
+    "title": "Sound familiar?",
+    "subtitle": "You're not alone — 8 out of 10 craftsmen still manage appointments by phone and paper.",
+    "closing": "But what if there was an easier way?",
+    "items": [
+      {
+        "title": "Missed calls = lost revenue",
+        "body": "You're on a job site and can't pick up. Every missed call is a customer who simply rings the next name on Google. Craftsmen lose 5–8 jobs a week this way."
+      },
+      {
+        "title": "Scheduling chaos",
+        "body": "Sticky notes, a paper diary and a half-full Excel sheet. Double bookings, forgotten appointments and no clear view of your week."
+      },
+      {
+        "title": "No-shows waste your day",
+        "body": "Without reminders, 30–40% of customers forget. You drive across town for nothing — that's lost time and lost money."
+      }
+    ]
+  },
+  "features": {
+    "eyebrow": "Everything in one place",
+    "title": "Everything you need, nothing you don't",
+    "subtitle": "Simple, focused tools built around how craftsmen actually work — not a bloated enterprise suite.",
+    "items": [
+      {
+        "title": "Online booking widget",
+        "body": "Embed on your website or Facebook page. Customers book themselves 24/7, even on weekends.",
+        "points": ["Copy-and-paste setup", "Mobile optimised", "Your own branding"]
+      },
+      {
+        "title": "Smart calendar",
+        "body": "Day, week and month views with colour-coded jobs. Drag to reschedule, never double-book.",
+        "points": ["Conflict prevention", "Google Calendar sync", "Block off breaks"]
+      },
+      {
+        "title": "Mobile app",
+        "body": "Built for the job site. See today's schedule, navigate with GPS, works offline in basements.",
+        "points": ["iOS & Android", "Offline mode", "One-tap navigation"]
+      },
+      {
+        "title": "Automatic reminders",
+        "body": "SMS and email sent automatically before every appointment. Cut no-shows by up to 40%.",
+        "points": ["SMS + email", "German templates", "Fully automatic"]
+      },
+      {
+        "title": "Customer database",
+        "body": "Every customer, job history, note and photo in one place. Personal service for repeat clients.",
+        "points": ["Full history", "Notes & photos", "One-tap call"]
+      },
+      {
+        "title": "Simple invoicing",
+        "body": "Generate professional, German tax-compliant invoices in seconds, right after the job.",
+        "points": ["PDF in seconds", "German format", "Payment links"]
+      }
+    ]
+  },
+  "howItWorks": {
+    "eyebrow": "Up and running fast",
+    "title": "Get started in 3 easy steps",
+    "subtitle": "From signup to your first booking in about 15 minutes.",
+    "cta": "Start free now",
+    "items": [
+      {
+        "title": "Sign up",
+        "body": "Create your account in two minutes. No credit card needed for the trial.",
+        "time": "2 min"
+      },
+      {
+        "title": "Set up",
+        "body": "Add your availability and services. Copy your booking widget code.",
+        "time": "10 min"
+      },
+      {
+        "title": "Start booking",
+        "body": "Share your link. Customers book themselves and you get instant alerts.",
+        "time": "3 min"
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Loved by craftsmen",
+    "title": "What our customers say",
+    "subtitle": "Over 500 craftsmen use HandyPlan to run their day.",
+    "ratingLabel": "Based on 127 reviews",
+    "items": [
+      {
+        "quote": "Since using HandyPlan I've taken on about 30% more jobs. The automatic reminders cut my no-show rate in half. Best investment I made this year.",
+        "name": "Michael Weber",
+        "role": "Electrician",
+        "city": "Berlin"
+      },
+      {
+        "quote": "Setup took ten minutes and now I can focus on the work instead of the phone. My customers love booking online whenever it suits them.",
+        "name": "Anna Schmidt",
+        "role": "Plumber",
+        "city": "Munich"
+      },
+      {
+        "quote": "I'm not a computer person, but this just works. No-shows are down, my week is organised, and I look far more professional to customers.",
+        "name": "Thomas Müller",
+        "role": "HVAC Technician",
+        "city": "Hamburg"
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Simple pricing",
+    "title": "Simple, transparent pricing",
+    "note": "No hidden fees. No setup charges. Cancel anytime.",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "save": "Save 17%",
+    "mostPopular": "Most popular",
+    "perMonth": "/ month",
+    "billedYearly": "Billed €{amount} yearly",
+    "orBilledYearly": "or €{amount} billed yearly",
+    "plans": [
+      {
+        "name": "Starter",
+        "tagline": "For solo craftsmen",
+        "cta": "Get started",
+        "features": [
+          "1 user",
+          "50 bookings / month",
+          "Online booking widget",
+          "Calendar & mobile app",
+          "Email reminders",
+          "Customer database (basic)",
+          "Email support"
+        ]
+      },
+      {
+        "name": "Professional",
+        "tagline": "For busy professionals",
+        "cta": "Start free trial",
+        "features": [
+          "3 users",
+          "Unlimited bookings",
+          "Everything in Starter",
+          "SMS reminders included",
+          "Customer database (advanced)",
+          "Invoice generation",
+          "Google Calendar sync",
+          "Priority support"
+        ]
+      },
+      {
+        "name": "Premium",
+        "tagline": "For growing teams",
+        "cta": "Get started",
+        "features": [
+          "5+ users",
+          "Everything in Professional",
+          "Route optimisation",
+          "Advanced analytics",
+          "API access",
+          "White-label option",
+          "Dedicated account manager",
+          "Phone support"
+        ]
+      }
+    ],
+    "trust": ["14-day free trial", "No credit card required", "Cancel anytime"]
+  },
+  "faq": {
+    "eyebrow": "Good to know",
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "q": "How long does setup take?",
+        "a": "Typically 10–15 minutes. You create your account, set your availability, add one or two services and copy the widget code. That's it — you're ready to take bookings."
+      },
+      {
+        "q": "Do I need a credit card for the trial?",
+        "a": "No. The 14-day free trial requires no payment details. You only add a payment method if you decide to continue afterwards."
+      },
+      {
+        "q": "Can I cancel anytime?",
+        "a": "Yes. There are no contracts and no lock-in. Cancel with one click from your settings and you won't be charged again."
+      },
+      {
+        "q": "Is my customer data safe?",
+        "a": "Absolutely. HandyPlan is fully GDPR compliant, hosted in the EU, and all data is encrypted in transit and at rest."
+      },
+      {
+        "q": "What happens with double bookings?",
+        "a": "It can't happen. The booking widget only shows time slots that are genuinely free, and the calendar blocks conflicts automatically."
+      },
+      {
+        "q": "Can I embed the widget on my own website?",
+        "a": "Yes. Copy a short snippet of code into your website or Facebook page, or simply share your personal booking link — no website required."
+      },
+      {
+        "q": "How many SMS reminders are included?",
+        "a": "SMS reminders are included on the Professional and Premium plans. Starter uses email reminders, and you can add SMS at any time."
+      },
+      {
+        "q": "Do you offer phone support?",
+        "a": "Email support is included on every plan, priority support on Professional, and dedicated phone support on Premium."
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Ready to get more bookings?",
+    "subtitle": "Start free today and see how simple scheduling can be. No credit card required.",
+    "cta": "Start 14-Day Free Trial",
+    "trust": ["Set up in 10 minutes", "No setup fees", "Cancel anytime"]
+  },
+  "footer": {
+    "tagline": "The simple booking solution for craftsmen. Made with care in Germany.",
+    "columns": {
+      "product": {
+        "title": "Product",
+        "links": ["Features", "Pricing", "Demo", "Updates", "Roadmap"]
+      },
+      "resources": {
+        "title": "Resources",
+        "links": ["Blog", "Help Center", "API Docs", "Integrations", "Templates"]
+      },
+      "company": {
+        "title": "Company",
+        "links": ["About", "Careers", "Contact", "Press", "Partners"]
+      },
+      "legal": {
+        "title": "Legal",
+        "links": ["Imprint", "Privacy (GDPR)", "Terms", "Cookies"]
+      }
+    },
+    "rights": "© {year} HandyPlan GmbH. All rights reserved.",
+    "madeWith": "Made with care in Germany 🇩🇪"
+  },
+  "a11y": {
+    "home": "HandyPlan home",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "toggleTheme": "Toggle dark mode",
+    "verified": "Verified customer",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password"
+  },
+  "localeSwitcher": {
+    "label": "Language",
+    "en": "English",
+    "de": "Deutsch"
+  },
+  "login": {
+    "backHome": "Back to home",
+    "title": "Welcome back",
+    "subtitle": "Log in to manage your bookings.",
+    "email": "Email",
+    "emailPlaceholder": "you@company.de",
+    "password": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "remember": "Remember me",
+    "forgot": "Forgot password?",
+    "submit": "Log in",
+    "or": "or continue with email",
+    "continueWith": "Continue with {provider}",
+    "noAccount": "New to HandyPlan?",
+    "signUp": "Start your free trial",
+    "secure": "GDPR-compliant · EU-hosted · Encrypted",
+    "errors": {
+      "required": "Please enter your email and password.",
+      "invalid": "That email or password doesn't look right. Please try again."
+    },
+    "brand": {
+      "heading": "Run your day, not your phone.",
+      "subtitle": "Join 500+ German craftsmen who take bookings online — even up a ladder or in a basement.",
+      "bullets": [
+        "Customers book 24/7, automatically",
+        "40% fewer no-shows with reminders",
+        "Your whole week, organised on your phone"
+      ],
+      "quote": "Setup took ten minutes and now I focus on the work instead of the phone.",
+      "author": "Anna Schmidt",
+      "role": "Plumber · Munich"
+    }
+  },
+  "signup": {
+    "backHome": "Back to home",
+    "title": "Create your account",
+    "subtitle": "Start your 14-day free trial — no credit card required.",
+    "name": "Full name",
+    "namePlaceholder": "Max Mustermann",
+    "email": "Email",
+    "emailPlaceholder": "you@company.de",
+    "password": "Password",
+    "passwordPlaceholder": "Create a password",
+    "passwordHint": "At least 8 characters",
+    "submit": "Create free account",
+    "or": "or sign up with email",
+    "continueWith": "Sign up with {provider}",
+    "haveAccount": "Already have an account?",
+    "logIn": "Log in",
+    "terms": "I agree to the Terms of Service and Privacy Policy.",
+    "secure": "GDPR-compliant · EU-hosted · Encrypted",
+    "errors": {
+      "required": "Please fill in all fields.",
+      "invalidEmail": "Please enter a valid email address.",
+      "weakPassword": "Your password must be at least 8 characters.",
+      "terms": "Please accept the Terms to continue."
+    },
+    "brand": {
+      "heading": "Win back your evenings.",
+      "subtitle": "Set up in 10 minutes and let customers book around the clock — while you get back to the craft.",
+      "bullets": [
+        "14-day free trial, full features",
+        "No credit card required",
+        "Cancel anytime, no contracts"
+      ],
+      "stat": "Trusted by 500+ craftsmen across Germany"
+    }
+  }
+}

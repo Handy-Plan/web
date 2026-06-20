@@ -1,0 +1,351 @@
+{
+  "meta": {
+    "title": "HandyPlan — Buchungssoftware für Handwerker",
+    "description": "Die einfache, mobil-optimierte Buchungsplattform für deutsche Handwerker. Lassen Sie Kunden rund um die Uhr buchen, senken Sie Nichterscheinen um 40 % mit automatischen Erinnerungen und verwalten Sie Ihren Tag direkt vom Handy.",
+    "ogDescription": "Mehr Buchungen. Weniger Stress. Keine verpassten Anrufe. Für deutsche Handwerker entwickelt."
+  },
+  "nav": {
+    "features": "Funktionen",
+    "howItWorks": "So funktioniert's",
+    "pricing": "Preise",
+    "faq": "FAQ",
+    "cta": "Kostenlos testen",
+    "login": "Anmelden"
+  },
+  "hero": {
+    "badge": "Die Nr. 1 Buchungslösung für Handwerker in Deutschland",
+    "titleLead": "Mehr Buchungen. Weniger Stress.",
+    "titleAccent": "Keine verpassten Anrufe.",
+    "subtitle": "HandyPlan ist die Buchungsplattform speziell für deutsche Handwerker. Ihre Kunden buchen rund um die Uhr online — auch wenn Sie gerade auf der Leiter oder im Keller stehen.",
+    "bullets": [
+      "40 % weniger Nichterscheinen dank automatischer Erinnerungen",
+      "Sparen Sie 5 Stunden pro Woche — kein Telefon-Ping-Pong mehr",
+      "In 10 Minuten eingerichtet, keine komplizierte Software"
+    ],
+    "primaryCta": "14 Tage kostenlos testen",
+    "secondaryCta": "Demo ansehen",
+    "trust": ["Keine Kreditkarte nötig", "Jederzeit kündbar", "DSGVO-konform"]
+  },
+  "stats": {
+    "items": [
+      "Gebuchte Termine",
+      "Handwerker an Bord",
+      "Weniger Nichterscheinen",
+      "Durchschnittsbewertung"
+    ]
+  },
+  "problem": {
+    "eyebrow": "Der Alltag",
+    "title": "Kommt Ihnen das bekannt vor?",
+    "subtitle": "Sie sind nicht allein — 8 von 10 Handwerkern verwalten Termine noch per Telefon und Papier.",
+    "closing": "Aber was, wenn es einfacher ginge?",
+    "items": [
+      {
+        "title": "Verpasste Anrufe = entgangener Umsatz",
+        "body": "Sie sind auf der Baustelle und können nicht rangehen. Jeder verpasste Anruf ist ein Kunde, der einfach den Nächsten bei Google anruft. So verlieren Handwerker 5–8 Aufträge pro Woche."
+      },
+      {
+        "title": "Termin-Chaos",
+        "body": "Klebezettel, ein Papierkalender und eine halbvolle Excel-Tabelle. Doppelbuchungen, vergessene Termine und kein klarer Überblick über die Woche."
+      },
+      {
+        "title": "Nichterscheinen kostet Sie den Tag",
+        "body": "Ohne Erinnerungen vergessen 30–40 % der Kunden den Termin. Sie fahren umsonst durch die halbe Stadt — verlorene Zeit und verlorenes Geld."
+      }
+    ]
+  },
+  "features": {
+    "eyebrow": "Alles an einem Ort",
+    "title": "Alles, was Sie brauchen — nichts, was Sie nicht brauchen",
+    "subtitle": "Einfache, fokussierte Werkzeuge, die sich daran orientieren, wie Handwerker wirklich arbeiten — keine überladene Enterprise-Software.",
+    "items": [
+      {
+        "title": "Online-Buchungs-Widget",
+        "body": "Binden Sie es auf Ihrer Website oder Facebook-Seite ein. Kunden buchen rund um die Uhr selbst, auch am Wochenende.",
+        "points": ["Einrichtung per Copy & Paste", "Für Mobilgeräte optimiert", "Ihr eigenes Branding"]
+      },
+      {
+        "title": "Intelligenter Kalender",
+        "body": "Tages-, Wochen- und Monatsansicht mit farblich markierten Aufträgen. Per Drag verschieben, nie doppelt buchen.",
+        "points": ["Konfliktvermeidung", "Google-Kalender-Sync", "Pausen blockieren"]
+      },
+      {
+        "title": "Mobile App",
+        "body": "Für die Baustelle gemacht. Tagesplan sehen, per GPS navigieren, funktioniert offline im Keller.",
+        "points": ["iOS & Android", "Offline-Modus", "Navigation per Fingertipp"]
+      },
+      {
+        "title": "Automatische Erinnerungen",
+        "body": "SMS und E-Mail werden vor jedem Termin automatisch versendet. Senken Sie Nichterscheinen um bis zu 40 %.",
+        "points": ["SMS + E-Mail", "Deutsche Vorlagen", "Vollautomatisch"]
+      },
+      {
+        "title": "Kundendatenbank",
+        "body": "Jeder Kunde, jede Auftragshistorie, Notiz und jedes Foto an einem Ort. Persönlicher Service für Stammkunden.",
+        "points": ["Vollständige Historie", "Notizen & Fotos", "Anruf per Fingertipp"]
+      },
+      {
+        "title": "Einfache Rechnungen",
+        "body": "Erstellen Sie professionelle, steuerkonforme Rechnungen in Sekunden — direkt nach dem Auftrag.",
+        "points": ["PDF in Sekunden", "Deutsches Format", "Zahlungslinks"]
+      }
+    ]
+  },
+  "howItWorks": {
+    "eyebrow": "Schnell startklar",
+    "title": "In 3 einfachen Schritten loslegen",
+    "subtitle": "Von der Anmeldung bis zur ersten Buchung in etwa 15 Minuten.",
+    "cta": "Jetzt kostenlos starten",
+    "items": [
+      {
+        "title": "Anmelden",
+        "body": "Erstellen Sie Ihr Konto in zwei Minuten. Für die Testphase ist keine Kreditkarte nötig.",
+        "time": "2 Min."
+      },
+      {
+        "title": "Einrichten",
+        "body": "Verfügbarkeiten und Leistungen hinzufügen. Buchungs-Widget-Code kopieren.",
+        "time": "10 Min."
+      },
+      {
+        "title": "Buchungen erhalten",
+        "body": "Teilen Sie Ihren Link. Kunden buchen selbst und Sie werden sofort benachrichtigt.",
+        "time": "3 Min."
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Von Handwerkern geliebt",
+    "title": "Das sagen unsere Kunden",
+    "subtitle": "Über 500 Handwerker organisieren ihren Tag mit HandyPlan.",
+    "ratingLabel": "Basierend auf 127 Bewertungen",
+    "items": [
+      {
+        "quote": "Seit ich HandyPlan nutze, nehme ich rund 30 % mehr Aufträge an. Die automatischen Erinnerungen haben mein Nichterscheinen halbiert. Beste Investition dieses Jahr.",
+        "name": "Michael Weber",
+        "role": "Elektriker",
+        "city": "Berlin"
+      },
+      {
+        "quote": "Die Einrichtung dauerte zehn Minuten und jetzt kann ich mich auf die Arbeit statt aufs Telefon konzentrieren. Meine Kunden lieben es, online zu buchen, wann es ihnen passt.",
+        "name": "Anna Schmidt",
+        "role": "Installateurin",
+        "city": "München"
+      },
+      {
+        "quote": "Ich bin kein Computermensch, aber das funktioniert einfach. Weniger Nichterscheinen, meine Woche ist organisiert und ich wirke deutlich professioneller.",
+        "name": "Thomas Müller",
+        "role": "Klima- und Heizungstechniker",
+        "city": "Hamburg"
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Einfache Preise",
+    "title": "Einfache, transparente Preise",
+    "note": "Keine versteckten Kosten. Keine Einrichtungsgebühr. Jederzeit kündbar.",
+    "monthly": "Monatlich",
+    "yearly": "Jährlich",
+    "save": "17 % sparen",
+    "mostPopular": "Am beliebtesten",
+    "perMonth": "/ Monat",
+    "billedYearly": "Jährlich €{amount} berechnet",
+    "orBilledYearly": "oder €{amount} jährlich berechnet",
+    "plans": [
+      {
+        "name": "Starter",
+        "tagline": "Für Einzelhandwerker",
+        "cta": "Loslegen",
+        "features": [
+          "1 Nutzer",
+          "50 Buchungen / Monat",
+          "Online-Buchungs-Widget",
+          "Kalender & mobile App",
+          "E-Mail-Erinnerungen",
+          "Kundendatenbank (Basis)",
+          "E-Mail-Support"
+        ]
+      },
+      {
+        "name": "Professional",
+        "tagline": "Für vielbeschäftigte Profis",
+        "cta": "Kostenlos testen",
+        "features": [
+          "3 Nutzer",
+          "Unbegrenzte Buchungen",
+          "Alles aus Starter",
+          "SMS-Erinnerungen inklusive",
+          "Kundendatenbank (erweitert)",
+          "Rechnungserstellung",
+          "Google-Kalender-Sync",
+          "Priorisierter Support"
+        ]
+      },
+      {
+        "name": "Premium",
+        "tagline": "Für wachsende Teams",
+        "cta": "Loslegen",
+        "features": [
+          "5+ Nutzer",
+          "Alles aus Professional",
+          "Routenoptimierung",
+          "Erweiterte Analysen",
+          "API-Zugang",
+          "White-Label-Option",
+          "Persönlicher Account-Manager",
+          "Telefon-Support"
+        ]
+      }
+    ],
+    "trust": ["14 Tage kostenlos testen", "Keine Kreditkarte nötig", "Jederzeit kündbar"]
+  },
+  "faq": {
+    "eyebrow": "Gut zu wissen",
+    "title": "Häufig gestellte Fragen",
+    "items": [
+      {
+        "q": "Wie lange dauert die Einrichtung?",
+        "a": "In der Regel 10–15 Minuten. Sie erstellen Ihr Konto, legen Ihre Verfügbarkeiten fest, fügen ein oder zwei Leistungen hinzu und kopieren den Widget-Code. Das war's — Sie können Buchungen annehmen."
+      },
+      {
+        "q": "Brauche ich für die Testphase eine Kreditkarte?",
+        "a": "Nein. Für die 14-tägige kostenlose Testphase sind keine Zahlungsdaten erforderlich. Eine Zahlungsmethode fügen Sie nur hinzu, wenn Sie danach weitermachen möchten."
+      },
+      {
+        "q": "Kann ich jederzeit kündigen?",
+        "a": "Ja. Es gibt keine Verträge und keine Bindung. Kündigen Sie mit einem Klick in Ihren Einstellungen und es wird nichts mehr berechnet."
+      },
+      {
+        "q": "Sind meine Kundendaten sicher?",
+        "a": "Absolut. HandyPlan ist vollständig DSGVO-konform, wird in der EU gehostet und alle Daten werden bei der Übertragung und Speicherung verschlüsselt."
+      },
+      {
+        "q": "Was passiert bei Doppelbuchungen?",
+        "a": "Die können nicht entstehen. Das Buchungs-Widget zeigt nur wirklich freie Zeitfenster an und der Kalender blockiert Konflikte automatisch."
+      },
+      {
+        "q": "Kann ich das Widget auf meiner eigenen Website einbinden?",
+        "a": "Ja. Kopieren Sie einen kurzen Code-Schnipsel auf Ihre Website oder Facebook-Seite — oder teilen Sie einfach Ihren persönlichen Buchungslink, ganz ohne Website."
+      },
+      {
+        "q": "Wie viele SMS-Erinnerungen sind inklusive?",
+        "a": "SMS-Erinnerungen sind in den Tarifen Professional und Premium enthalten. Starter nutzt E-Mail-Erinnerungen, SMS können Sie jederzeit hinzufügen."
+      },
+      {
+        "q": "Bieten Sie Telefon-Support an?",
+        "a": "E-Mail-Support ist in jedem Tarif enthalten, priorisierter Support bei Professional und dedizierter Telefon-Support bei Premium."
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Bereit für mehr Buchungen?",
+    "subtitle": "Starten Sie heute kostenlos und erleben Sie, wie einfach Terminplanung sein kann. Keine Kreditkarte erforderlich.",
+    "cta": "14 Tage kostenlos testen",
+    "trust": ["In 10 Minuten eingerichtet", "Keine Einrichtungsgebühr", "Jederzeit kündbar"]
+  },
+  "footer": {
+    "tagline": "Die einfache Buchungslösung für Handwerker. Mit Sorgfalt in Deutschland gemacht.",
+    "columns": {
+      "product": {
+        "title": "Produkt",
+        "links": ["Funktionen", "Preise", "Demo", "Updates", "Roadmap"]
+      },
+      "resources": {
+        "title": "Ressourcen",
+        "links": ["Blog", "Hilfe-Center", "API-Doku", "Integrationen", "Vorlagen"]
+      },
+      "company": {
+        "title": "Unternehmen",
+        "links": ["Über uns", "Karriere", "Kontakt", "Presse", "Partner"]
+      },
+      "legal": {
+        "title": "Rechtliches",
+        "links": ["Impressum", "Datenschutz (DSGVO)", "AGB", "Cookies"]
+      }
+    },
+    "rights": "© {year} HandyPlan GmbH. Alle Rechte vorbehalten.",
+    "madeWith": "Mit Sorgfalt in Deutschland gemacht 🇩🇪"
+  },
+  "a11y": {
+    "home": "HandyPlan Startseite",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "toggleTheme": "Dunkelmodus umschalten",
+    "verified": "Verifizierter Kunde",
+    "showPassword": "Passwort anzeigen",
+    "hidePassword": "Passwort verbergen"
+  },
+  "localeSwitcher": {
+    "label": "Sprache",
+    "en": "English",
+    "de": "Deutsch"
+  },
+  "login": {
+    "backHome": "Zurück zur Startseite",
+    "title": "Willkommen zurück",
+    "subtitle": "Melden Sie sich an, um Ihre Buchungen zu verwalten.",
+    "email": "E-Mail",
+    "emailPlaceholder": "name@firma.de",
+    "password": "Passwort",
+    "passwordPlaceholder": "Passwort eingeben",
+    "remember": "Angemeldet bleiben",
+    "forgot": "Passwort vergessen?",
+    "submit": "Anmelden",
+    "or": "oder mit E-Mail fortfahren",
+    "continueWith": "Mit {provider} fortfahren",
+    "noAccount": "Neu bei HandyPlan?",
+    "signUp": "Kostenlose Testphase starten",
+    "secure": "DSGVO-konform · In der EU gehostet · Verschlüsselt",
+    "errors": {
+      "required": "Bitte geben Sie E-Mail und Passwort ein.",
+      "invalid": "E-Mail oder Passwort scheint nicht zu stimmen. Bitte versuchen Sie es erneut."
+    },
+    "brand": {
+      "heading": "Organisieren Sie Ihren Tag, nicht Ihr Telefon.",
+      "subtitle": "Schließen Sie sich über 500 deutschen Handwerkern an, die Termine online annehmen — auch auf der Leiter oder im Keller.",
+      "bullets": [
+        "Kunden buchen rund um die Uhr, automatisch",
+        "40 % weniger Nichterscheinen dank Erinnerungen",
+        "Ihre ganze Woche, organisiert auf dem Handy"
+      ],
+      "quote": "Die Einrichtung dauerte zehn Minuten und jetzt konzentriere ich mich auf die Arbeit statt aufs Telefon.",
+      "author": "Anna Schmidt",
+      "role": "Installateurin · München"
+    }
+  },
+  "signup": {
+    "backHome": "Zurück zur Startseite",
+    "title": "Konto erstellen",
+    "subtitle": "Starten Sie Ihre 14-tägige kostenlose Testphase — keine Kreditkarte nötig.",
+    "name": "Vollständiger Name",
+    "namePlaceholder": "Max Mustermann",
+    "email": "E-Mail",
+    "emailPlaceholder": "name@firma.de",
+    "password": "Passwort",
+    "passwordPlaceholder": "Passwort erstellen",
+    "passwordHint": "Mindestens 8 Zeichen",
+    "submit": "Kostenloses Konto erstellen",
+    "or": "oder mit E-Mail registrieren",
+    "continueWith": "Mit {provider} registrieren",
+    "haveAccount": "Sie haben bereits ein Konto?",
+    "logIn": "Anmelden",
+    "terms": "Ich stimme den AGB und der Datenschutzerklärung zu.",
+    "secure": "DSGVO-konform · In der EU gehostet · Verschlüsselt",
+    "errors": {
+      "required": "Bitte füllen Sie alle Felder aus.",
+      "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "weakPassword": "Ihr Passwort muss mindestens 8 Zeichen lang sein.",
+      "terms": "Bitte akzeptieren Sie die AGB, um fortzufahren."
+    },
+    "brand": {
+      "heading": "Gewinnen Sie Ihre Abende zurück.",
+      "subtitle": "In 10 Minuten eingerichtet — lassen Sie Kunden rund um die Uhr buchen, während Sie sich aufs Handwerk konzentrieren.",
+      "bullets": [
+        "14 Tage kostenlos, alle Funktionen",
+        "Keine Kreditkarte nötig",
+        "Jederzeit kündbar, keine Verträge"
+      ],
+      "stat": "Über 500 Handwerker in Deutschland vertrauen darauf"
+    }
+  }
+}
