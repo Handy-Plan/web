@@ -1,26 +1,214 @@
 @import "tailwindcss";
 
+/* Class-based dark mode: `dark:` utilities respond to .dark on <html> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Brand */
+  --color-primary: #6366f1;
+  --color-primary-dark: #5558e3;
+  --color-primary-soft: #eef0ff;
+  --color-indigo: #8b5cf6;
+  --color-violet: #764ba2;
+
+  /* Status */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+
+  /* Neutral scale — cooler, deeper ink for sharper contrast */
+  --color-ink: #0f1729;
+  --color-graphite: #374151;
+  --color-slate: #6b7280;
+  --color-muted: #9ca3af;
+  --color-line: #e8eaf0;
+  --color-cloud: #f1f2f8;
+  --color-mist: #f6f7fb;
+  --color-fog: #fafbff;
+
+  /* Semantic surfaces (theme-aware) */
+  --color-canvas: #ffffff; /* page background */
+  --color-surface: #ffffff; /* cards & raised panels */
+  --color-surface-2: #f6f7fb; /* inputs / inset panels */
+  --color-footer: #0f1729; /* footer (dark in both themes) */
+
+  /* Type */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* Radii */
+  --radius-card: 16px;
+
+  /* Shadows — layered, low-opacity, cool-tinted for premium depth */
+  --shadow-subtle: 0 1px 2px rgba(15, 23, 41, 0.04), 0 2px 8px rgba(15, 23, 41, 0.04);
+  --shadow-soft: 0 2px 4px rgba(15, 23, 41, 0.04), 0 8px 20px rgba(15, 23, 41, 0.06);
+  --shadow-lift: 0 4px 10px rgba(15, 23, 41, 0.05), 0 18px 36px rgba(15, 23, 41, 0.10);
+  --shadow-glow: 0 2px 8px rgba(99, 102, 241, 0.18), 0 12px 32px rgba(99, 102, 241, 0.24);
+  --shadow-float: 0 8px 16px rgba(15, 23, 41, 0.06), 0 28px 60px rgba(15, 23, 41, 0.14);
+
+  /* Easing */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Container */
+  --breakpoint-3xl: 1440px;
+}
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f1729;
+  color-scheme: light;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ── Dark theme ─────────────────────────────────────────────
+   Overrides the neutral + surface tokens so every utility that
+   references them (bg-surface, text-ink, border-line, …) adapts.
+   Brand colors (primary/indigo/violet) stay constant. */
+.dark {
+  --background: #0a0e16;
+  --foreground: #e6e9f0;
+  color-scheme: dark;
+
+  /* Neutral scale flips: light text, dark surfaces */
+  --color-ink: #eef1f6;
+  --color-graphite: #c7cedb;
+  --color-slate: #98a1b3;
+  --color-muted: #6c7589;
+  --color-line: #232b3b;
+  --color-cloud: #1a2130;
+  --color-mist: #10151f;
+  --color-fog: #0c111a;
+
+  /* Semantic surfaces */
+  --color-canvas: #0a0e16;
+  --color-surface: #121826;
+  --color-surface-2: #1a2130;
+  --color-footer: #070a11;
+
+  --color-primary-soft: #1b1f3a;
+
+  /* Shadows: lean on black + a subtle ring of light for depth */
+  --shadow-subtle: 0 1px 2px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-soft: 0 2px 6px rgba(0, 0, 0, 0.5), 0 10px 24px rgba(0, 0, 0, 0.4);
+  --shadow-lift: 0 6px 14px rgba(0, 0, 0, 0.55), 0 22px 44px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 2px 10px rgba(99, 102, 241, 0.35), 0 16px 40px rgba(99, 102, 241, 0.3);
+  --shadow-float: 0 10px 22px rgba(0, 0, 0, 0.55), 0 32px 64px rgba(0, 0, 0, 0.55);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  letter-spacing: -0.011em;
+}
+
+/* Sharper typographic hierarchy */
+h1,
+h2 {
+  letter-spacing: -0.03em;
+}
+
+h3,
+h4 {
+  letter-spacing: -0.02em;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-primary) 22%, transparent);
+  color: var(--color-ink);
+}
+
+/* Smooth GPU hint for scroll-reveal elements before GSAP runs */
+[data-reveal] {
+  will-change: transform, opacity;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float 9s ease-in-out infinite;
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2.5s ease-in-out infinite;
+}
+
+/* Gradient text helper */
+.text-gradient {
+  background: linear-gradient(120deg, var(--color-primary), var(--color-indigo) 55%, var(--color-violet));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Subtle dot-grid background (mask it where used) */
+.bg-dot-grid {
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(99, 102, 241, 0.12) 1px,
+    transparent 0
+  );
+  background-size: 32px 32px;
+}
+
+/* Soft hairline ring for cards/surfaces */
+.ring-soft {
+  box-shadow: inset 0 0 0 1px rgba(15, 23, 41, 0.06);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-float,
+  .animate-float-slow,
+  .animate-pulse-soft {
+    animation: none !important;
+  }
+}
+
+/* Branded scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-line);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted);
 }
