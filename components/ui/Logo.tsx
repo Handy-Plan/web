@@ -5,7 +5,7 @@ export default function Logo({ className }: { className?: string }) {
   return (
     <span
       className={cn(
-        "flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-indigo shadow-[0_4px_12px_rgba(99,102,241,0.35)]",
+        "flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-indigo shadow-[0_4px_12px_rgba(3,105,161,0.35)]",
         className,
       )}
     >

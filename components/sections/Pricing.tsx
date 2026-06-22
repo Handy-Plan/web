@@ -112,7 +112,7 @@ export default function Pricing() {
                   className={cn(
                     "mt-7 flex h-12 items-center justify-center rounded-xl text-[15px] font-semibold transition-all duration-300 active:scale-[0.98]",
                     cfg.featured
-                      ? "bg-primary text-white shadow-[0_4px_14px_rgba(99,102,241,0.35)] hover:-translate-y-0.5 hover:bg-primary-dark hover:shadow-[var(--shadow-glow)]"
+                      ? "bg-primary text-white shadow-[0_4px_14px_rgba(3,105,161,0.35)] hover:-translate-y-0.5 hover:bg-primary-dark hover:shadow-[var(--shadow-glow)]"
                       : "border-2 border-primary text-primary hover:bg-primary hover:text-white",
                   )}
                 >

@@ -37,5 +37,5 @@ export async function signup(formData: FormData): Promise<void> {
   if (!terms) back("terms");
 
   // TODO: create the account & session here.
-  redirect(`/${locale}`);
+  redirect(`/${locale}/onboarding`);
 }

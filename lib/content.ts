@@ -79,3 +79,48 @@ export const footerConfig = {
   columns: ["product", "resources", "company", "legal"] as const,
   socials: ["LinkedIn", "Facebook", "Instagram", "YouTube"] as const,
 };
+
+/* ── Onboarding wizard ───────────────────────────────────────────
+   Ordered steps + the option keys for each step. Labels live in the
+   `onboarding` message namespace, keyed by these same strings. */
+export const onboardingSteps = ["business", "services", "availability"] as const;
+export type OnboardingStep = (typeof onboardingSteps)[number];
+
+export const tradeOptions = [
+  "electrician",
+  "plumber",
+  "hvac",
+  "carpenter",
+  "painter",
+  "roofer",
+  "locksmith",
+  "other",
+] as const;
+
+export const serviceOptions = [
+  "consultation",
+  "installation",
+  "repair",
+  "maintenance",
+  "inspection",
+  "emergency",
+] as const;
+
+export const weekdays = [
+  "mon",
+  "tue",
+  "wed",
+  "thu",
+  "fri",
+  "sat",
+  "sun",
+] as const;
+
+/** Trust bar credential icons (order matches trustBar.items in messages). */
+export const trustBarIcons: readonly IconName[] = [
+  "shield",
+  "server",
+  "lock",
+  "award",
+  "star",
+];

@@ -1,13 +1,22 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins, Open_Sans } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import ThemeSync from "@/components/ui/ThemeSync";
 import "../globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+// Poppins for headings, Open Sans for body — "Trust & Authority" pairing.
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const openSans = Open_Sans({
+  variable: "--font-open-sans",
   subsets: ["latin"],
   display: "swap",
 });
@@ -77,11 +86,16 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} className={inter.variable} suppressHydrationWarning>
+    <html
+      lang={locale}
+      className={`${poppins.variable} ${openSans.variable}`}
+      suppressHydrationWarning
+    >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body className="bg-canvas text-ink antialiased">
+        <ThemeSync />
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>
