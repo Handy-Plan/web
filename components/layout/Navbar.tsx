@@ -73,7 +73,7 @@ export default function Navbar() {
           </Link>
           <a
             href={navConfig.cta.href}
-            className="inline-flex h-11 items-center rounded-xl bg-gradient-to-br from-primary to-indigo px-6 text-[15px] font-semibold text-white shadow-[0_4px_14px_rgba(99,102,241,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[var(--shadow-glow)] hover:brightness-[1.05]"
+            className="inline-flex h-11 items-center rounded-xl bg-gradient-to-br from-primary to-indigo px-6 text-[15px] font-semibold text-white shadow-[0_4px_14px_rgba(3,105,161,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[var(--shadow-glow)] hover:brightness-[1.05]"
           >
             {t("cta")}
           </a>

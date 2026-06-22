@@ -38,7 +38,7 @@ export default function Features() {
               {/* top accent line on hover */}
               <div className="pointer-events-none absolute inset-x-0 top-0 h-px scale-x-0 bg-gradient-to-r from-transparent via-primary/50 to-transparent transition-transform duration-500 group-hover:scale-x-100" />
 
-              <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-indigo text-white shadow-[0_8px_18px_rgba(99,102,241,0.3)] transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-3">
+              <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-indigo text-white shadow-[0_8px_18px_rgba(3,105,161,0.3)] transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-3">
                 <Icon name={f.icon} size={26} />
               </span>
 

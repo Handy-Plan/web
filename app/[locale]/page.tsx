@@ -2,6 +2,7 @@ import { setRequestLocale } from "next-intl/server";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
+import TrustBar from "@/components/sections/TrustBar";
 import SocialProof from "@/components/sections/SocialProof";
 import Problem from "@/components/sections/Problem";
 import Features from "@/components/sections/Features";
@@ -24,6 +25,7 @@ export default async function Home({
       <Navbar />
       <main>
         <Hero />
+        <TrustBar />
         <SocialProof />
         <Problem />
         <Features />

@@ -34,6 +34,15 @@
       "Durchschnittsbewertung"
     ]
   },
+  "trustBar": {
+    "items": [
+      { "label": "DSGVO-konform", "sublabel": "EU-Datenstandards" },
+      { "label": "In der EU gehostet", "sublabel": "Rechenzentrum Frankfurt" },
+      { "label": "SSL-verschlüsselt", "sublabel": "256-Bit-Sicherheit" },
+      { "label": "Made in Germany", "sublabel": "Fürs Handwerk gebaut" },
+      { "label": "4,8/5 Bewertung", "sublabel": "500+ Handwerker" }
+    ]
+  },
   "problem": {
     "eyebrow": "Der Alltag",
     "title": "Kommt Ihnen das bekannt vor?",
@@ -346,6 +355,91 @@
         "Jederzeit kündbar, keine Verträge"
       ],
       "stat": "Über 500 Handwerker in Deutschland vertrauen darauf"
+    }
+  },
+  "onboarding": {
+    "stepLabel": "Schritt {current} von {total}",
+    "skip": "Später erledigen",
+    "back": "Zurück",
+    "continue": "Weiter",
+    "finish": "Einrichtung abschließen",
+    "steps": {
+      "business": "Betrieb",
+      "services": "Leistungen",
+      "availability": "Verfügbarkeit"
+    },
+    "business": {
+      "title": "Erzählen Sie uns von Ihrem Betrieb",
+      "subtitle": "Das erscheint auf Ihrer Buchungsseite und in den Kundenerinnerungen.",
+      "name": "Firmenname",
+      "namePlaceholder": "Weber Elektrotechnik",
+      "trade": "Ihr Gewerk",
+      "tradePlaceholder": "Gewerk auswählen",
+      "trades": {
+        "electrician": "Elektriker",
+        "plumber": "Installateur",
+        "hvac": "Klima- & Heizungstechniker",
+        "carpenter": "Tischler",
+        "painter": "Maler",
+        "roofer": "Dachdecker",
+        "locksmith": "Schlosser",
+        "other": "Sonstiges"
+      },
+      "phone": "Telefonnummer",
+      "phoneOptional": "optional",
+      "phonePlaceholder": "+49 30 1234567"
+    },
+    "services": {
+      "title": "Was bieten Sie an?",
+      "subtitle": "Wählen Sie die Leistungen, die Kunden buchen können. Sie können das später anpassen.",
+      "hint": "Mindestens eine auswählen",
+      "options": {
+        "consultation": "Beratung vor Ort",
+        "installation": "Installation",
+        "repair": "Reparatur",
+        "maintenance": "Wartung",
+        "inspection": "Inspektion",
+        "emergency": "Notdiensteinsatz"
+      },
+      "customLabel": "Eigene hinzufügen",
+      "customPlaceholder": "z. B. Heizungswartung"
+    },
+    "availability": {
+      "title": "Wann sind Sie verfügbar?",
+      "subtitle": "Legen Sie Ihre üblichen Arbeitstage und -zeiten fest. Kunden können nur innerhalb dieser buchen.",
+      "days": "Arbeitstage",
+      "hours": "Arbeitszeiten",
+      "from": "Von",
+      "to": "Bis",
+      "dayNames": {
+        "mon": "Mo",
+        "tue": "Di",
+        "wed": "Mi",
+        "thu": "Do",
+        "fri": "Fr",
+        "sat": "Sa",
+        "sun": "So"
+      }
+    },
+    "done": {
+      "badge": "Einrichtung abgeschlossen",
+      "title": "Alles bereit, {name}!",
+      "titleNoName": "Alles bereit!",
+      "subtitle": "Ihr HandyPlan-Konto ist startklar. Teilen Sie Ihren Buchungslink und nehmen Sie ab heute Termine an.",
+      "summaryTitle": "Ihre Einrichtung",
+      "labels": {
+        "business": "Betrieb",
+        "trade": "Gewerk",
+        "services": "Leistungen",
+        "availability": "Verfügbarkeit"
+      },
+      "cta": "Zum Dashboard",
+      "secondary": "Zurück zur Startseite"
+    },
+    "errors": {
+      "business": "Bitte geben Sie Ihren Firmennamen ein und wählen Sie Ihr Gewerk.",
+      "services": "Bitte wählen Sie mindestens eine Leistung aus.",
+      "availability": "Bitte wählen Sie mindestens einen Arbeitstag."
     }
   }
 }

@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { cn } from "@/lib/cn";
 import Icon from "./Icon";
@@ -16,18 +15,7 @@ import Icon from "./Icon";
 export default function ThemeToggle({ className }: { className?: string }) {
   const t = useTranslations("a11y");
 
-  // Keep following the OS until the user makes an explicit choice.
-  useEffect(() => {
-    const mq = window.matchMedia("(prefers-color-scheme: dark)");
-    const onChange = (e: MediaQueryListEvent) => {
-      if (!localStorage.getItem("theme")) {
-        document.documentElement.classList.toggle("dark", e.matches);
-      }
-    };
-    mq.addEventListener("change", onChange);
-    return () => mq.removeEventListener("change", onChange);
-  }, []);
-
+  // System-preference following lives centrally in <ThemeSync>.
   const toggle = () => {
     const isDark = document.documentElement.classList.toggle("dark");
     localStorage.setItem("theme", isDark ? "dark" : "light");

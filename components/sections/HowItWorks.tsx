@@ -41,7 +41,7 @@ export default function HowItWorks() {
                 key={s.number}
                 className="relative flex flex-col items-center rounded-[20px] border border-line bg-surface p-8 text-center shadow-[var(--shadow-subtle)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[var(--shadow-lift)]"
               >
-                <span className="flex h-[88px] w-[88px] items-center justify-center rounded-full bg-gradient-to-br from-primary to-indigo text-3xl font-extrabold text-white shadow-[0_8px_18px_rgba(99,102,241,0.35)] ring-4 ring-surface ring-offset-2 ring-offset-primary/10">
+                <span className="flex h-[88px] w-[88px] items-center justify-center rounded-full bg-gradient-to-br from-primary to-indigo text-3xl font-extrabold text-white shadow-[0_8px_18px_rgba(3,105,161,0.35)] ring-4 ring-surface ring-offset-2 ring-offset-primary/10">
                   {s.number}
                 </span>
                 <span className="mt-5 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">

@@ -32,7 +32,9 @@ export type IconName =
   | "lock"
   | "eye"
   | "eye-off"
-  | "arrow-left";
+  | "arrow-left"
+  | "server"
+  | "award";
 
 const paths: Record<IconName, React.ReactNode> = {
   phone: (
@@ -138,6 +140,19 @@ const paths: Record<IconName, React.ReactNode> = {
     </>
   ),
   "arrow-left": <path d="M19.5 12h-15M11 5.5 4.5 12 11 18.5" />,
+  server: (
+    <>
+      <rect x="3" y="4" width="18" height="7" rx="2" />
+      <rect x="3" y="13" width="18" height="7" rx="2" />
+      <path d="M7 7.5h.01M7 16.5h.01" />
+    </>
+  ),
+  award: (
+    <>
+      <circle cx="12" cy="9" r="5.5" />
+      <path d="M8.5 13.7 7 21l5-2.8 5 2.8-1.5-7.3" />
+    </>
+  ),
 };
 
 type Props = SVGProps<SVGSVGElement> & {

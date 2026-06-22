@@ -34,6 +34,15 @@
       "Average rating"
     ]
   },
+  "trustBar": {
+    "items": [
+      { "label": "GDPR-compliant", "sublabel": "EU data standards" },
+      { "label": "EU-hosted", "sublabel": "Frankfurt data center" },
+      { "label": "SSL encrypted", "sublabel": "256-bit security" },
+      { "label": "Made in Germany", "sublabel": "Built for Handwerk" },
+      { "label": "4.8/5 rating", "sublabel": "500+ craftsmen" }
+    ]
+  },
   "problem": {
     "eyebrow": "The daily reality",
     "title": "Sound familiar?",
@@ -346,6 +355,91 @@
         "Cancel anytime, no contracts"
       ],
       "stat": "Trusted by 500+ craftsmen across Germany"
+    }
+  },
+  "onboarding": {
+    "stepLabel": "Step {current} of {total}",
+    "skip": "Skip for now",
+    "back": "Back",
+    "continue": "Continue",
+    "finish": "Finish setup",
+    "steps": {
+      "business": "Business",
+      "services": "Services",
+      "availability": "Availability"
+    },
+    "business": {
+      "title": "Tell us about your business",
+      "subtitle": "This appears on your booking page and customer reminders.",
+      "name": "Business name",
+      "namePlaceholder": "Weber Elektrotechnik",
+      "trade": "Your trade",
+      "tradePlaceholder": "Select your trade",
+      "trades": {
+        "electrician": "Electrician",
+        "plumber": "Plumber",
+        "hvac": "HVAC technician",
+        "carpenter": "Carpenter",
+        "painter": "Painter",
+        "roofer": "Roofer",
+        "locksmith": "Locksmith",
+        "other": "Other"
+      },
+      "phone": "Phone number",
+      "phoneOptional": "optional",
+      "phonePlaceholder": "+49 30 1234567"
+    },
+    "services": {
+      "title": "What do you offer?",
+      "subtitle": "Pick the services customers can book. You can fine-tune these later.",
+      "hint": "Select at least one",
+      "options": {
+        "consultation": "On-site consultation",
+        "installation": "Installation",
+        "repair": "Repair",
+        "maintenance": "Maintenance",
+        "inspection": "Inspection",
+        "emergency": "Emergency call-out"
+      },
+      "customLabel": "Add your own",
+      "customPlaceholder": "e.g. Boiler service"
+    },
+    "availability": {
+      "title": "When are you available?",
+      "subtitle": "Set your default working days and hours. Customers can only book within these.",
+      "days": "Working days",
+      "hours": "Working hours",
+      "from": "From",
+      "to": "To",
+      "dayNames": {
+        "mon": "Mon",
+        "tue": "Tue",
+        "wed": "Wed",
+        "thu": "Thu",
+        "fri": "Fri",
+        "sat": "Sat",
+        "sun": "Sun"
+      }
+    },
+    "done": {
+      "badge": "Setup complete",
+      "title": "You're all set, {name}!",
+      "titleNoName": "You're all set!",
+      "subtitle": "Your HandyPlan account is ready. Share your booking link and start taking appointments today.",
+      "summaryTitle": "Your setup",
+      "labels": {
+        "business": "Business",
+        "trade": "Trade",
+        "services": "Services",
+        "availability": "Availability"
+      },
+      "cta": "Go to dashboard",
+      "secondary": "Back to home"
+    },
+    "errors": {
+      "business": "Please enter your business name and select your trade.",
+      "services": "Please select at least one service.",
+      "availability": "Please choose at least one working day."
     }
   }
 }
