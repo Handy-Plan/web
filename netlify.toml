@@ -1,0 +1,13 @@
+# Netlify build settings for the HandyPlan Next.js app.
+#
+# Without these, Netlify logged "No build steps found" and published the raw
+# repo source from "/" (0 functions, no index.html) -> 404 on every path.
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+# Official Next.js runtime: wires up SSR/ISR functions, the proxy (middleware),
+# image optimisation and the locale-prefixed routes under app/[locale].
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
