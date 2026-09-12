@@ -3,12 +3,12 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
 import TrustBar from "@/components/sections/TrustBar";
-import SocialProof from "@/components/sections/SocialProof";
 import Problem from "@/components/sections/Problem";
-import Features from "@/components/sections/Features";
+import Market from "@/components/sections/Market";
 import HowItWorks from "@/components/sections/HowItWorks";
-import Testimonials from "@/components/sections/Testimonials";
-import Pricing from "@/components/sections/Pricing";
+import WhyHandyPlan from "@/components/sections/WhyHandyPlan";
+import BusinessModel from "@/components/sections/BusinessModel";
+import Languages from "@/components/sections/Languages";
 import FAQ from "@/components/sections/FAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
 
@@ -26,12 +26,12 @@ export default async function Home({
       <main>
         <Hero />
         <TrustBar />
-        <SocialProof />
         <Problem />
-        <Features />
+        <Market />
         <HowItWorks />
-        <Testimonials />
-        <Pricing />
+        <WhyHandyPlan />
+        <BusinessModel />
+        <Languages />
         <FAQ />
         <FinalCTA />
       </main>

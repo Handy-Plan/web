@@ -1,12 +1,14 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { navConfig } from "@/lib/content";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import Icon from "@/components/ui/Icon";
 import Reveal from "@/components/animations/Reveal";
-import CalendarMockup from "@/components/sections/CalendarMockup";
+import MissedCallMockup from "@/components/sections/MissedCallMockup";
 
 export default function Hero() {
   const t = useTranslations("hero");
+  const locale = useLocale();
   const bullets = t.raw("bullets") as string[];
   const trust = t.raw("trust") as string[];
 
@@ -61,15 +63,14 @@ export default function Hero() {
           </ul>
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-            <Button href="#pricing" size="lg" iconAfter="arrow-right">
+            <Button
+              href={`/${locale}${navConfig.cta.href}`}
+              size="lg"
+              iconAfter="arrow-right"
+            >
               {t("primaryCta")}
             </Button>
-            <Button
-              href="#how-it-works"
-              size="lg"
-              variant="secondary"
-              iconBefore="play"
-            >
+            <Button href="#how-it-works" size="lg" variant="secondary">
               {t("secondaryCta")}
             </Button>
           </div>
@@ -92,7 +93,7 @@ export default function Hero() {
         {/* Visual */}
         <Reveal trigger="load" delay={0.2} y={40} className="relative">
           <div className="animate-float-slow">
-            <CalendarMockup />
+            <MissedCallMockup />
           </div>
         </Reveal>
       </Container>

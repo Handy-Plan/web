@@ -1,279 +1,191 @@
 {
   "meta": {
-    "title": "HandyPlan — Booking Software for Craftsmen",
-    "description": "The simple, mobile-first booking platform built for German craftsmen. Let customers book 24/7, cut no-shows by 40% with automatic reminders, and manage your day from your phone.",
-    "ogDescription": "More bookings. Less stress. Zero missed calls. Built for German craftsmen."
+    "title": "HandyPlan · Stop losing jobs to missed calls",
+    "description": "When you're on a job and can't pick up, HandyPlan texts the caller back right away, asks what they need, and sends it to your phone as a job card. You pick a time and the job is booked. Free to use.",
+    "ogDescription": "Missed calls turned into booked jobs. Free for trade businesses."
   },
   "nav": {
-    "features": "Features",
+    "problem": "The problem",
     "howItWorks": "How it works",
-    "pricing": "Pricing",
+    "model": "Pricing",
     "faq": "FAQ",
-    "cta": "Start Free Trial",
+    "cta": "Get started",
     "login": "Log in"
   },
   "hero": {
-    "badge": "The #1 booking solution for craftsmen in Germany",
-    "titleLead": "More bookings. Less stress.",
-    "titleAccent": "Zero missed calls.",
-    "subtitle": "HandyPlan is the booking platform built specifically for German craftsmen. Your customers book online 24/7 — even when you're up a ladder or in a basement.",
+    "badge": "Made for trade businesses",
+    "titleLead": "You're up a ladder.",
+    "titleAccent": "Your customer still gets an answer.",
+    "subtitle": "When you can't pick up, HandyPlan texts the caller right away and asks what they need. You get the details on your phone and book the job with one tap.",
     "bullets": [
-      "40% fewer no-shows with automatic reminders",
-      "Save 5 hours a week — no more phone tag",
-      "Set up in 10 minutes, no complicated software"
+      "Every missed call gets a text back within seconds",
+      "Name, address, problem and urgency on one card",
+      "Book the job with one tap. No office software."
     ],
-    "primaryCta": "Start 14-Day Free Trial",
-    "secondaryCta": "Watch demo",
-    "trust": ["No credit card required", "Cancel anytime", "GDPR compliant"]
+    "primaryCta": "Get started free",
+    "secondaryCta": "See how it works",
+    "trust": ["Free to use", "Keep your number", "Data stays in the EU"]
   },
-  "stats": {
-    "items": [
-      "Appointments booked",
-      "Craftsmen on board",
-      "Fewer no-shows",
-      "Average rating"
-    ]
+  "mockup": {
+    "missedCall": "Missed call",
+    "missedTime": "09:42 · on a job site",
+    "autoReplyLabel": "Automatic reply · sent instantly",
+    "autoReply": "Hi! We're on a job right now. Tell us briefly what's wrong and where, and we'll get back to you today.",
+    "customerReply": "Boiler is making noise, no hot water. Lindenstraße 12, Cottbus.",
+    "jobCard": "New job card",
+    "labels": {
+      "name": "Name",
+      "address": "Address",
+      "problem": "Problem",
+      "urgency": "Urgency"
+    },
+    "values": {
+      "name": "K. Neumann",
+      "address": "Lindenstraße 12, Cottbus",
+      "problem": "No hot water, boiler noise",
+      "urgency": "Today"
+    },
+    "slots": ["Today 16:00", "Tomorrow 08:00"],
+    "book": "Book",
+    "booked": "Job booked",
+    "bookedSub": "Confirmation sent to the customer"
   },
   "trustBar": {
     "items": [
-      { "label": "GDPR-compliant", "sublabel": "EU data standards" },
-      { "label": "EU-hosted", "sublabel": "Frankfurt data center" },
-      { "label": "SSL encrypted", "sublabel": "256-bit security" },
-      { "label": "Made in Germany", "sublabel": "Built for Handwerk" },
-      { "label": "4.8/5 rating", "sublabel": "500+ craftsmen" }
+      { "label": "GDPR-compliant", "sublabel": "DPA available" },
+      { "label": "Hosted in Frankfurt", "sublabel": "AWS EU region" },
+      { "label": "No data in the US", "sublabel": "Customer and job data stay in the EU" },
+      { "label": "German and English", "sublabel": "Arabic coming soon" },
+      { "label": "Built in Cottbus", "sublabel": "For the trades in Germany" }
     ]
   },
   "problem": {
-    "eyebrow": "The daily reality",
-    "title": "Sound familiar?",
-    "subtitle": "You're not alone — 8 out of 10 craftsmen still manage appointments by phone and paper.",
-    "closing": "But what if there was an easier way?",
-    "items": [
-      {
-        "title": "Missed calls = lost revenue",
-        "body": "You're on a job site and can't pick up. Every missed call is a customer who simply rings the next name on Google. Craftsmen lose 5–8 jobs a week this way."
-      },
-      {
-        "title": "Scheduling chaos",
-        "body": "Sticky notes, a paper diary and a half-full Excel sheet. Double bookings, forgotten appointments and no clear view of your week."
-      },
-      {
-        "title": "No-shows waste your day",
-        "body": "Without reminders, 30–40% of customers forget. You drive across town for nothing — that's lost time and lost money."
-      }
-    ]
+    "eyebrow": "The problem",
+    "title": "When you're working, nobody's in the office.",
+    "subtitle": "This is how most jobs get lost, and you never even hear about them.",
+    "steps": [
+      "Someone's boiler breaks. They google a tradesperson and call the first name they find.",
+      "You're in a basement with your hands full. The phone rings out.",
+      "They don't leave a voicemail. They just call the next business on the list.",
+      "That job is gone, and you never knew it was there."
+    ],
+    "claimLabel": "What it really costs",
+    "claimTitle": "A missed call is a lost job.",
+    "claimBody": "Most software promises to save you admin time. But you don't count your hours. You do notice when work goes to someone else.",
+    "whyNowLabel": "Why now:",
+    "whyNow": "62% of trade businesses already call digitalisation one of their five biggest challenges (Bitkom Research, 2026). Being reachable is usually where it starts.",
+    "fitLabel": "Good to know:",
+    "fit": "HandyPlan is for everyday calls, like a quote request or a routine repair. Real emergencies need a person on the phone, so those should always go to your emergency number."
   },
-  "features": {
-    "eyebrow": "Everything in one place",
-    "title": "Everything you need, nothing you don't",
-    "subtitle": "Simple, focused tools built around how craftsmen actually work — not a bloated enterprise suite.",
+  "market": {
+    "eyebrow": "The market",
+    "title": "A problem in a lot of workshops",
+    "subtitle": "Here's how many businesses we're talking about.",
     "items": [
-      {
-        "title": "Online booking widget",
-        "body": "Embed on your website or Facebook page. Customers book themselves 24/7, even on weekends.",
-        "points": ["Copy-and-paste setup", "Mobile optimised", "Your own branding"]
-      },
-      {
-        "title": "Smart calendar",
-        "body": "Day, week and month views with colour-coded jobs. Drag to reschedule, never double-book.",
-        "points": ["Conflict prevention", "Google Calendar sync", "Block off breaks"]
-      },
-      {
-        "title": "Mobile app",
-        "body": "Built for the job site. See today's schedule, navigate with GPS, works offline in basements.",
-        "points": ["iOS & Android", "Offline mode", "One-tap navigation"]
-      },
-      {
-        "title": "Automatic reminders",
-        "body": "SMS and email sent automatically before every appointment. Cut no-shows by up to 40%.",
-        "points": ["SMS + email", "German templates", "Fully automatic"]
-      },
-      {
-        "title": "Customer database",
-        "body": "Every customer, job history, note and photo in one place. Personal service for repeat clients.",
-        "points": ["Full history", "Notes & photos", "One-tap call"]
-      },
-      {
-        "title": "Simple invoicing",
-        "body": "Generate professional, German tax-compliant invoices in seconds, right after the job.",
-        "points": ["PDF in seconds", "German format", "Payment links"]
-      }
-    ]
+      { "suffix": "+", "label": "trade businesses in the Cottbus Chamber of Crafts district alone (Dec 2025)" },
+      { "suffix": "", "label": "people working in South Brandenburg's skilled trades" },
+      { "suffix": "M", "label": "trade businesses across Germany, in 53 chambers" },
+      { "suffix": "%", "label": "of trade businesses name digitalisation a top-5 challenge" }
+    ],
+    "source": "Sources: Cottbus Chamber of Crafts, facts and figures (as of 31 Dec 2025); German Confederation of Skilled Crafts (ZDH); Bitkom Research (504 trade businesses)."
   },
   "howItWorks": {
-    "eyebrow": "Up and running fast",
-    "title": "Get started in 3 easy steps",
-    "subtitle": "From signup to your first booking in about 15 minutes.",
-    "cta": "Start free now",
-    "items": [
-      {
-        "title": "Sign up",
-        "body": "Create your account in two minutes. No credit card needed for the trial.",
-        "time": "2 min"
-      },
-      {
-        "title": "Set up",
-        "body": "Add your availability and services. Copy your booking widget code.",
-        "time": "10 min"
-      },
-      {
-        "title": "Start booking",
-        "body": "Share your link. Customers book themselves and you get instant alerts.",
-        "time": "3 min"
-      }
-    ]
-  },
-  "testimonials": {
-    "eyebrow": "Loved by craftsmen",
-    "title": "What our customers say",
-    "subtitle": "Over 500 craftsmen use HandyPlan to run their day.",
-    "ratingLabel": "Based on 127 reviews",
-    "items": [
-      {
-        "quote": "Since using HandyPlan I've taken on about 30% more jobs. The automatic reminders cut my no-show rate in half. Best investment I made this year.",
-        "name": "Michael Weber",
-        "role": "Electrician",
-        "city": "Berlin"
-      },
-      {
-        "quote": "Setup took ten minutes and now I can focus on the work instead of the phone. My customers love booking online whenever it suits them.",
-        "name": "Anna Schmidt",
-        "role": "Plumber",
-        "city": "Munich"
-      },
-      {
-        "quote": "I'm not a computer person, but this just works. No-shows are down, my week is organised, and I look far more professional to customers.",
-        "name": "Thomas Müller",
-        "role": "HVAC Technician",
-        "city": "Hamburg"
-      }
-    ]
-  },
-  "pricing": {
-    "eyebrow": "Simple pricing",
-    "title": "Simple, transparent pricing",
-    "note": "No hidden fees. No setup charges. Cancel anytime.",
-    "monthly": "Monthly",
-    "yearly": "Yearly",
-    "save": "Save 17%",
-    "mostPopular": "Most popular",
-    "perMonth": "/ month",
-    "billedYearly": "Billed €{amount} yearly",
-    "orBilledYearly": "or €{amount} billed yearly",
-    "plans": [
-      {
-        "name": "Starter",
-        "tagline": "For solo craftsmen",
-        "cta": "Get started",
-        "features": [
-          "1 user",
-          "50 bookings / month",
-          "Online booking widget",
-          "Calendar & mobile app",
-          "Email reminders",
-          "Customer database (basic)",
-          "Email support"
-        ]
-      },
-      {
-        "name": "Professional",
-        "tagline": "For busy professionals",
-        "cta": "Start free trial",
-        "features": [
-          "3 users",
-          "Unlimited bookings",
-          "Everything in Starter",
-          "SMS reminders included",
-          "Customer database (advanced)",
-          "Invoice generation",
-          "Google Calendar sync",
-          "Priority support"
-        ]
-      },
-      {
-        "name": "Premium",
-        "tagline": "For growing teams",
-        "cta": "Get started",
-        "features": [
-          "5+ users",
-          "Everything in Professional",
-          "Route optimisation",
-          "Advanced analytics",
-          "API access",
-          "White-label option",
-          "Dedicated account manager",
-          "Phone support"
-        ]
-      }
+    "eyebrow": "How it works",
+    "title": "Two ways in, one booked job",
+    "subtitle": "One side is for you. The other is for customers looking for someone nearby.",
+    "craftsmanLabel": "For your business",
+    "customerLabel": "For your customers",
+    "craftsman": [
+      { "title": "You miss a call", "body": "You're busy and can't answer. That's fine, carry on." },
+      { "title": "We text them back", "body": "The caller gets a text within seconds asking what's wrong and where." },
+      { "title": "You get a job card", "body": "Name, address, problem, urgency and number, all on your phone." },
+      { "title": "You pick a time", "body": "One tap and the customer gets a confirmation. Job booked." }
     ],
-    "trust": ["14-day free trial", "No credit card required", "Cancel anytime"]
+    "customer": [
+      { "title": "Search nearby", "body": "Customers search by trade and see tradespeople close by with real free slots." },
+      { "title": "Compare", "body": "They can see who's available soonest and who's closest before they book." },
+      { "title": "Priority match (optional)", "body": "For a flat fee shown upfront, we match them with the nearest free slot. The price never goes up because it's urgent." },
+      { "title": "Confirmed", "body": "One tap. They get a time, you get the job." }
+    ],
+    "footnote": "Coming soon: calendar, customer history, reminders, and sending jobs straight to the invoicing tool you already use."
+  },
+  "why": {
+    "eyebrow": "Why HandyPlan",
+    "title": "Made for businesses that don't want another big software package",
+    "subtitle": "You don't need an office suite to answer your phone.",
+    "cards": [
+      { "title": "Keep your number", "body": "No website, no widget, no new phone. You set up call forwarding on the number you already have, and that's it." },
+      { "title": "Does one thing well", "body": "Big software packages cost €49 to €75 a month and try to do everything. Marketplaces are free but only work in their app. HandyPlan just makes sure missed calls turn into jobs." },
+      { "title": "Fair to your customers", "body": "Nobody pays extra because their heating broke on a Sunday. The priority fee is a fixed amount and is shown before they book." }
+    ]
+  },
+  "model": {
+    "eyebrow": "Pricing",
+    "title": "Free to use. You only pay for AI.",
+    "subtitle": "Everything you need to stop losing jobs is free. The AI features are optional extras.",
+    "free": {
+      "label": "Free",
+      "title": "The whole core product",
+      "points": [
+        "Instant text reply to every missed call",
+        "Job cards with all the details",
+        "One-tap booking and confirmations",
+        "Customer app for searching and booking"
+      ],
+      "note": "No credit card needed to sign up."
+    },
+    "paid": {
+      "label": "Paid extras",
+      "title": "AI features",
+      "points": [
+        "AI calling agent that picks up when you can't and takes down the job, in German",
+        "AI tools for your business, like scheduling suggestions and voice notes",
+        "AI help for customers when they describe their problem",
+        "Priority match for customers, at one flat fee"
+      ],
+      "note": "Billed monthly or yearly. You only pay for what you switch on."
+    }
+  },
+  "languages": {
+    "eyebrow": "Languages",
+    "title": "In your language",
+    "subtitle": "Available in German and English. Arabic is coming soon.",
+    "items": [
+      { "name": "German", "status": "Available" },
+      { "name": "English", "status": "Available" },
+      { "name": "Arabic", "status": "Coming soon" }
+    ],
+    "whyLabel": "Why it matters:",
+    "why": "A lot of people in the trades grew up speaking another language. In trades like electrical engineering and metalwork it's around 30%. We haven't found another platform that offers the business side in anything but German.",
+    "source": "German Confederation of Skilled Crafts (ZDH), employees with a migration background in the trades (Federal Statistical Office, Microcensus)"
   },
   "faq": {
     "eyebrow": "Good to know",
     "title": "Frequently asked questions",
     "items": [
-      {
-        "q": "How long does setup take?",
-        "a": "Typically 10–15 minutes. You create your account, set your availability, add one or two services and copy the widget code. That's it — you're ready to take bookings."
-      },
-      {
-        "q": "Do I need a credit card for the trial?",
-        "a": "No. The 14-day free trial requires no payment details. You only add a payment method if you decide to continue afterwards."
-      },
-      {
-        "q": "Can I cancel anytime?",
-        "a": "Yes. There are no contracts and no lock-in. Cancel with one click from your settings and you won't be charged again."
-      },
-      {
-        "q": "Is my customer data safe?",
-        "a": "Absolutely. HandyPlan is fully GDPR compliant, hosted in the EU, and all data is encrypted in transit and at rest."
-      },
-      {
-        "q": "What happens with double bookings?",
-        "a": "It can't happen. The booking widget only shows time slots that are genuinely free, and the calendar blocks conflicts automatically."
-      },
-      {
-        "q": "Can I embed the widget on my own website?",
-        "a": "Yes. Copy a short snippet of code into your website or Facebook page, or simply share your personal booking link — no website required."
-      },
-      {
-        "q": "How many SMS reminders are included?",
-        "a": "SMS reminders are included on the Professional and Premium plans. Starter uses email reminders, and you can add SMS at any time."
-      },
-      {
-        "q": "Do you offer phone support?",
-        "a": "Email support is included on every plan, priority support on Professional, and dedicated phone support on Premium."
-      }
+      { "q": "How do I get started?", "a": "Sign up for free and add your business details. Then set up call forwarding on your phone for the calls you can't take. From then on, every missed call gets a text back." },
+      { "q": "Is it really free?", "a": "Yes. Text replies, job cards and booking are free. You only pay if you turn on one of the AI features, like the AI calling agent." },
+      { "q": "Do I need a website or new software?", "a": "No. HandyPlan works with the phone number you already have. You don't need a website, a booking widget or office software." },
+      { "q": "Do my customers need an app?", "a": "No. Callers get a text with a short form that opens in any browser. The customer app is optional, for people who want to search and compare tradespeople nearby." },
+      { "q": "What about emergencies?", "a": "Real emergencies need a person on the phone, so keep those on your emergency number. HandyPlan is for everyday calls, like a quote request or a routine repair." },
+      { "q": "Which trades is it for?", "a": "Any business that misses calls while working. It fits especially well where there's a lot of repair and maintenance work, like heating, plumbing and electrical." },
+      { "q": "Where is my data stored?", "a": "On AWS servers in Frankfurt. HandyPlan is GDPR-compliant, we have a data processing agreement (DPA) ready for you, and no customer or job data is stored in the US." },
+      { "q": "Which languages are supported?", "a": "German and English. Arabic is coming soon, for your side of the app too, not only for customers." }
     ]
   },
   "finalCta": {
-    "title": "Ready to get more bookings?",
-    "subtitle": "Start free today and see how simple scheduling can be. No credit card required.",
-    "cta": "Start 14-Day Free Trial",
-    "trust": ["Set up in 10 minutes", "No setup fees", "Cancel anytime"]
+    "title": "Stop losing jobs to missed calls.",
+    "subtitle": "Sign up for free, keep your number, and let HandyPlan answer when you can't.",
+    "cta": "Get started free",
+    "trust": ["Free to use", "No credit card", "Keep your number"]
   },
   "footer": {
-    "tagline": "The simple booking solution for craftsmen. Made with care in Germany.",
-    "columns": {
-      "product": {
-        "title": "Product",
-        "links": ["Features", "Pricing", "Demo", "Updates", "Roadmap"]
-      },
-      "resources": {
-        "title": "Resources",
-        "links": ["Blog", "Help Center", "API Docs", "Integrations", "Templates"]
-      },
-      "company": {
-        "title": "Company",
-        "links": ["About", "Careers", "Contact", "Press", "Partners"]
-      },
-      "legal": {
-        "title": "Legal",
-        "links": ["Imprint", "Privacy (GDPR)", "Terms", "Cookies"]
-      }
-    },
-    "rights": "© {year} HandyPlan GmbH. All rights reserved.",
-    "madeWith": "Made with care in Germany 🇩🇪"
+    "tagline": "HandyPlan turns missed calls into booked jobs for trade businesses.",
+    "explore": "Explore",
+    "legal": "Legal",
+    "legalLinks": ["Imprint", "Privacy"],
+    "rights": "© {year} HandyPlan. All rights reserved.",
+    "madeWith": "Made in Cottbus"
   },
   "a11y": {
     "home": "HandyPlan home",
@@ -303,31 +215,29 @@
     "or": "or continue with email",
     "continueWith": "Continue with {provider}",
     "noAccount": "New to HandyPlan?",
-    "signUp": "Start your free trial",
+    "signUp": "Create a free account",
     "secure": "GDPR-compliant · EU-hosted · Encrypted",
     "errors": {
       "required": "Please enter your email and password.",
       "invalid": "That email or password doesn't look right. Please try again."
     },
     "brand": {
-      "heading": "Run your day, not your phone.",
-      "subtitle": "Join 500+ German craftsmen who take bookings online — even up a ladder or in a basement.",
+      "heading": "Welcome back to HandyPlan.",
+      "subtitle": "See your job cards and bookings wherever you are.",
       "bullets": [
-        "Customers book 24/7, automatically",
-        "40% fewer no-shows with reminders",
-        "Your whole week, organised on your phone"
+        "Every missed call gets a text back",
+        "All the job details on one card",
+        "Book with one tap"
       ],
-      "quote": "Setup took ten minutes and now I focus on the work instead of the phone.",
-      "author": "Anna Schmidt",
-      "role": "Plumber · Munich"
+      "note": "GDPR-compliant and hosted in Frankfurt. Your data stays in the EU."
     }
   },
   "signup": {
     "backHome": "Back to home",
     "title": "Create your account",
-    "subtitle": "Start your 14-day free trial — no credit card required.",
+    "subtitle": "Free to use. No credit card needed.",
     "name": "Full name",
-    "namePlaceholder": "Max Mustermann",
+    "namePlaceholder": "Alex Miller",
     "email": "Email",
     "emailPlaceholder": "you@company.de",
     "password": "Password",
@@ -347,66 +257,93 @@
       "terms": "Please accept the Terms to continue."
     },
     "brand": {
-      "heading": "Win back your evenings.",
-      "subtitle": "Set up in 10 minutes and let customers book around the clock — while you get back to the craft.",
+      "heading": "Stop losing jobs to missed calls.",
+      "subtitle": "Keep your number and let HandyPlan answer when you can't pick up.",
       "bullets": [
-        "14-day free trial, full features",
-        "No credit card required",
-        "Cancel anytime, no contracts"
+        "The core product is free",
+        "Keep your existing number",
+        "Pay only for the AI features you switch on"
       ],
-      "stat": "Trusted by 500+ craftsmen across Germany"
+      "stat": "GDPR-compliant and hosted in Frankfurt."
     }
   },
   "onboarding": {
     "stepLabel": "Step {current} of {total}",
-    "skip": "Skip for now",
+    "skip": "Finish later",
+    "skipStep": "Skip this step",
     "back": "Back",
     "continue": "Continue",
-    "finish": "Finish setup",
+    "finish": "Finish",
+    "optional": "optional",
+    "laterNote": "You can change or add all of this later.",
     "steps": {
       "business": "Business",
-      "services": "Services",
-      "availability": "Availability"
+      "contact": "Contact",
+      "hours": "Hours"
     },
     "business": {
       "title": "Tell us about your business",
-      "subtitle": "This appears on your booking page and customer reminders.",
-      "name": "Business name",
-      "namePlaceholder": "Weber Elektrotechnik",
-      "trade": "Your trade",
-      "tradePlaceholder": "Select your trade",
+      "subtitle": "Just the basics. It takes about a minute.",
+      "name": "Company name",
+      "nameHint": "Callers see this name in the text they get from you.",
+      "namePlaceholder": "Weber Electrical",
+      "trade": "Trade",
+      "tradePlaceholder": "Choose your trade",
       "trades": {
-        "electrician": "Electrician",
-        "plumber": "Plumber",
-        "hvac": "HVAC technician",
-        "carpenter": "Carpenter",
-        "painter": "Painter",
-        "roofer": "Roofer",
+        "electrician": "Electrical",
+        "plumber": "Plumbing",
+        "hvac": "Heating and air conditioning",
+        "carpenter": "Carpentry",
+        "painter": "Painting and decorating",
+        "roofer": "Roofing",
+        "tiler": "Tiling",
         "locksmith": "Locksmith",
+        "chimneySweep": "Chimney sweeping",
+        "mechanic": "Car repair",
         "other": "Other"
       },
-      "phone": "Phone number",
-      "phoneOptional": "optional",
-      "phonePlaceholder": "+49 30 1234567"
+      "employees": "How many people work in your business?",
+      "employeeOptions": {
+        "solo": "Just me",
+        "2to5": "2 to 5",
+        "6to10": "6 to 10",
+        "11to20": "11 to 20",
+        "21to50": "21 to 50",
+        "over50": "More than 50"
+      }
     },
-    "services": {
-      "title": "What do you offer?",
-      "subtitle": "Pick the services customers can book. You can fine-tune these later.",
-      "hint": "Select at least one",
-      "options": {
-        "consultation": "On-site consultation",
-        "installation": "Installation",
-        "repair": "Repair",
-        "maintenance": "Maintenance",
-        "inspection": "Inspection",
-        "emergency": "Emergency call-out"
+    "contact": {
+      "title": "How customers reach you",
+      "subtitle": "We use this for the texts your callers get, and to show you to customers nearby.",
+      "phone": "Business phone",
+      "phoneHint": "The number your customers call",
+      "phonePlaceholder": "+49 355 1234567",
+      "mobile": "Mobile for job cards",
+      "mobileHint": "Where we send new job cards",
+      "mobilePlaceholder": "+49 151 12345678",
+      "emergency": "Emergency number",
+      "emergencyHint": "We add it to the automatic reply, for real emergencies.",
+      "emergencyPlaceholder": "+49 355 7654321",
+      "address": "Business address",
+      "street": "Street and number",
+      "streetPlaceholder": "Street and number",
+      "postcode": "Postcode",
+      "postcodePlaceholder": "Postcode",
+      "city": "City",
+      "cityPlaceholder": "City",
+      "radius": "How far do you travel for jobs?",
+      "radiusOptions": {
+        "10": "10 km",
+        "25": "25 km",
+        "50": "50 km",
+        "100": "100 km or more"
       },
-      "customLabel": "Add your own",
-      "customPlaceholder": "e.g. Boiler service"
+      "website": "Website",
+      "websitePlaceholder": "www.your-business.com"
     },
-    "availability": {
-      "title": "When are you available?",
-      "subtitle": "Set your default working days and hours. Customers can only book within these.",
+    "hours": {
+      "title": "When do you work?",
+      "subtitle": "We only suggest times inside your working hours.",
       "days": "Working days",
       "hours": "Working hours",
       "from": "From",
@@ -419,27 +356,152 @@
         "fri": "Fri",
         "sat": "Sat",
         "sun": "Sun"
-      }
+      },
+      "services": "Which jobs do you take?",
+      "options": {
+        "consultation": "On-site consultation",
+        "installation": "Installation",
+        "repair": "Repair",
+        "maintenance": "Maintenance",
+        "inspection": "Inspection",
+        "emergency": "Emergency call-out"
+      },
+      "customLabel": "Anything else?",
+      "customPlaceholder": "e.g. Boiler service"
     },
     "done": {
-      "badge": "Setup complete",
+      "badge": "Account ready",
       "title": "You're all set, {name}!",
       "titleNoName": "You're all set!",
-      "subtitle": "Your HandyPlan account is ready. Share your booking link and start taking appointments today.",
-      "summaryTitle": "Your setup",
+      "subtitle": "Your HandyPlan account is ready. Add or change any detail whenever you like.",
+      "progress": "Profile {percent}% complete",
+      "missingTitle": "Still to add",
+      "missing": {
+        "business": "Company name and trade",
+        "employees": "Team size",
+        "phones": "Phone numbers",
+        "address": "Address",
+        "hours": "Working hours",
+        "services": "Jobs you take"
+      },
+      "add": "Add",
+      "summaryTitle": "Your details",
+      "edit": "Edit",
       "labels": {
-        "business": "Business",
+        "business": "Company",
         "trade": "Trade",
-        "services": "Services",
-        "availability": "Availability"
+        "employees": "Team size",
+        "phone": "Business phone",
+        "mobile": "Job cards to",
+        "emergency": "Emergency number",
+        "address": "Address",
+        "radius": "Travels up to",
+        "website": "Website",
+        "hours": "Working hours",
+        "services": "Jobs"
       },
       "cta": "Go to dashboard",
       "secondary": "Back to home"
     },
     "errors": {
-      "business": "Please enter your business name and select your trade.",
-      "services": "Please select at least one service.",
-      "availability": "Please choose at least one working day."
+      "business": "Please enter your company name, or skip this step for now.",
+      "contact": "The postcode needs 5 digits. Everything else was saved.",
+      "hours": "Something went wrong. Please try again."
+    },
+    "aside": {
+      "previewTitle": "What your callers get",
+      "namePlaceholder": "your company",
+      "previewText": "Hi, this is {name}. We're on a job right now. Tell us briefly what's wrong and where, and we'll get back to you today.",
+      "previewEmergency": "For emergencies, call {phone}.",
+      "previewNote": "This is the text your callers get when you miss their call. It updates as you fill in your details.",
+      "whyTitle": "Why we ask",
+      "why": {
+        "business": "Your company name goes into the text your callers get. Trade and team size help us show you to the right customers.",
+        "contact": "New job cards go to your mobile. Your emergency number is added to the automatic reply, so real emergencies still reach a person.",
+        "hours": "We only suggest times inside your working hours, so nobody gets offered a slot at 10 pm."
+      }
+    }
+  },
+  "dashboard": {
+    "meta": "Dashboard",
+    "roles": {
+      "business": "Business",
+      "customer": "Customer"
+    },
+    "groups": {
+      "work": "Work",
+      "account": "Account",
+      "main": "Menu"
+    },
+    "nav": {
+      "label": "Dashboard navigation",
+      "overview": "Overview",
+      "jobs": "Job cards",
+      "calls": "Missed calls",
+      "calendar": "Calendar",
+      "customers": "Customers",
+      "messages": "Messages",
+      "profile": "Business profile",
+      "ai": "AI features",
+      "settings": "Settings",
+      "find": "Find a tradesperson",
+      "bookings": "My bookings"
+    },
+    "sidebar": {
+      "collapse": "Collapse sidebar",
+      "expand": "Expand sidebar",
+      "open": "Open menu",
+      "close": "Close menu",
+      "upgradeTitle": "AI calling agent",
+      "upgradeBody": "Picks up when you can't and writes the job card for you.",
+      "upgradeCta": "See AI features"
+    },
+    "header": {
+      "search": "Search jobs, customers, numbers",
+      "notifications": "Notifications",
+      "userMenu": "Account menu",
+      "profile": "Business profile",
+      "settings": "Settings",
+      "logout": "Log out",
+      "yourAccount": "Your account"
+    },
+    "overview": {
+      "greeting": "Good to see you, {name}.",
+      "greetingNoName": "Welcome to HandyPlan.",
+      "subtitle": "Here's what's happening with your calls and jobs.",
+      "stats": {
+        "missed": "Missed calls today",
+        "cards": "Open job cards",
+        "booked": "Booked this week",
+        "reply": "Average reply time"
+      },
+      "noData": "No data yet",
+      "setupTitle": "Finish your profile",
+      "setupBody": "Your profile is {percent}% complete. Your company name and emergency number go straight into the automatic reply.",
+      "setupCta": "Continue setup",
+      "jobsTitle": "Latest job cards",
+      "viewAll": "View all",
+      "jobsEmptyTitle": "No job cards yet",
+      "jobsEmptyBody": "When you miss a call, the caller gets a text and their request shows up here as a job card.",
+      "jobsEmptyCta": "Set up call forwarding",
+      "todayTitle": "Today",
+      "todayEmpty": "Nothing booked for today."
+    },
+    "placeholder": {
+      "empty": "Nothing here yet.",
+      "back": "Back to overview",
+      "editProfile": "Edit company details",
+      "overview": "Your bookings and messages in one place.",
+      "jobs": "Every missed call becomes a job card here, with name, address, problem and urgency.",
+      "calls": "Every call you missed, and whether it turned into a job.",
+      "calendar": "Your booked jobs, day by day, inside your working hours.",
+      "customers": "Everyone who has called or booked you, with their history.",
+      "messages": "The texts HandyPlan sent for you and the replies you got.",
+      "profile": "Your company details. You can change them any time.",
+      "ai": "The AI calling agent and other paid features. You only pay for what you switch on.",
+      "settings": "Account, notifications, call forwarding and language.",
+      "find": "Search by trade and see tradespeople nearby with real free slots.",
+      "bookings": "Your upcoming and past bookings."
     }
   }
 }

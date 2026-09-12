@@ -3,6 +3,7 @@
 import { redirect } from "next/navigation";
 import { hasLocale } from "next-intl";
 import { routing } from "@/i18n/routing";
+import { onboardingSteps } from "@/lib/content";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -37,5 +38,8 @@ export async function signup(formData: FormData): Promise<void> {
   if (!terms) back("terms");
 
   // TODO: create the account & session here.
-  redirect(`/${locale}/onboarding`);
+  // Go straight to the first step: redirecting to /onboarding (a prerendered
+  // page that itself redirects) crashed the client on Netlify, whose cache
+  // served a stale redirect for the action response.
+  redirect(`/${locale}/onboarding/${onboardingSteps[0]}`);
 }

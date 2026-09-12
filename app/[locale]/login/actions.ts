@@ -30,5 +30,5 @@ export async function login(formData: FormData): Promise<void> {
   if (!EMAIL_RE.test(email) || password.length < 6) back("invalid");
 
   // TODO: verify credentials & create a session here.
-  redirect(`/${locale}`);
+  redirect(`/${locale}/dashboard`);
 }

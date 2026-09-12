@@ -307,7 +307,7 @@ export default async function SignupPage({ params, searchParams }: PageProps) {
         {/* bottom: trust stat */}
         <div className="relative flex items-center gap-3 rounded-2xl bg-white/10 p-5 ring-1 ring-inset ring-white/15 backdrop-blur-sm">
           <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/15 ring-1 ring-inset ring-white/20">
-            <Icon name="users" size={22} />
+            <Icon name="shield" size={22} />
           </span>
           <p className="text-sm font-medium text-white/90">{t("brand.stat")}</p>
         </div>
