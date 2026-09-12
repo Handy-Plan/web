@@ -71,12 +71,12 @@ export default function Navbar() {
           >
             {t("login")}
           </Link>
-          <a
+          <Link
             href={navConfig.cta.href}
             className="inline-flex h-11 items-center rounded-xl bg-gradient-to-br from-primary to-indigo px-6 text-[15px] font-semibold text-white shadow-[0_4px_14px_rgba(3,105,161,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[var(--shadow-glow)] hover:brightness-[1.05]"
           >
             {t("cta")}
-          </a>
+          </Link>
         </div>
 
         {/* Mobile controls */}
@@ -124,13 +124,13 @@ export default function Navbar() {
             >
               {t("login")}
             </Link>
-            <a
+            <Link
               href={navConfig.cta.href}
               onClick={() => setOpen(false)}
               className="rounded-xl bg-gradient-to-br from-primary to-indigo px-4 py-3 text-center font-semibold text-white shadow-[var(--shadow-soft)]"
             >
               {t("cta")}
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

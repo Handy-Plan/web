@@ -3,11 +3,13 @@
 import { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import { useLocale } from "next-intl";
 
 gsap.registerPlugin(useGSAP);
 
 type Props = {
   value: number;
+  prefix?: string;
   suffix?: string;
   decimals?: number;
   className?: string;
@@ -16,21 +18,28 @@ type Props = {
 /** Counts up to `value` when scrolled into view (IntersectionObserver-driven). */
 export default function Counter({
   value,
+  prefix = "",
   suffix = "",
   decimals = 0,
   className,
 }: Props) {
   const ref = useRef<HTMLSpanElement>(null);
+  const locale = useLocale();
 
   useGSAP(
     () => {
       const el = ref.current;
       if (!el) return;
 
+      // Locale-aware grouping: 9,000 (en) vs 9.000 (de).
       const format = (n: number) =>
-        decimals > 0
-          ? n.toFixed(decimals)
-          : Math.round(n).toLocaleString("en-US");
+        prefix +
+        (decimals > 0
+          ? n.toLocaleString(locale, {
+              minimumFractionDigits: decimals,
+              maximumFractionDigits: decimals,
+            })
+          : Math.round(n).toLocaleString(locale));
 
       const reduce = window.matchMedia(
         "(prefers-reduced-motion: reduce)",
@@ -74,7 +83,7 @@ export default function Counter({
 
   return (
     <span ref={ref} className={className}>
-      0{suffix}
+      {prefix}0{suffix}
     </span>
   );
 }

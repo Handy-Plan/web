@@ -131,26 +131,13 @@ export default async function LoginPage({ params, searchParams }: PageProps) {
           </ul>
         </div>
 
-        {/* bottom: testimonial */}
-        <figure className="relative rounded-2xl bg-white/10 p-6 ring-1 ring-inset ring-white/15 backdrop-blur-sm">
-          <div className="flex gap-0.5 text-white">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <Icon key={i} name="star" size={16} filled />
-            ))}
-          </div>
-          <blockquote className="mt-3 text-pretty leading-relaxed text-white/90">
-            “{t("brand.quote")}”
-          </blockquote>
-          <figcaption className="mt-4 flex items-center gap-3">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/15 text-sm font-bold ring-1 ring-inset ring-white/20">
-              AS
-            </span>
-            <div className="text-sm">
-              <p className="font-bold">{t("brand.author")}</p>
-              <p className="text-white/70">{t("brand.role")}</p>
-            </div>
-          </figcaption>
-        </figure>
+        {/* bottom: trust note */}
+        <div className="relative flex items-center gap-3 rounded-2xl bg-white/10 p-5 ring-1 ring-inset ring-white/15 backdrop-blur-sm">
+          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/15 ring-1 ring-inset ring-white/20">
+            <Icon name="shield" size={22} />
+          </span>
+          <p className="text-sm font-medium text-white/90">{t("brand.note")}</p>
+        </div>
       </aside>
 
       {/* ── Form panel ───────────────────────────────────────────── */}

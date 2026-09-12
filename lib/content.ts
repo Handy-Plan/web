@@ -2,9 +2,9 @@
  * Non-translatable structure & configuration.
  *
  * All user-facing copy lives in `messages/<locale>.json` and is read via
- * next-intl. This file keeps only locale-independent data — icons, accent
- * keys, numeric values, prices, hrefs and ordering — which components zip
- * together with the translated strings (by array index / key).
+ * next-intl. This file keeps only locale-independent data — icons, numeric
+ * values, hrefs and ordering — which components zip together with the
+ * translated strings (by array index / key).
  *
  * Keep the order of these arrays in sync with the matching arrays in the
  * message files.
@@ -14,76 +14,123 @@ import type { IconName } from "@/components/ui/Icon";
 
 export const navConfig = {
   links: [
-    { key: "features", href: "#features" },
+    { key: "problem", href: "#problem" },
     { key: "howItWorks", href: "#how-it-works" },
-    { key: "pricing", href: "#pricing" },
+    { key: "model", href: "#model" },
     { key: "faq", href: "#faq" },
   ],
-  cta: { href: "#pricing" },
+  /** Locale-relative routes — render with the i18n Link or prefix the locale. */
+  cta: { href: "/signup" },
   login: { href: "/login" },
 } as const;
 
-export type StatConfig = { value: number; suffix: string; decimals?: number };
-
-export const statsConfig: readonly StatConfig[] = [
-  { value: 10000, suffix: "+" },
-  { value: 500, suffix: "+" },
-  { value: 40, suffix: "%" },
-  { value: 4.8, suffix: "/5", decimals: 1 },
+/** Trust bar credential icons (order matches trustBar.items in messages). */
+export const trustBarIcons: readonly IconName[] = [
+  "shield",
+  "server",
+  "lock",
+  "globe",
+  "award",
 ];
 
-export type ProblemAccent = "danger" | "warning";
+export type StatConfig = { value: number; prefix?: string };
 
-export const problemsConfig: readonly {
+/** Market figures (order matches market.items; suffixes are per-locale). */
+export const marketStatsConfig: readonly StatConfig[] = [
+  { value: 9000 },
+  { value: 45000 },
+  { value: 1, prefix: "~" },
+  { value: 62 },
+];
+
+/** Icons for the two "How it works" flows (order matches the message arrays). */
+export const craftsmanFlowIcons: readonly IconName[] = [
+  "phone-missed",
+  "message",
+  "clipboard",
+  "calendar-check",
+];
+
+export const customerFlowIcons: readonly IconName[] = [
+  "search",
+  "compare",
+  "bolt",
+  "check",
+];
+
+/** "Why HandyPlan" card icons (order matches why.cards). */
+export const whyIcons: readonly IconName[] = ["phone", "target", "shield"];
+
+/** Pricing cards (keys match `model.*` in messages). */
+export const businessModelConfig: readonly {
+  key: "free" | "paid";
   icon: IconName;
-  accent: ProblemAccent;
+  featured: boolean;
 }[] = [
-  { icon: "phone", accent: "danger" },
-  { icon: "calendar", accent: "warning" },
-  { icon: "clock", accent: "danger" },
+  { key: "free", icon: "check", featured: true },
+  { key: "paid", icon: "sparkle", featured: false },
 ];
 
-export const featuresConfig: readonly { icon: IconName }[] = [
-  { icon: "widget" },
-  { icon: "calendar" },
-  { icon: "mobile" },
-  { icon: "bell" },
-  { icon: "users" },
-  { icon: "invoice" },
-];
+/** Language tiles (order matches languages.items). */
+export const languagesConfig = [
+  { code: "de", available: true },
+  { code: "en", available: true },
+  { code: "ar", available: false },
+] as const;
 
-export const stepsConfig: readonly { number: string; icon: IconName }[] = [
-  { number: "1", icon: "signup" },
-  { number: "2", icon: "setup" },
-  { number: "3", icon: "rocket" },
-];
+/* ── Dashboard ───────────────────────────────────────────────────
+   One shell for both roles; each role gets its own sidebar navigation.
+   Section pages live at /dashboard/<key>; labels are `dashboard.nav.<key>`. */
+export type DashboardRole = "business" | "customer";
+export type DashboardNavItem = { key: string; href: string; icon: IconName };
+export type DashboardNavGroup = { key: string; items: DashboardNavItem[] };
 
-export const testimonialsConfig: readonly { initials: string }[] = [
-  { initials: "MW" },
-  { initials: "AS" },
-  { initials: "TM" },
-];
+const navItem = (key: string, icon: IconName): DashboardNavItem => ({
+  key,
+  icon,
+  href: key === "overview" ? "/dashboard" : `/dashboard/${key}`,
+});
 
-export type PlanInterval = "monthly" | "yearly";
-
-export const pricingConfig = {
-  plans: [
-    { monthly: 19, yearly: 190, featured: false },
-    { monthly: 39, yearly: 390, featured: true },
-    { monthly: 79, yearly: 790, featured: false },
+export const dashboardNav: Record<DashboardRole, DashboardNavGroup[]> = {
+  business: [
+    {
+      key: "work",
+      items: [
+        navItem("overview", "home"),
+        navItem("jobs", "clipboard"),
+        navItem("calls", "phone-missed"),
+        navItem("calendar", "calendar"),
+        navItem("customers", "users"),
+        navItem("messages", "message"),
+      ],
+    },
+    {
+      key: "account",
+      items: [
+        navItem("profile", "building"),
+        navItem("ai", "sparkle"),
+        navItem("settings", "gear"),
+      ],
+    },
   ],
-} as const;
-
-/** Footer column keys (match `footer.columns.*` in messages) + brand socials. */
-export const footerConfig = {
-  columns: ["product", "resources", "company", "legal"] as const,
-  socials: ["LinkedIn", "Facebook", "Instagram", "YouTube"] as const,
+  customer: [
+    {
+      key: "main",
+      items: [
+        navItem("overview", "home"),
+        navItem("find", "search"),
+        navItem("bookings", "calendar-check"),
+        navItem("messages", "message"),
+      ],
+    },
+    { key: "account", items: [navItem("settings", "gear")] },
+  ],
 };
 
 /* ── Onboarding wizard ───────────────────────────────────────────
    Ordered steps + the option keys for each step. Labels live in the
    `onboarding` message namespace, keyed by these same strings. */
-export const onboardingSteps = ["business", "services", "availability"] as const;
+export const onboardingSteps = ["business", "contact", "hours"] as const;
 export type OnboardingStep = (typeof onboardingSteps)[number];
 
 export const tradeOptions = [
@@ -93,9 +140,25 @@ export const tradeOptions = [
   "carpenter",
   "painter",
   "roofer",
+  "tiler",
   "locksmith",
+  "chimneySweep",
+  "mechanic",
   "other",
 ] as const;
+
+/** Team-size buckets for "How many people work in your business?". */
+export const employeeOptions = [
+  "solo",
+  "2to5",
+  "6to10",
+  "11to20",
+  "21to50",
+  "over50",
+] as const;
+
+/** Service-area radius in km. */
+export const serviceRadiusOptions = ["10", "25", "50", "100"] as const;
 
 export const serviceOptions = [
   "consultation",
@@ -115,12 +178,3 @@ export const weekdays = [
   "sat",
   "sun",
 ] as const;
-
-/** Trust bar credential icons (order matches trustBar.items in messages). */
-export const trustBarIcons: readonly IconName[] = [
-  "shield",
-  "server",
-  "lock",
-  "award",
-  "star",
-];

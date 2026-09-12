@@ -39,19 +39,20 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "meta" });
 
   return {
-    metadataBase: new URL("https://handyplan.de"),
+    metadataBase: new URL("https://handyplan.netlify.app"),
     title: {
       default: t("title"),
       template: "%s · HandyPlan",
     },
     description: t("description"),
     keywords: [
-      "booking software",
-      "craftsmen",
-      "Handwerker",
-      "appointment scheduling",
-      "Germany",
-      "field service",
+      "Handwerk",
+      "Handwerksbetrieb",
+      "verpasste Anrufe",
+      "missed calls",
+      "Erreichbarkeit",
+      "job intake",
+      "Cottbus",
     ],
     alternates: {
       languages: { en: "/en", de: "/de" },

@@ -1,279 +1,191 @@
 {
   "meta": {
-    "title": "HandyPlan — Buchungssoftware für Handwerker",
-    "description": "Die einfache, mobil-optimierte Buchungsplattform für deutsche Handwerker. Lassen Sie Kunden rund um die Uhr buchen, senken Sie Nichterscheinen um 40 % mit automatischen Erinnerungen und verwalten Sie Ihren Tag direkt vom Handy.",
-    "ogDescription": "Mehr Buchungen. Weniger Stress. Keine verpassten Anrufe. Für deutsche Handwerker entwickelt."
+    "title": "HandyPlan · Keine Aufträge mehr durch verpasste Anrufe verlieren",
+    "description": "Wenn Sie auf der Baustelle nicht rangehen können, schreibt HandyPlan dem Anrufer sofort eine SMS, fragt nach, worum es geht, und schickt Ihnen alles als Job-Karte aufs Handy. Sie wählen einen Termin, fertig. Kostenlos nutzbar.",
+    "ogDescription": "Aus verpassten Anrufen werden gebuchte Aufträge. Kostenlos für Handwerksbetriebe."
   },
   "nav": {
-    "features": "Funktionen",
+    "problem": "Das Problem",
     "howItWorks": "So funktioniert's",
-    "pricing": "Preise",
+    "model": "Preise",
     "faq": "FAQ",
-    "cta": "Kostenlos testen",
+    "cta": "Kostenlos starten",
     "login": "Anmelden"
   },
   "hero": {
-    "badge": "Die Nr. 1 Buchungslösung für Handwerker in Deutschland",
-    "titleLead": "Mehr Buchungen. Weniger Stress.",
-    "titleAccent": "Keine verpassten Anrufe.",
-    "subtitle": "HandyPlan ist die Buchungsplattform speziell für deutsche Handwerker. Ihre Kunden buchen rund um die Uhr online — auch wenn Sie gerade auf der Leiter oder im Keller stehen.",
+    "badge": "Für Handwerksbetriebe gemacht",
+    "titleLead": "Sie stehen auf der Leiter.",
+    "titleAccent": "Ihr Kunde bekommt trotzdem eine Antwort.",
+    "subtitle": "Wenn Sie nicht rangehen können, schreibt HandyPlan dem Anrufer sofort eine SMS und fragt, worum es geht. Sie bekommen alles aufs Handy und buchen den Auftrag mit einem Tipp.",
     "bullets": [
-      "40 % weniger Nichterscheinen dank automatischer Erinnerungen",
-      "Sparen Sie 5 Stunden pro Woche — kein Telefon-Ping-Pong mehr",
-      "In 10 Minuten eingerichtet, keine komplizierte Software"
+      "Jeder verpasste Anruf bekommt in Sekunden eine SMS zurück",
+      "Name, Adresse, Problem und Dringlichkeit auf einer Karte",
+      "Auftrag mit einem Tipp buchen. Ganz ohne Bürosoftware."
     ],
-    "primaryCta": "14 Tage kostenlos testen",
-    "secondaryCta": "Demo ansehen",
-    "trust": ["Keine Kreditkarte nötig", "Jederzeit kündbar", "DSGVO-konform"]
+    "primaryCta": "Kostenlos starten",
+    "secondaryCta": "So funktioniert's",
+    "trust": ["Kostenlos nutzbar", "Ihre Nummer bleibt", "Daten bleiben in der EU"]
   },
-  "stats": {
-    "items": [
-      "Gebuchte Termine",
-      "Handwerker an Bord",
-      "Weniger Nichterscheinen",
-      "Durchschnittsbewertung"
-    ]
+  "mockup": {
+    "missedCall": "Verpasster Anruf",
+    "missedTime": "09:42 · auf der Baustelle",
+    "autoReplyLabel": "Automatische Antwort · sofort gesendet",
+    "autoReply": "Hallo! Wir sind gerade auf einer Baustelle. Schreiben Sie uns kurz, was los ist und wo, dann melden wir uns heute noch.",
+    "customerReply": "Heizung macht Geräusche, kein Warmwasser. Lindenstraße 12, Cottbus.",
+    "jobCard": "Neue Job-Karte",
+    "labels": {
+      "name": "Name",
+      "address": "Adresse",
+      "problem": "Problem",
+      "urgency": "Dringlichkeit"
+    },
+    "values": {
+      "name": "K. Neumann",
+      "address": "Lindenstraße 12, Cottbus",
+      "problem": "Kein Warmwasser, Heizung laut",
+      "urgency": "Heute"
+    },
+    "slots": ["Heute 16:00", "Morgen 08:00"],
+    "book": "Buchen",
+    "booked": "Termin gebucht",
+    "bookedSub": "Bestätigung an den Kunden gesendet"
   },
   "trustBar": {
     "items": [
-      { "label": "DSGVO-konform", "sublabel": "EU-Datenstandards" },
-      { "label": "In der EU gehostet", "sublabel": "Rechenzentrum Frankfurt" },
-      { "label": "SSL-verschlüsselt", "sublabel": "256-Bit-Sicherheit" },
-      { "label": "Made in Germany", "sublabel": "Fürs Handwerk gebaut" },
-      { "label": "4,8/5 Bewertung", "sublabel": "500+ Handwerker" }
+      { "label": "DSGVO-konform", "sublabel": "AVV vorhanden" },
+      { "label": "Hosting in Frankfurt", "sublabel": "AWS EU-Region" },
+      { "label": "Keine Daten in den USA", "sublabel": "Kunden- und Auftragsdaten bleiben in der EU" },
+      { "label": "Deutsch und Englisch", "sublabel": "Arabisch folgt in Kürze" },
+      { "label": "Entwickelt in Cottbus", "sublabel": "Fürs Handwerk in Deutschland" }
     ]
   },
   "problem": {
-    "eyebrow": "Der Alltag",
-    "title": "Kommt Ihnen das bekannt vor?",
-    "subtitle": "Sie sind nicht allein — 8 von 10 Handwerkern verwalten Termine noch per Telefon und Papier.",
-    "closing": "Aber was, wenn es einfacher ginge?",
-    "items": [
-      {
-        "title": "Verpasste Anrufe = entgangener Umsatz",
-        "body": "Sie sind auf der Baustelle und können nicht rangehen. Jeder verpasste Anruf ist ein Kunde, der einfach den Nächsten bei Google anruft. So verlieren Handwerker 5–8 Aufträge pro Woche."
-      },
-      {
-        "title": "Termin-Chaos",
-        "body": "Klebezettel, ein Papierkalender und eine halbvolle Excel-Tabelle. Doppelbuchungen, vergessene Termine und kein klarer Überblick über die Woche."
-      },
-      {
-        "title": "Nichterscheinen kostet Sie den Tag",
-        "body": "Ohne Erinnerungen vergessen 30–40 % der Kunden den Termin. Sie fahren umsonst durch die halbe Stadt — verlorene Zeit und verlorenes Geld."
-      }
-    ]
+    "eyebrow": "Das Problem",
+    "title": "Wenn Sie arbeiten, ist keiner im Büro.",
+    "subtitle": "So gehen die meisten Aufträge verloren, und Sie bekommen es nicht einmal mit.",
+    "steps": [
+      "Bei jemandem fällt die Heizung aus. Er sucht bei Google einen Handwerker und ruft den ersten an.",
+      "Sie stehen im Keller und haben keine Hand frei. Das Telefon klingelt ins Leere.",
+      "Auf die Mailbox spricht er nicht. Er ruft einfach den nächsten Betrieb auf der Liste an.",
+      "Der Auftrag ist weg, und Sie wussten nicht einmal, dass es ihn gab."
+    ],
+    "claimLabel": "Was es wirklich kostet",
+    "claimTitle": "Ein verpasster Anruf ist ein verlorener Auftrag.",
+    "claimBody": "Die meiste Software verspricht, Ihnen Bürozeit zu sparen. Aber Ihre Stunden zählen Sie nicht. Dass ein Auftrag an die Konkurrenz geht, merken Sie schon.",
+    "whyNowLabel": "Warum jetzt:",
+    "whyNow": "62 % der Handwerksbetriebe zählen Digitalisierung schon heute zu ihren fünf größten Baustellen (Bitkom Research, 2026). Meist fängt es bei der Erreichbarkeit an.",
+    "fitLabel": "Gut zu wissen:",
+    "fit": "HandyPlan ist für ganz normale Anrufe gedacht, etwa eine Angebotsanfrage oder eine Reparatur. Echte Notfälle brauchen einen Menschen am Telefon und gehören deshalb immer auf Ihre Notdienstnummer."
   },
-  "features": {
-    "eyebrow": "Alles an einem Ort",
-    "title": "Alles, was Sie brauchen — nichts, was Sie nicht brauchen",
-    "subtitle": "Einfache, fokussierte Werkzeuge, die sich daran orientieren, wie Handwerker wirklich arbeiten — keine überladene Enterprise-Software.",
+  "market": {
+    "eyebrow": "Der Markt",
+    "title": "Ein Problem in sehr vielen Betrieben",
+    "subtitle": "So viele Betriebe betrifft das.",
     "items": [
-      {
-        "title": "Online-Buchungs-Widget",
-        "body": "Binden Sie es auf Ihrer Website oder Facebook-Seite ein. Kunden buchen rund um die Uhr selbst, auch am Wochenende.",
-        "points": ["Einrichtung per Copy & Paste", "Für Mobilgeräte optimiert", "Ihr eigenes Branding"]
-      },
-      {
-        "title": "Intelligenter Kalender",
-        "body": "Tages-, Wochen- und Monatsansicht mit farblich markierten Aufträgen. Per Drag verschieben, nie doppelt buchen.",
-        "points": ["Konfliktvermeidung", "Google-Kalender-Sync", "Pausen blockieren"]
-      },
-      {
-        "title": "Mobile App",
-        "body": "Für die Baustelle gemacht. Tagesplan sehen, per GPS navigieren, funktioniert offline im Keller.",
-        "points": ["iOS & Android", "Offline-Modus", "Navigation per Fingertipp"]
-      },
-      {
-        "title": "Automatische Erinnerungen",
-        "body": "SMS und E-Mail werden vor jedem Termin automatisch versendet. Senken Sie Nichterscheinen um bis zu 40 %.",
-        "points": ["SMS + E-Mail", "Deutsche Vorlagen", "Vollautomatisch"]
-      },
-      {
-        "title": "Kundendatenbank",
-        "body": "Jeder Kunde, jede Auftragshistorie, Notiz und jedes Foto an einem Ort. Persönlicher Service für Stammkunden.",
-        "points": ["Vollständige Historie", "Notizen & Fotos", "Anruf per Fingertipp"]
-      },
-      {
-        "title": "Einfache Rechnungen",
-        "body": "Erstellen Sie professionelle, steuerkonforme Rechnungen in Sekunden — direkt nach dem Auftrag.",
-        "points": ["PDF in Sekunden", "Deutsches Format", "Zahlungslinks"]
-      }
-    ]
+      { "suffix": "+", "label": "Handwerksbetriebe allein im Kammerbezirk Cottbus (Dez. 2025)" },
+      { "suffix": "", "label": "Beschäftigte im südbrandenburgischen Handwerk" },
+      { "suffix": " Mio.", "label": "Handwerksbetriebe in Deutschland, in 53 Kammern" },
+      { "suffix": " %", "label": "der Handwerksbetriebe nennen Digitalisierung eine Top-5-Herausforderung" }
+    ],
+    "source": "Quellen: Handwerkskammer Cottbus, Zahlen Daten Fakten (Stand 31.12.2025); ZDH; Bitkom Research (504 Handwerksbetriebe)."
   },
   "howItWorks": {
-    "eyebrow": "Schnell startklar",
-    "title": "In 3 einfachen Schritten loslegen",
-    "subtitle": "Von der Anmeldung bis zur ersten Buchung in etwa 15 Minuten.",
-    "cta": "Jetzt kostenlos starten",
-    "items": [
-      {
-        "title": "Anmelden",
-        "body": "Erstellen Sie Ihr Konto in zwei Minuten. Für die Testphase ist keine Kreditkarte nötig.",
-        "time": "2 Min."
-      },
-      {
-        "title": "Einrichten",
-        "body": "Verfügbarkeiten und Leistungen hinzufügen. Buchungs-Widget-Code kopieren.",
-        "time": "10 Min."
-      },
-      {
-        "title": "Buchungen erhalten",
-        "body": "Teilen Sie Ihren Link. Kunden buchen selbst und Sie werden sofort benachrichtigt.",
-        "time": "3 Min."
-      }
-    ]
-  },
-  "testimonials": {
-    "eyebrow": "Von Handwerkern geliebt",
-    "title": "Das sagen unsere Kunden",
-    "subtitle": "Über 500 Handwerker organisieren ihren Tag mit HandyPlan.",
-    "ratingLabel": "Basierend auf 127 Bewertungen",
-    "items": [
-      {
-        "quote": "Seit ich HandyPlan nutze, nehme ich rund 30 % mehr Aufträge an. Die automatischen Erinnerungen haben mein Nichterscheinen halbiert. Beste Investition dieses Jahr.",
-        "name": "Michael Weber",
-        "role": "Elektriker",
-        "city": "Berlin"
-      },
-      {
-        "quote": "Die Einrichtung dauerte zehn Minuten und jetzt kann ich mich auf die Arbeit statt aufs Telefon konzentrieren. Meine Kunden lieben es, online zu buchen, wann es ihnen passt.",
-        "name": "Anna Schmidt",
-        "role": "Installateurin",
-        "city": "München"
-      },
-      {
-        "quote": "Ich bin kein Computermensch, aber das funktioniert einfach. Weniger Nichterscheinen, meine Woche ist organisiert und ich wirke deutlich professioneller.",
-        "name": "Thomas Müller",
-        "role": "Klima- und Heizungstechniker",
-        "city": "Hamburg"
-      }
-    ]
-  },
-  "pricing": {
-    "eyebrow": "Einfache Preise",
-    "title": "Einfache, transparente Preise",
-    "note": "Keine versteckten Kosten. Keine Einrichtungsgebühr. Jederzeit kündbar.",
-    "monthly": "Monatlich",
-    "yearly": "Jährlich",
-    "save": "17 % sparen",
-    "mostPopular": "Am beliebtesten",
-    "perMonth": "/ Monat",
-    "billedYearly": "Jährlich €{amount} berechnet",
-    "orBilledYearly": "oder €{amount} jährlich berechnet",
-    "plans": [
-      {
-        "name": "Starter",
-        "tagline": "Für Einzelhandwerker",
-        "cta": "Loslegen",
-        "features": [
-          "1 Nutzer",
-          "50 Buchungen / Monat",
-          "Online-Buchungs-Widget",
-          "Kalender & mobile App",
-          "E-Mail-Erinnerungen",
-          "Kundendatenbank (Basis)",
-          "E-Mail-Support"
-        ]
-      },
-      {
-        "name": "Professional",
-        "tagline": "Für vielbeschäftigte Profis",
-        "cta": "Kostenlos testen",
-        "features": [
-          "3 Nutzer",
-          "Unbegrenzte Buchungen",
-          "Alles aus Starter",
-          "SMS-Erinnerungen inklusive",
-          "Kundendatenbank (erweitert)",
-          "Rechnungserstellung",
-          "Google-Kalender-Sync",
-          "Priorisierter Support"
-        ]
-      },
-      {
-        "name": "Premium",
-        "tagline": "Für wachsende Teams",
-        "cta": "Loslegen",
-        "features": [
-          "5+ Nutzer",
-          "Alles aus Professional",
-          "Routenoptimierung",
-          "Erweiterte Analysen",
-          "API-Zugang",
-          "White-Label-Option",
-          "Persönlicher Account-Manager",
-          "Telefon-Support"
-        ]
-      }
+    "eyebrow": "So funktioniert's",
+    "title": "Zwei Wege, ein gebuchter Auftrag",
+    "subtitle": "Eine Seite ist für Sie. Die andere für Kunden, die jemanden in der Nähe suchen.",
+    "craftsmanLabel": "Für Ihren Betrieb",
+    "customerLabel": "Für Ihre Kunden",
+    "craftsman": [
+      { "title": "Sie verpassen einen Anruf", "body": "Sie sind beschäftigt und können nicht rangehen. Kein Problem, machen Sie weiter." },
+      { "title": "Wir schreiben zurück", "body": "Der Anrufer bekommt in Sekunden eine SMS und wird gefragt, was los ist und wo." },
+      { "title": "Sie bekommen eine Job-Karte", "body": "Name, Adresse, Problem, Dringlichkeit und Nummer, alles auf Ihrem Handy." },
+      { "title": "Sie wählen einen Termin", "body": "Ein Tipp, und der Kunde bekommt eine Bestätigung. Auftrag gebucht." }
     ],
-    "trust": ["14 Tage kostenlos testen", "Keine Kreditkarte nötig", "Jederzeit kündbar"]
+    "customer": [
+      { "title": "In der Nähe suchen", "body": "Kunden suchen nach Gewerk und sehen Handwerker in der Nähe mit echten freien Terminen." },
+      { "title": "Vergleichen", "body": "Vor der Buchung sehen sie, wer am schnellsten kann und wer am nächsten ist." },
+      { "title": "Prioritäts-Vermittlung (optional)", "body": "Für eine feste Gebühr, die vorher angezeigt wird, vermitteln wir den nächsten freien Termin. Der Preis steigt nie, nur weil es eilig ist." },
+      { "title": "Bestätigt", "body": "Ein Tipp. Der Kunde hat einen Termin, Sie haben den Auftrag." }
+    ],
+    "footnote": "Demnächst: Kalender, Kundenhistorie, Erinnerungen und die Übergabe an Ihr Rechnungsprogramm."
+  },
+  "why": {
+    "eyebrow": "Warum HandyPlan",
+    "title": "Für Betriebe, die keine große Branchensoftware wollen",
+    "subtitle": "Um ans Telefon zu gehen, brauchen Sie kein Büroprogramm.",
+    "cards": [
+      { "title": "Ihre Nummer bleibt", "body": "Keine Website, kein Widget, kein neues Handy. Sie richten eine Rufumleitung auf Ihrer Nummer ein, das war's." },
+      { "title": "Macht eine Sache richtig", "body": "Große Branchenlösungen kosten 49 bis 75 € im Monat und wollen alles können. Marktplätze sind kostenlos, laufen aber nur in ihrer App. HandyPlan sorgt einfach dafür, dass aus verpassten Anrufen Aufträge werden." },
+      { "title": "Fair zu Ihren Kunden", "body": "Niemand zahlt drauf, nur weil die Heizung am Sonntag ausfällt. Die Prioritätsgebühr ist ein fester Betrag und wird vor der Buchung angezeigt." }
+    ]
+  },
+  "model": {
+    "eyebrow": "Preise",
+    "title": "Kostenlos nutzbar. Sie zahlen nur für KI.",
+    "subtitle": "Alles, was Sie brauchen, damit kein Auftrag mehr verloren geht, ist kostenlos. Die KI-Funktionen sind optionale Extras.",
+    "free": {
+      "label": "Kostenlos",
+      "title": "Das komplette Grundprodukt",
+      "points": [
+        "Sofortige SMS-Antwort auf jeden verpassten Anruf",
+        "Job-Karten mit allen Details",
+        "Buchung und Bestätigung mit einem Tipp",
+        "Kunden-App zum Suchen und Buchen"
+      ],
+      "note": "Für die Anmeldung brauchen Sie keine Kreditkarte."
+    },
+    "paid": {
+      "label": "Kostenpflichtige Extras",
+      "title": "KI-Funktionen",
+      "points": [
+        "KI-Telefonassistent, der rangeht, wenn Sie es nicht können, und den Auftrag aufnimmt, auf Deutsch",
+        "KI-Werkzeuge für Ihren Betrieb, zum Beispiel Terminvorschläge und Sprachnotizen",
+        "KI-Hilfe für Kunden, die ihr Problem beschreiben möchten",
+        "Prioritäts-Vermittlung für Kunden zu einem festen Preis"
+      ],
+      "note": "Monatlich oder jährlich. Sie zahlen nur, was Sie einschalten."
+    }
+  },
+  "languages": {
+    "eyebrow": "Sprachen",
+    "title": "In Ihrer Sprache",
+    "subtitle": "Auf Deutsch und Englisch verfügbar. Arabisch folgt in Kürze.",
+    "items": [
+      { "name": "Deutsch", "status": "Verfügbar" },
+      { "name": "English", "status": "Verfügbar" },
+      { "name": "العربية", "status": "Demnächst" }
+    ],
+    "whyLabel": "Warum das wichtig ist:",
+    "why": "Viele Menschen im Handwerk sind mit einer anderen Sprache aufgewachsen. In Gewerken wie Elektrotechnik und Metallbau sind es rund 30 %. Eine andere Plattform, die die Betriebsseite nicht nur auf Deutsch anbietet, haben wir nicht gefunden.",
+    "source": "ZDH, Beschäftigte mit Migrationshintergrund im Handwerk (Statistisches Bundesamt / Mikrozensus)"
   },
   "faq": {
     "eyebrow": "Gut zu wissen",
     "title": "Häufig gestellte Fragen",
     "items": [
-      {
-        "q": "Wie lange dauert die Einrichtung?",
-        "a": "In der Regel 10–15 Minuten. Sie erstellen Ihr Konto, legen Ihre Verfügbarkeiten fest, fügen ein oder zwei Leistungen hinzu und kopieren den Widget-Code. Das war's — Sie können Buchungen annehmen."
-      },
-      {
-        "q": "Brauche ich für die Testphase eine Kreditkarte?",
-        "a": "Nein. Für die 14-tägige kostenlose Testphase sind keine Zahlungsdaten erforderlich. Eine Zahlungsmethode fügen Sie nur hinzu, wenn Sie danach weitermachen möchten."
-      },
-      {
-        "q": "Kann ich jederzeit kündigen?",
-        "a": "Ja. Es gibt keine Verträge und keine Bindung. Kündigen Sie mit einem Klick in Ihren Einstellungen und es wird nichts mehr berechnet."
-      },
-      {
-        "q": "Sind meine Kundendaten sicher?",
-        "a": "Absolut. HandyPlan ist vollständig DSGVO-konform, wird in der EU gehostet und alle Daten werden bei der Übertragung und Speicherung verschlüsselt."
-      },
-      {
-        "q": "Was passiert bei Doppelbuchungen?",
-        "a": "Die können nicht entstehen. Das Buchungs-Widget zeigt nur wirklich freie Zeitfenster an und der Kalender blockiert Konflikte automatisch."
-      },
-      {
-        "q": "Kann ich das Widget auf meiner eigenen Website einbinden?",
-        "a": "Ja. Kopieren Sie einen kurzen Code-Schnipsel auf Ihre Website oder Facebook-Seite — oder teilen Sie einfach Ihren persönlichen Buchungslink, ganz ohne Website."
-      },
-      {
-        "q": "Wie viele SMS-Erinnerungen sind inklusive?",
-        "a": "SMS-Erinnerungen sind in den Tarifen Professional und Premium enthalten. Starter nutzt E-Mail-Erinnerungen, SMS können Sie jederzeit hinzufügen."
-      },
-      {
-        "q": "Bieten Sie Telefon-Support an?",
-        "a": "E-Mail-Support ist in jedem Tarif enthalten, priorisierter Support bei Professional und dedizierter Telefon-Support bei Premium."
-      }
+      { "q": "Wie fange ich an?", "a": "Registrieren Sie sich kostenlos und tragen Sie Ihre Betriebsdaten ein. Dann richten Sie auf Ihrem Handy eine Rufumleitung für Anrufe ein, die Sie nicht annehmen können. Ab dann bekommt jeder verpasste Anruf eine SMS zurück." },
+      { "q": "Ist das wirklich kostenlos?", "a": "Ja. SMS-Antworten, Job-Karten und Buchungen kosten nichts. Sie zahlen nur, wenn Sie eine KI-Funktion einschalten, zum Beispiel den KI-Telefonassistenten." },
+      { "q": "Brauche ich eine Website oder neue Software?", "a": "Nein. HandyPlan funktioniert mit der Nummer, die Sie schon haben. Website, Buchungs-Widget oder Bürosoftware brauchen Sie nicht." },
+      { "q": "Brauchen meine Kunden eine App?", "a": "Nein. Anrufer bekommen eine SMS mit einem kurzen Formular, das in jedem Browser aufgeht. Die Kunden-App ist freiwillig, für alle, die Handwerker in der Nähe suchen und vergleichen wollen." },
+      { "q": "Was ist mit Notfällen?", "a": "Echte Notfälle brauchen einen Menschen am Telefon. Die bleiben auf Ihrer Notdienstnummer. HandyPlan ist für normale Anrufe da, etwa eine Angebotsanfrage oder eine Reparatur." },
+      { "q": "Für welche Gewerke passt HandyPlan?", "a": "Für jeden Betrieb, der bei der Arbeit Anrufe verpasst. Besonders gut passt es, wo viele Reparaturen und Wartungen anfallen, zum Beispiel bei Heizung, Sanitär und Elektro." },
+      { "q": "Wo liegen meine Daten?", "a": "Auf AWS-Servern in Frankfurt. HandyPlan ist DSGVO-konform, einen Auftragsverarbeitungsvertrag (AVV) gibt es, und Kunden- oder Auftragsdaten werden nicht in den USA gespeichert." },
+      { "q": "Welche Sprachen gibt es?", "a": "Deutsch und Englisch. Arabisch folgt in Kürze, auch für Ihre Seite der App und nicht nur für Kunden." }
     ]
   },
   "finalCta": {
-    "title": "Bereit für mehr Buchungen?",
-    "subtitle": "Starten Sie heute kostenlos und erleben Sie, wie einfach Terminplanung sein kann. Keine Kreditkarte erforderlich.",
-    "cta": "14 Tage kostenlos testen",
-    "trust": ["In 10 Minuten eingerichtet", "Keine Einrichtungsgebühr", "Jederzeit kündbar"]
+    "title": "Schluss mit verlorenen Aufträgen durch verpasste Anrufe.",
+    "subtitle": "Kostenlos registrieren, Nummer behalten und HandyPlan antworten lassen, wenn Sie nicht können.",
+    "cta": "Kostenlos starten",
+    "trust": ["Kostenlos nutzbar", "Keine Kreditkarte", "Ihre Nummer bleibt"]
   },
   "footer": {
-    "tagline": "Die einfache Buchungslösung für Handwerker. Mit Sorgfalt in Deutschland gemacht.",
-    "columns": {
-      "product": {
-        "title": "Produkt",
-        "links": ["Funktionen", "Preise", "Demo", "Updates", "Roadmap"]
-      },
-      "resources": {
-        "title": "Ressourcen",
-        "links": ["Blog", "Hilfe-Center", "API-Doku", "Integrationen", "Vorlagen"]
-      },
-      "company": {
-        "title": "Unternehmen",
-        "links": ["Über uns", "Karriere", "Kontakt", "Presse", "Partner"]
-      },
-      "legal": {
-        "title": "Rechtliches",
-        "links": ["Impressum", "Datenschutz (DSGVO)", "AGB", "Cookies"]
-      }
-    },
-    "rights": "© {year} HandyPlan GmbH. Alle Rechte vorbehalten.",
-    "madeWith": "Mit Sorgfalt in Deutschland gemacht 🇩🇪"
+    "tagline": "HandyPlan macht aus verpassten Anrufen gebuchte Aufträge, für Handwerksbetriebe.",
+    "explore": "Entdecken",
+    "legal": "Rechtliches",
+    "legalLinks": ["Impressum", "Datenschutz"],
+    "rights": "© {year} HandyPlan. Alle Rechte vorbehalten.",
+    "madeWith": "Gemacht in Cottbus"
   },
   "a11y": {
     "home": "HandyPlan Startseite",
@@ -303,29 +215,27 @@
     "or": "oder mit E-Mail fortfahren",
     "continueWith": "Mit {provider} fortfahren",
     "noAccount": "Neu bei HandyPlan?",
-    "signUp": "Kostenlose Testphase starten",
+    "signUp": "Kostenloses Konto erstellen",
     "secure": "DSGVO-konform · In der EU gehostet · Verschlüsselt",
     "errors": {
       "required": "Bitte geben Sie E-Mail und Passwort ein.",
       "invalid": "E-Mail oder Passwort scheint nicht zu stimmen. Bitte versuchen Sie es erneut."
     },
     "brand": {
-      "heading": "Organisieren Sie Ihren Tag, nicht Ihr Telefon.",
-      "subtitle": "Schließen Sie sich über 500 deutschen Handwerkern an, die Termine online annehmen — auch auf der Leiter oder im Keller.",
+      "heading": "Willkommen zurück bei HandyPlan.",
+      "subtitle": "Ihre Job-Karten und Termine, egal wo Sie gerade sind.",
       "bullets": [
-        "Kunden buchen rund um die Uhr, automatisch",
-        "40 % weniger Nichterscheinen dank Erinnerungen",
-        "Ihre ganze Woche, organisiert auf dem Handy"
+        "Jeder verpasste Anruf bekommt eine SMS zurück",
+        "Alle Auftragsdetails auf einer Karte",
+        "Termine mit einem Tipp buchen"
       ],
-      "quote": "Die Einrichtung dauerte zehn Minuten und jetzt konzentriere ich mich auf die Arbeit statt aufs Telefon.",
-      "author": "Anna Schmidt",
-      "role": "Installateurin · München"
+      "note": "DSGVO-konform und in Frankfurt gehostet. Ihre Daten bleiben in der EU."
     }
   },
   "signup": {
     "backHome": "Zurück zur Startseite",
     "title": "Konto erstellen",
-    "subtitle": "Starten Sie Ihre 14-tägige kostenlose Testphase — keine Kreditkarte nötig.",
+    "subtitle": "Kostenlos nutzbar. Keine Kreditkarte nötig.",
     "name": "Vollständiger Name",
     "namePlaceholder": "Max Mustermann",
     "email": "E-Mail",
@@ -347,66 +257,93 @@
       "terms": "Bitte akzeptieren Sie die AGB, um fortzufahren."
     },
     "brand": {
-      "heading": "Gewinnen Sie Ihre Abende zurück.",
-      "subtitle": "In 10 Minuten eingerichtet — lassen Sie Kunden rund um die Uhr buchen, während Sie sich aufs Handwerk konzentrieren.",
+      "heading": "Schluss mit verlorenen Aufträgen durch verpasste Anrufe.",
+      "subtitle": "Ihre Nummer bleibt, und HandyPlan antwortet, wenn Sie nicht rangehen können.",
       "bullets": [
-        "14 Tage kostenlos, alle Funktionen",
-        "Keine Kreditkarte nötig",
-        "Jederzeit kündbar, keine Verträge"
+        "Das Grundprodukt ist kostenlos",
+        "Ihre bestehende Nummer bleibt",
+        "Sie zahlen nur für KI-Funktionen, die Sie einschalten"
       ],
-      "stat": "Über 500 Handwerker in Deutschland vertrauen darauf"
+      "stat": "DSGVO-konform und in Frankfurt gehostet."
     }
   },
   "onboarding": {
     "stepLabel": "Schritt {current} von {total}",
-    "skip": "Später erledigen",
+    "skip": "Später fertigstellen",
+    "skipStep": "Schritt überspringen",
     "back": "Zurück",
     "continue": "Weiter",
-    "finish": "Einrichtung abschließen",
+    "finish": "Fertig",
+    "optional": "optional",
+    "laterNote": "Alles lässt sich später ändern oder ergänzen.",
     "steps": {
       "business": "Betrieb",
-      "services": "Leistungen",
-      "availability": "Verfügbarkeit"
+      "contact": "Kontakt",
+      "hours": "Arbeitszeiten"
     },
     "business": {
       "title": "Erzählen Sie uns von Ihrem Betrieb",
-      "subtitle": "Das erscheint auf Ihrer Buchungsseite und in den Kundenerinnerungen.",
+      "subtitle": "Nur das Wichtigste. Dauert etwa eine Minute.",
       "name": "Firmenname",
+      "nameHint": "Diesen Namen sehen Anrufer in der SMS, die sie von Ihnen bekommen.",
       "namePlaceholder": "Weber Elektrotechnik",
-      "trade": "Ihr Gewerk",
+      "trade": "Gewerk",
       "tradePlaceholder": "Gewerk auswählen",
       "trades": {
-        "electrician": "Elektriker",
-        "plumber": "Installateur",
-        "hvac": "Klima- & Heizungstechniker",
-        "carpenter": "Tischler",
-        "painter": "Maler",
-        "roofer": "Dachdecker",
-        "locksmith": "Schlosser",
+        "electrician": "Elektro",
+        "plumber": "Sanitär",
+        "hvac": "Heizung und Klima",
+        "carpenter": "Tischlerei / Schreinerei",
+        "painter": "Maler und Lackierer",
+        "roofer": "Dachdeckerei",
+        "tiler": "Fliesen",
+        "locksmith": "Schlüsseldienst",
+        "chimneySweep": "Schornsteinfeger",
+        "mechanic": "Kfz-Werkstatt",
         "other": "Sonstiges"
       },
-      "phone": "Telefonnummer",
-      "phoneOptional": "optional",
-      "phonePlaceholder": "+49 30 1234567"
+      "employees": "Wie viele Personen arbeiten in Ihrem Betrieb?",
+      "employeeOptions": {
+        "solo": "Nur ich",
+        "2to5": "2 bis 5",
+        "6to10": "6 bis 10",
+        "11to20": "11 bis 20",
+        "21to50": "21 bis 50",
+        "over50": "Mehr als 50"
+      }
     },
-    "services": {
-      "title": "Was bieten Sie an?",
-      "subtitle": "Wählen Sie die Leistungen, die Kunden buchen können. Sie können das später anpassen.",
-      "hint": "Mindestens eine auswählen",
-      "options": {
-        "consultation": "Beratung vor Ort",
-        "installation": "Installation",
-        "repair": "Reparatur",
-        "maintenance": "Wartung",
-        "inspection": "Inspektion",
-        "emergency": "Notdiensteinsatz"
+    "contact": {
+      "title": "So erreichen Kunden Sie",
+      "subtitle": "Das nutzen wir für die SMS an Ihre Anrufer und um Sie Kunden in der Nähe zu zeigen.",
+      "phone": "Telefon im Betrieb",
+      "phoneHint": "Die Nummer, die Ihre Kunden anrufen",
+      "phonePlaceholder": "+49 355 1234567",
+      "mobile": "Handy für Job-Karten",
+      "mobileHint": "Hierhin schicken wir neue Job-Karten",
+      "mobilePlaceholder": "+49 151 12345678",
+      "emergency": "Notdienstnummer",
+      "emergencyHint": "Wir nehmen sie in die automatische Antwort auf, für echte Notfälle.",
+      "emergencyPlaceholder": "+49 355 7654321",
+      "address": "Adresse des Betriebs",
+      "street": "Straße und Hausnummer",
+      "streetPlaceholder": "Straße und Hausnummer",
+      "postcode": "PLZ",
+      "postcodePlaceholder": "PLZ",
+      "city": "Ort",
+      "cityPlaceholder": "Ort",
+      "radius": "Wie weit fahren Sie zu Aufträgen?",
+      "radiusOptions": {
+        "10": "10 km",
+        "25": "25 km",
+        "50": "50 km",
+        "100": "100 km oder mehr"
       },
-      "customLabel": "Eigene hinzufügen",
-      "customPlaceholder": "z. B. Heizungswartung"
+      "website": "Website",
+      "websitePlaceholder": "www.ihr-betrieb.de"
     },
-    "availability": {
-      "title": "Wann sind Sie verfügbar?",
-      "subtitle": "Legen Sie Ihre üblichen Arbeitstage und -zeiten fest. Kunden können nur innerhalb dieser buchen.",
+    "hours": {
+      "title": "Wann arbeiten Sie?",
+      "subtitle": "Wir schlagen nur Termine innerhalb Ihrer Arbeitszeiten vor.",
       "days": "Arbeitstage",
       "hours": "Arbeitszeiten",
       "from": "Von",
@@ -419,27 +356,152 @@
         "fri": "Fr",
         "sat": "Sa",
         "sun": "So"
-      }
+      },
+      "services": "Welche Aufträge übernehmen Sie?",
+      "options": {
+        "consultation": "Beratung vor Ort",
+        "installation": "Installation",
+        "repair": "Reparatur",
+        "maintenance": "Wartung",
+        "inspection": "Inspektion",
+        "emergency": "Notdiensteinsatz"
+      },
+      "customLabel": "Noch etwas?",
+      "customPlaceholder": "z. B. Heizungswartung"
     },
     "done": {
-      "badge": "Einrichtung abgeschlossen",
+      "badge": "Konto bereit",
       "title": "Alles bereit, {name}!",
       "titleNoName": "Alles bereit!",
-      "subtitle": "Ihr HandyPlan-Konto ist startklar. Teilen Sie Ihren Buchungslink und nehmen Sie ab heute Termine an.",
-      "summaryTitle": "Ihre Einrichtung",
+      "subtitle": "Ihr HandyPlan-Konto ist eingerichtet. Details können Sie jederzeit ergänzen oder ändern.",
+      "progress": "Profil zu {percent} % vollständig",
+      "missingTitle": "Noch offen",
+      "missing": {
+        "business": "Firmenname und Gewerk",
+        "employees": "Anzahl Mitarbeitende",
+        "phones": "Telefonnummern",
+        "address": "Adresse",
+        "hours": "Arbeitszeiten",
+        "services": "Ihre Aufträge"
+      },
+      "add": "Ergänzen",
+      "summaryTitle": "Ihre Angaben",
+      "edit": "Bearbeiten",
       "labels": {
-        "business": "Betrieb",
+        "business": "Firma",
         "trade": "Gewerk",
-        "services": "Leistungen",
-        "availability": "Verfügbarkeit"
+        "employees": "Mitarbeitende",
+        "phone": "Telefon im Betrieb",
+        "mobile": "Job-Karten an",
+        "emergency": "Notdienstnummer",
+        "address": "Adresse",
+        "radius": "Fährt bis zu",
+        "website": "Website",
+        "hours": "Arbeitszeiten",
+        "services": "Aufträge"
       },
       "cta": "Zum Dashboard",
       "secondary": "Zurück zur Startseite"
     },
     "errors": {
-      "business": "Bitte geben Sie Ihren Firmennamen ein und wählen Sie Ihr Gewerk.",
-      "services": "Bitte wählen Sie mindestens eine Leistung aus.",
-      "availability": "Bitte wählen Sie mindestens einen Arbeitstag."
+      "business": "Bitte geben Sie Ihren Firmennamen ein oder überspringen Sie den Schritt.",
+      "contact": "Die PLZ braucht 5 Ziffern. Alles andere wurde gespeichert.",
+      "hours": "Da ist etwas schiefgelaufen. Bitte versuchen Sie es noch einmal."
+    },
+    "aside": {
+      "previewTitle": "Das bekommen Ihre Anrufer",
+      "namePlaceholder": "Ihr Betrieb",
+      "previewText": "Hallo, hier ist {name}. Wir sind gerade auf einer Baustelle. Schreiben Sie uns kurz, was los ist und wo, dann melden wir uns heute noch.",
+      "previewEmergency": "Bei Notfällen: {phone}",
+      "previewNote": "So sieht die SMS aus, wenn Sie einen Anruf verpassen. Sie passt sich an, während Sie Ihre Angaben ausfüllen.",
+      "whyTitle": "Warum wir fragen",
+      "why": {
+        "business": "Ihr Firmenname steht in der SMS an Ihre Anrufer. Gewerk und Teamgröße helfen uns, Sie den passenden Kunden zu zeigen.",
+        "contact": "Neue Job-Karten gehen an Ihr Handy. Ihre Notdienstnummer steht in der automatischen Antwort, damit echte Notfälle trotzdem einen Menschen erreichen.",
+        "hours": "Wir schlagen nur Termine innerhalb Ihrer Arbeitszeiten vor. So bekommt niemand einen Termin um 22 Uhr angeboten."
+      }
+    }
+  },
+  "dashboard": {
+    "meta": "Dashboard",
+    "roles": {
+      "business": "Betrieb",
+      "customer": "Kunde"
+    },
+    "groups": {
+      "work": "Arbeit",
+      "account": "Konto",
+      "main": "Menü"
+    },
+    "nav": {
+      "label": "Dashboard-Navigation",
+      "overview": "Übersicht",
+      "jobs": "Job-Karten",
+      "calls": "Verpasste Anrufe",
+      "calendar": "Kalender",
+      "customers": "Kunden",
+      "messages": "Nachrichten",
+      "profile": "Firmenprofil",
+      "ai": "KI-Funktionen",
+      "settings": "Einstellungen",
+      "find": "Handwerker finden",
+      "bookings": "Meine Buchungen"
+    },
+    "sidebar": {
+      "collapse": "Seitenleiste einklappen",
+      "expand": "Seitenleiste ausklappen",
+      "open": "Menü öffnen",
+      "close": "Menü schließen",
+      "upgradeTitle": "KI-Telefonassistent",
+      "upgradeBody": "Geht ran, wenn Sie es nicht können, und schreibt die Job-Karte für Sie.",
+      "upgradeCta": "KI-Funktionen ansehen"
+    },
+    "header": {
+      "search": "Aufträge, Kunden, Nummern suchen",
+      "notifications": "Benachrichtigungen",
+      "userMenu": "Kontomenü",
+      "profile": "Firmenprofil",
+      "settings": "Einstellungen",
+      "logout": "Abmelden",
+      "yourAccount": "Ihr Konto"
+    },
+    "overview": {
+      "greeting": "Schön, dass Sie da sind, {name}.",
+      "greetingNoName": "Willkommen bei HandyPlan.",
+      "subtitle": "Das passiert gerade bei Ihren Anrufen und Aufträgen.",
+      "stats": {
+        "missed": "Verpasste Anrufe heute",
+        "cards": "Offene Job-Karten",
+        "booked": "Diese Woche gebucht",
+        "reply": "Ø Antwortzeit"
+      },
+      "noData": "Noch keine Daten",
+      "setupTitle": "Profil vervollständigen",
+      "setupBody": "Ihr Profil ist zu {percent} % vollständig. Firmenname und Notdienstnummer stehen direkt in der automatischen Antwort.",
+      "setupCta": "Weiter einrichten",
+      "jobsTitle": "Neueste Job-Karten",
+      "viewAll": "Alle ansehen",
+      "jobsEmptyTitle": "Noch keine Job-Karten",
+      "jobsEmptyBody": "Wenn Sie einen Anruf verpassen, bekommt der Anrufer eine SMS, und seine Anfrage erscheint hier als Job-Karte.",
+      "jobsEmptyCta": "Rufumleitung einrichten",
+      "todayTitle": "Heute",
+      "todayEmpty": "Für heute ist nichts gebucht."
+    },
+    "placeholder": {
+      "empty": "Hier ist noch nichts.",
+      "back": "Zurück zur Übersicht",
+      "editProfile": "Firmendaten bearbeiten",
+      "overview": "Ihre Buchungen und Nachrichten an einem Ort.",
+      "jobs": "Jeder verpasste Anruf wird hier zur Job-Karte, mit Name, Adresse, Problem und Dringlichkeit.",
+      "calls": "Alle verpassten Anrufe und ob daraus ein Auftrag wurde.",
+      "calendar": "Ihre gebuchten Aufträge, Tag für Tag, innerhalb Ihrer Arbeitszeiten.",
+      "customers": "Alle, die Sie angerufen oder gebucht haben, mit ihrer Historie.",
+      "messages": "Die SMS, die HandyPlan für Sie verschickt hat, und die Antworten darauf.",
+      "profile": "Ihre Firmendaten. Sie können sie jederzeit ändern.",
+      "ai": "Der KI-Telefonassistent und weitere kostenpflichtige Funktionen. Sie zahlen nur, was Sie einschalten.",
+      "settings": "Konto, Benachrichtigungen, Rufumleitung und Sprache.",
+      "find": "Nach Gewerk suchen und Handwerker in der Nähe mit echten freien Terminen sehen.",
+      "bookings": "Ihre kommenden und vergangenen Buchungen."
     }
   }
 }

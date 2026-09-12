@@ -1,4 +1,5 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { navConfig } from "@/lib/content";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import Icon from "@/components/ui/Icon";
@@ -6,6 +7,7 @@ import Reveal from "@/components/animations/Reveal";
 
 export default function FinalCTA() {
   const t = useTranslations("finalCta");
+  const locale = useLocale();
   const trust = t.raw("trust") as string[];
 
   return (
@@ -44,7 +46,7 @@ export default function FinalCTA() {
 
             <div className="mt-9 flex justify-center">
               <Button
-                href="#"
+                href={`/${locale}${navConfig.cta.href}`}
                 size="lg"
                 variant="white"
                 iconAfter="arrow-right"
@@ -54,13 +56,13 @@ export default function FinalCTA() {
             </div>
 
             <ul className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-              {trust.map((t) => (
+              {trust.map((item) => (
                 <li
-                  key={t}
+                  key={item}
                   className="flex items-center gap-1.5 text-sm font-medium text-white/85"
                 >
                   <Icon name="check" size={16} />
-                  {t}
+                  {item}
                 </li>
               ))}
             </ul>
