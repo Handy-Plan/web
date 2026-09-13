@@ -100,7 +100,7 @@ export default async function LoginPage({ params, searchParams }: PageProps) {
         <div className="relative flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2.5">
             <Logo />
-            <span className="text-xl font-bold tracking-tight">HandyPlan</span>
+            <span className="hp-wordmark text-xl font-bold tracking-tight">HandyPlan</span>
           </Link>
           <Link
             href="/"
@@ -145,7 +145,7 @@ export default async function LoginPage({ params, searchParams }: PageProps) {
         <header className="flex items-center justify-between p-6">
           <Link href="/" className="flex items-center gap-2.5 lg:hidden">
             <Logo />
-            <span className="text-xl font-bold tracking-tight text-ink">
+            <span className="hp-wordmark text-xl font-bold tracking-tight text-ink">
               HandyPlan
             </span>
           </Link>

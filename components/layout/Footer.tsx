@@ -29,7 +29,7 @@ export default function Footer() {
               aria-label={a11y("home")}
             >
               <Logo />
-              <span className="text-xl font-bold">HandyPlan</span>
+              <span className="hp-wordmark text-xl font-bold">HandyPlan</span>
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/60">
               {t("tagline")}

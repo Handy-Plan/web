@@ -115,6 +115,25 @@ body {
   letter-spacing: -0.011em;
 }
 
+/* Tailwind v4 resets buttons to `cursor: default`; restore the pointer for
+   every clickable control (accordion, language/theme switches, etc.). */
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  input[type="submit"]:not(:disabled),
+  input[type="button"]:not(:disabled),
+  select:not(:disabled),
+  summary {
+    cursor: pointer;
+  }
+
+  button:disabled,
+  input:disabled,
+  select:disabled {
+    cursor: not-allowed;
+  }
+}
+
 /* Sharper typographic hierarchy — Poppins headings */
 h1,
 h2,
@@ -174,6 +193,90 @@ h4 {
 
 .animate-pulse-soft {
   animation: pulse-soft 2.5s ease-in-out infinite;
+}
+
+/* Logo intro: the tile pops in, the house rises, the tick draws itself.
+   Plays whenever a logo mounts: every page load and client navigation. */
+@keyframes hp-logo-tile {
+  from {
+    transform: scale(0.55);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.06);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes hp-logo-house {
+  from {
+    transform: translateY(5px) scale(0.6);
+    opacity: 0;
+  }
+  70% {
+    transform: translateY(-0.5px) scale(1.05);
+    opacity: 1;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+/* Offset starts past 1 (with a gap longer than the path) so no round-cap
+   dot shows before the tick begins drawing. */
+@keyframes hp-logo-tick {
+  from {
+    stroke-dashoffset: 1.2;
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+.hp-logo-tile {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: hp-logo-tile 0.55s var(--ease-out-expo) both;
+}
+
+.hp-logo-house {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: hp-logo-house 0.6s var(--ease-out-expo) 0.18s both;
+}
+
+.hp-logo-tick {
+  stroke-dasharray: 1 1.5;
+  animation: hp-logo-tick 0.45s ease-out 0.55s both;
+}
+
+/* The "HandyPlan" name next to the logo wipes in from behind the tile. */
+@keyframes hp-wordmark {
+  from {
+    clip-path: inset(-25% 100% -25% -10%);
+    transform: translateX(-8px);
+    opacity: 0;
+  }
+  to {
+    clip-path: inset(-25% -10% -25% -10%);
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.hp-wordmark {
+  display: inline-block;
+  animation: hp-wordmark 0.7s var(--ease-out-expo) 0.3s both;
 }
 
 /* Gradient text helper */

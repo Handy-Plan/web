@@ -1,39 +1,44 @@
 import { cn } from "@/lib/cn";
 
-/** HandyPlan mark: a calendar with an embedded wrench/check. */
+/**
+ * HandyPlan mark ("Home Reply"): a message bubble shaped like a house, with a
+ * tick — the job at someone's home, the instant reply, and the booked job.
+ * The tick is drawn in the tile colour (no mask), so the mark renders
+ * correctly even when several logos sit in hidden and visible containers.
+ *
+ * The `hp-logo-*` classes drive the intro animation in globals.css, which
+ * plays every time a logo mounts (skipped for reduced motion).
+ */
 export default function Logo({ className }: { className?: string }) {
   return (
-    <span
+    <svg
+      viewBox="0 0 40 40"
+      aria-hidden="true"
       className={cn(
-        "flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-indigo shadow-[0_4px_12px_rgba(3,105,161,0.35)]",
+        "h-10 w-10 shrink-0 overflow-visible drop-shadow-[0_4px_10px_rgba(3,105,161,0.3)]",
         className,
       )}
     >
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <rect
-          x="3"
-          y="4.5"
-          width="18"
-          height="16"
-          rx="3"
-          stroke="white"
-          strokeWidth="1.8"
-        />
-        <path d="M3 9h18" stroke="white" strokeWidth="1.8" />
+      <rect width="40" height="40" rx="12" className="hp-logo-tile fill-primary" />
+      <g transform="translate(7 6.5) scale(1.0833)">
         <path
-          d="M8 2.5v4M16 2.5v4"
-          stroke="white"
-          strokeWidth="1.8"
-          strokeLinecap="round"
+          className="hp-logo-house"
+          d="M12 5 19.2 10.4V16.8H11L7 20V16.8H4.8V10.4Z"
+          fill="#fff"
+          stroke="#fff"
+          strokeWidth="3.2"
+          strokeLinejoin="round"
         />
         <path
-          d="m8.5 14.5 2.2 2.2 4.8-5"
-          stroke="white"
-          strokeWidth="1.8"
+          className="hp-logo-tick stroke-primary"
+          d="m8.6 13 2.3 2.3 4.6-4.8"
+          pathLength={1}
+          fill="none"
+          strokeWidth="2.4"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
-      </svg>
-    </span>
+      </g>
+    </svg>
   );
 }
