@@ -43,7 +43,7 @@ export default function Navbar() {
       <nav className="mx-auto flex h-20 max-w-[1200px] items-center justify-between px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2.5" aria-label={a11y("home")}>
           <Logo />
-          <span className="text-xl font-bold tracking-tight text-ink">
+          <span className="hp-wordmark text-xl font-bold tracking-tight text-ink">
             HandyPlan
           </span>
         </Link>

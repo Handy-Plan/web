@@ -28,9 +28,7 @@ export const navConfig = {
 export const trustBarIcons: readonly IconName[] = [
   "shield",
   "server",
-  "lock",
   "globe",
-  "award",
 ];
 
 export type StatConfig = { value: number; prefix?: string };

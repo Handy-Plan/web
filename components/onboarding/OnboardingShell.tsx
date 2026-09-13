@@ -70,10 +70,10 @@ export default async function OnboardingShell({
       <header className="relative mx-auto flex max-w-5xl items-center justify-between gap-3 px-6 py-6">
         <Link href="/" className="flex items-center gap-2.5 text-white">
           {/* white ring so the blue logo tile stands out on the blue band */}
-          <span className="rounded-[14px] ring-2 ring-white/35">
+          <span className="rounded-xl ring-2 ring-white/35">
             <Logo />
           </span>
-          <span className="text-xl font-bold tracking-tight">HandyPlan</span>
+          <span className="hp-wordmark text-xl font-bold tracking-tight">HandyPlan</span>
         </Link>
         <div className="flex items-center gap-2">
           {/* Light pill so the shared controls keep their normal colors */}

@@ -54,9 +54,7 @@
     "items": [
       { "label": "DSGVO-konform", "sublabel": "AVV vorhanden" },
       { "label": "Hosting in Frankfurt", "sublabel": "AWS EU-Region" },
-      { "label": "Keine Daten in den USA", "sublabel": "Kunden- und Auftragsdaten bleiben in der EU" },
-      { "label": "Deutsch und Englisch", "sublabel": "Arabisch folgt in Kürze" },
-      { "label": "Entwickelt in Cottbus", "sublabel": "Fürs Handwerk in Deutschland" }
+      { "label": "Deutsch und Englisch", "sublabel": "Arabisch folgt in Kürze" }
     ]
   },
   "problem": {
@@ -466,7 +464,7 @@
       "yourAccount": "Ihr Konto"
     },
     "overview": {
-      "greeting": "Schön, dass Sie da sind, {name}.",
+      "greeting": "Willkommen zurück.",
       "greetingNoName": "Willkommen bei HandyPlan.",
       "subtitle": "Das passiert gerade bei Ihren Anrufen und Aufträgen.",
       "stats": {

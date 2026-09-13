@@ -77,7 +77,6 @@ export default function DashboardShell({
         <Sidebar
           role={role}
           groups={groups}
-          user={user}
           activeKey={active?.key}
           collapsed={collapsed}
           onToggleCollapse={toggleCollapsed}
@@ -104,7 +103,6 @@ export default function DashboardShell({
           <Sidebar
             role={role}
             groups={groups}
-            user={user}
             activeKey={active?.key}
             onNavigate={closeMobile}
             onClose={closeMobile}

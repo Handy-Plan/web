@@ -18,7 +18,6 @@ const DOTS_ON_BLUE = {
 type Props = {
   role: DashboardRole;
   groups: DashboardNavGroup[];
-  user: DashboardUser;
   activeKey?: string;
   /** Icon-only rail (desktop). */
   collapsed?: boolean;
@@ -34,7 +33,6 @@ type Props = {
 export default function Sidebar({
   role,
   groups,
-  user,
   activeKey,
   collapsed = false,
   onNavigate,
@@ -60,7 +58,7 @@ export default function Sidebar({
         >
           <Logo />
           {!collapsed && (
-            <span className="text-lg font-bold tracking-tight text-ink">HandyPlan</span>
+            <span className="hp-wordmark text-lg font-bold tracking-tight text-ink">HandyPlan</span>
           )}
         </Link>
         {onClose && (
@@ -73,25 +71,6 @@ export default function Sidebar({
             <Icon name="close" size={20} />
           </button>
         )}
-      </div>
-
-      {/* Workspace */}
-      <div className={cn("shrink-0 pt-4", collapsed ? "px-2" : "px-3")}>
-        <div
-          title={collapsed ? user.name : undefined}
-          className={cn(
-            "flex items-center gap-3 rounded-xl border border-line bg-fog",
-            collapsed ? "justify-center p-1.5" : "px-3 py-2.5",
-          )}
-        >
-          <Avatar initials={user.initials} />
-          {!collapsed && (
-            <div className="min-w-0">
-              <p className="truncate text-sm font-semibold text-ink">{user.name}</p>
-              <p className="truncate text-xs text-slate">{user.subtitle}</p>
-            </div>
-          )}
-        </div>
       </div>
 
       {/* Navigation + AI card scroll together on short screens */}
@@ -156,30 +135,34 @@ export default function Sidebar({
       {/* Paid AI features (business only) */}
       {role === "business" && !collapsed && (
         <div className="mt-auto px-3 pb-3">
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary via-indigo to-violet p-4 text-white">
-            <div
+          <Link
+            href="/dashboard/ai"
+            onClick={onNavigate}
+            title={t("sidebar.upgradeBody")}
+            className="group relative flex items-center gap-3 overflow-hidden rounded-xl bg-gradient-to-br from-primary via-indigo to-violet px-3 py-2.5 text-white transition-shadow duration-200 hover:shadow-[var(--shadow-glow)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+          >
+            <span
               aria-hidden
               className="pointer-events-none absolute inset-0 opacity-25"
               style={DOTS_ON_BLUE}
             />
-            <div className="relative">
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/15 ring-1 ring-inset ring-white/25">
-                <Icon name="sparkle" size={16} filled />
+            <span className="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/15 ring-1 ring-inset ring-white/25">
+              <Icon name="sparkle" size={16} filled />
+            </span>
+            <span className="relative min-w-0 flex-1">
+              <span className="block truncate text-sm font-semibold">
+                {t("sidebar.upgradeTitle")}
               </span>
-              <p className="mt-3 text-sm font-semibold">{t("sidebar.upgradeTitle")}</p>
-              <p className="mt-1 text-xs leading-relaxed text-white/80">
-                {t("sidebar.upgradeBody")}
-              </p>
-              <Link
-                href="/dashboard/ai"
-                onClick={onNavigate}
-                className="mt-3 inline-flex h-8 items-center gap-1.5 rounded-lg bg-white px-3 text-xs font-semibold text-primary transition-transform duration-200 hover:-translate-y-0.5"
-              >
+              <span className="block truncate text-xs text-white/80">
                 {t("sidebar.upgradeCta")}
-                <Icon name="arrow-right" size={13} />
-              </Link>
-            </div>
-          </div>
+              </span>
+            </span>
+            <Icon
+              name="arrow-right"
+              size={16}
+              className="relative shrink-0 transition-transform duration-200 group-hover:translate-x-0.5"
+            />
+          </Link>
         </div>
       )}
       </div>

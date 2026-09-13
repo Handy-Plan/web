@@ -54,9 +54,7 @@
     "items": [
       { "label": "GDPR-compliant", "sublabel": "DPA available" },
       { "label": "Hosted in Frankfurt", "sublabel": "AWS EU region" },
-      { "label": "No data in the US", "sublabel": "Customer and job data stay in the EU" },
-      { "label": "German and English", "sublabel": "Arabic coming soon" },
-      { "label": "Built in Cottbus", "sublabel": "For the trades in Germany" }
+      { "label": "German and English", "sublabel": "Arabic coming soon" }
     ]
   },
   "problem": {
@@ -466,7 +464,7 @@
       "yourAccount": "Your account"
     },
     "overview": {
-      "greeting": "Good to see you, {name}.",
+      "greeting": "Welcome back.",
       "greetingNoName": "Welcome to HandyPlan.",
       "subtitle": "Here's what's happening with your calls and jobs.",
       "stats": {

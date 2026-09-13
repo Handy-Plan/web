@@ -40,9 +40,8 @@ export default async function DashboardOverview({ params }: PageProps) {
     <div className="flex flex-col gap-6">
       <div>
         <h1 className="text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">
-          {data.businessName
-            ? t("greeting", { name: data.businessName })
-            : t("greetingNoName")}
+          {/* Short on purpose: long company names made this heading wrap. */}
+          {data.businessName ? t("greeting") : t("greetingNoName")}
         </h1>
         <p className="mt-1.5 text-slate">{t("subtitle")}</p>
       </div>
