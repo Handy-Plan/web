@@ -657,3 +657,19 @@ html.lenis {
     stroke-dashoffset: 0;
   }
 }
+
+/* ── Dashboard ──────────────────────────────────────────────── */
+/* Progress ring draws from empty to its value (set --ring-c = circumference) */
+@keyframes hp-ring-fill {
+  from {
+    stroke-dashoffset: var(--ring-c);
+  }
+}
+.hp-ring-fill {
+  animation: hp-ring-fill 1.2s var(--ease-out-expo) 0.3s both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hp-ring-fill {
+    animation: none !important;
+  }
+}

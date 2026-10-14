@@ -252,7 +252,7 @@ function IconInput({ icon, ...props }: { icon: IconName } & React.InputHTMLAttri
 async function BusinessFields({ data }: { data: OnboardingData }) {
   const t = await getTranslations("onboarding");
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-6 pb-10">
       <Field
         label={t("business.name")}
         description={t("business.nameHint")}
@@ -315,7 +315,7 @@ async function ContactFields({ data }: { data: OnboardingData }) {
   const t = await getTranslations("onboarding");
   const optional = t("optional");
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-6 pb-10">
       <div className="grid gap-5 sm:grid-cols-2">
         <Field
           label={t("contact.phone")}
@@ -446,7 +446,7 @@ async function ContactFields({ data }: { data: OnboardingData }) {
 async function HoursFields({ data }: { data: OnboardingData }) {
   const t = await getTranslations("onboarding");
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-6 pb-10">
       <ChipGroup
         legend={t("hours.days")}
         name="days"

@@ -1,208 +1,134 @@
-# Design System Master File
+# HandyPlan Design System (v2, "night-blue")
 
-> **LOGIC:** When building a specific page, first check `design-system/pages/[page-name].md`.
-> If that file exists, its rules **override** this Master file.
-> If not, strictly follow the rules below.
-
----
-
-**Project:** HandyPlan
-**Generated:** 2026-06-22 03:56:02
-**Category:** B2B Service
-
----
-
-## Global Rules
-
-### Color Palette
-
-| Role | Hex | CSS Variable |
-|------|-----|--------------|
-| Primary | `#0F172A` | `--color-primary` |
-| On Primary | `#FFFFFF` | `--color-on-primary` |
-| Secondary | `#334155` | `--color-secondary` |
-| Accent/CTA | `#0369A1` | `--color-accent` |
-| Background | `#F8FAFC` | `--color-background` |
-| Foreground | `#020617` | `--color-foreground` |
-| Muted | `#E8ECF1` | `--color-muted` |
-| Border | `#E2E8F0` | `--color-border` |
-| Destructive | `#DC2626` | `--color-destructive` |
-| Ring | `#0F172A` | `--color-ring` |
-
-**Color Notes:** Professional navy + blue CTA
-
-### Typography
-
-- **Heading Font:** Poppins
-- **Body Font:** Open Sans
-- **Mood:** modern, professional, clean, corporate, friendly, approachable
-- **Google Fonts:** [Poppins + Open Sans](https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap)
-
-**CSS Import:**
-```css
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
-```
-
-### Spacing Variables
-
-| Token | Value | Usage |
-|-------|-------|-------|
-| `--space-xs` | `4px` / `0.25rem` | Tight gaps |
-| `--space-sm` | `8px` / `0.5rem` | Icon gaps, inline spacing |
-| `--space-md` | `16px` / `1rem` | Standard padding |
-| `--space-lg` | `24px` / `1.5rem` | Section padding |
-| `--space-xl` | `32px` / `2rem` | Large gaps |
-| `--space-2xl` | `48px` / `3rem` | Section margins |
-| `--space-3xl` | `64px` / `4rem` | Hero padding |
-
-### Shadow Depths
-
-| Level | Value | Usage |
-|-------|-------|-------|
-| `--shadow-sm` | `0 1px 2px rgba(0,0,0,0.05)` | Subtle lift |
-| `--shadow-md` | `0 4px 6px rgba(0,0,0,0.1)` | Cards, buttons |
-| `--shadow-lg` | `0 10px 15px rgba(0,0,0,0.1)` | Modals, dropdowns |
-| `--shadow-xl` | `0 20px 25px rgba(0,0,0,0.15)` | Hero images, featured cards |
+> Source of truth for every HandyPlan screen: landing, auth, onboarding,
+> dashboard. Follow it for any new UI. Page-specific overrides may live in
+> `design-system/handyplan/pages/<page>.md`; if one exists, it wins.
+>
+> Skills: load `design-taste-frontend`, `apple-design` and `ui-ux-pro-max`
+> before UI work. Long-form guide (component APIs, motion utilities, the
+> rules we took from each skill, gotchas): `Vault/06 Tech/UI Design System.md`.
+>
+> Reference implementations (copy patterns from these, don't reinvent):
+> landing `components/sections/*`, auth `components/auth/*`, onboarding
+> `components/onboarding/*`, dashboard `components/dashboard/*`.
 
 ---
 
-## Component Specs
+## 1. Design read
 
-### Buttons
+Product for German trade businesses (Handwerker): trust-first, calm, but
+premium and alive. Apple product-page polish over B2B template. One brand
+accent (blue), a night-blue "stage" for showcase moments, everything else
+quiet neutrals. Motion explains the product (call → text → job card →
+booked); it never decorates for its own sake.
 
-```css
-/* Primary Button */
-.btn-primary {
-  background: #0369A1;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: all 200ms ease;
-  cursor: pointer;
-}
+## 2. Colour
 
-.btn-primary:hover {
-  opacity: 0.9;
-  transform: translateY(-1px);
-}
+All colours are tokens in `app/globals.css` (`@theme` + `.dark`). Never hard-
+code hex in components except inside the night-blue stage (see below).
 
-/* Secondary Button */
-.btn-secondary {
-  background: transparent;
-  color: #0F172A;
-  border: 2px solid #0F172A;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: all 200ms ease;
-  cursor: pointer;
-}
-```
+| Token | Use |
+|---|---|
+| `primary` `#0369a1` (dark `#1577ad`) | The ONE accent: active states, links, progress, icons on soft tiles |
+| `primary-soft` | Tinted icon tiles, hover washes |
+| `ink` / `graphite` / `slate` / `muted` | Text: headings / strong body / body / hints |
+| `line`, `cloud`, `mist`, `fog` | Borders, hover fills, section tints |
+| `canvas`, `surface`, `surface-2` | Page bg, cards, inset/input bg |
+| `success` / `warning` / `danger` | Real state only (booked, urgency, missed/error) |
 
-### Cards
+- **Night-blue stage**: `bg-[#06121f]` panel with two radial glows
+  (`rgba(3,105,161,.55)` top, `rgba(56,189,248,.2)` bottom) and optional
+  perspective floor (`.hp-floor` with `[--color-primary:#38bdf8]`). Used for
+  showcase surfaces: auth brand panel, onboarding preview, landing CTA,
+  dashboard hero card. It stays dark in BOTH themes. Text on it: white,
+  `white/65` body, `sky-300` accents, glass chips `bg-white/[0.08] ring-white/15`.
+- **Primary actions** are `bg-ink text-canvas` pills that turn `bg-primary`
+  on hover (auth submit, onboarding continue, nav CTA). Brand-blue filled
+  buttons are for the single hero CTA of a page.
+- No purple, no gradient text, no neon glows. Light and dark mode are both
+  first-class; check both.
 
-```css
-.card {
-  background: #F8FAFC;
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: var(--shadow-md);
-  transition: all 200ms ease;
-  cursor: pointer;
-}
+## 3. Type
 
-.card:hover {
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-2px);
-}
-```
+- **Geist** (sans) for everything, **Geist Mono** for times, phone numbers,
+  counts, step indices (`font-mono`). Loaded via `next/font` in the layout.
+- Display headings: `font-semibold tracking-[-0.045em] leading-[1.02-1.05]`.
+  Scale: hero 64-76px, section 56-68px, page title 40-44px, card title
+  24-30px. Mobile drops one step (34px section, 32px page title).
+- Body: 15-17px, `leading-relaxed`, `text-slate`, `text-pretty`; headings
+  `text-balance`.
+- Labels above inputs: `text-[13px] font-medium text-graphite`; "optional"
+  hints `text-[12px] text-muted` (no brackets).
+- Eyebrows (small uppercase tracking labels) are rationed: max one per three
+  sections. Prefer none.
+- No em dashes in UI copy; use a hyphen or restructure.
 
-### Inputs
+## 4. Shape, depth, spacing
 
-```css
-.input {
-  padding: 12px 16px;
-  border: 1px solid #E2E8F0;
-  border-radius: 8px;
-  font-size: 16px;
-  transition: border-color 200ms ease;
-}
+- Radii: inputs/small buttons `14px`, cards `22-28px`, big panels `32-36px`,
+  chips/pills/primary buttons `rounded-full`. Keep this mapping.
+- Cards: `bg-surface border border-line` (or `ring-1 ring-line`), shadows only
+  for floating things (`--shadow-float`). Group with spacing before adding a
+  card.
+- Split layouts (auth, onboarding): `lg:grid lg:h-svh lg:p-3` with the stage as
+  a rounded-[32px] panel; the page never scrolls on desktop, only the form
+  column does (`lg:min-h-0 lg:overflow-y-auto`). Use the `short:` (<=860px
+  tall) and `xshort:` (<=760px) variants to compact for laptops.
+- Mobile first. Every layout states its `<lg` fallback explicitly; no
+  horizontal scroll; tap targets >= 44px; `min-h-[100dvh]`/`svh`, never
+  `h-screen`.
 
-.input:focus {
-  border-color: #0F172A;
-  outline: none;
-  box-shadow: 0 0 0 3px #0F172A20;
-}
-```
+## 5. Components (patterns to reuse)
 
-### Modals
+| Need | Use |
+|---|---|
+| Text input | `authInput` (`components/auth/styles.ts`): h-52px, rounded-14, `focus:ring-4 ring-primary/15`, leading icon via `peer` + `peer-focus:text-primary` |
+| Choice chips | Pill label wrapping a hidden radio/checkbox, `has-[:checked]:bg-ink has-[:checked]:text-canvas` |
+| Primary button | `bg-ink text-canvas rounded-full h-12/52px`, hover `bg-primary`, `active:scale-[0.97]`, arrow icon nudges right on hover |
+| Secondary | `border border-line rounded-full`, hover `border-ink/25` |
+| Glass (on stage/over imagery) | `.glass` utility (has reduced-transparency fallback) |
+| Icon tile | `h-12 w-12 rounded-2xl bg-primary-soft text-primary` |
+| Progress | 5-6px track `bg-line`, fill `bg-primary` with `.hp-fill` entrance |
+| Empty state | Honest: no fake numbers. Icon tile + one line + one action; "ghost" skeleton shapes allowed as illustration |
+| Sticky action bar | `sticky bottom-0 border-t border-line bg-canvas/85 backdrop-blur-xl` |
+| Icons | `components/ui/Icon.tsx` only (one stroke family). Add glyphs there |
 
-```css
-.modal-overlay {
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(4px);
-}
+## 6. Motion
 
-.modal {
-  background: white;
-  border-radius: 16px;
-  padding: 32px;
-  box-shadow: var(--shadow-xl);
-  max-width: 500px;
-  width: 90%;
-}
-```
+Libraries: **GSAP** (+ScrollTrigger, SplitText) for scroll/scrub/pin and
+pointer physics; **CSS keyframes** for entrances; **R3F/Three** only for the
+landing 3D story; **Lenis** smooth scroll on the landing page (via
+`lib/lenis.ts` when you need to scroll programmatically).
 
----
+| Pattern | How |
+|---|---|
+| Staggered entrance | wrap in `.auth-rise`, set `style={{"--i": n}}` per child (rise + unblur, 70ms steps) |
+| Headline reveal | `<SplitReveal>` (lines rise from masks) |
+| Reading reveal | `<ScrubText>` (words light up with scroll) |
+| Section reveal | `<Reveal>` (y + blur, IntersectionObserver) |
+| Hover physics | `<Magnetic>` for hero CTAs, `<TiltCard>` for showcase cards |
+| Live value change | key the element by its value + `.hp-flash` / `.hp-pop` |
+| Float | `.hp-bob` on an INNER wrapper (it owns `transform`) |
+| Floating card in | `.hp-rise-in` |
 
-## Style Guidelines
+Rules: animate only `transform`/`opacity`/`filter`/`clip-path`; ease
+`--ease-out-expo` for UI, `--ease-spring` for playful pops; durations
+150-300ms for micro, 700-1200ms for entrances; every animation has a
+`prefers-reduced-motion` fallback (most utilities already include one); never
+`window.addEventListener("scroll")` (use ScrollTrigger); one marquee per page.
 
-**Style:** Trust & Authority
+## 7. Copy & data
 
-**Keywords:** Certificates/badges displayed, expert credentials, case studies with metrics, before/after comparisons, industry recognition, security badges
+- Every user-facing string lives in `messages/en.json` + `messages/de.json`
+  (add both). Client components inside a separate React root (R3F, drei
+  `<Html>`) can't use `useTranslations`: pass resolved strings as props.
+- No invented metrics, testimonials or logos. Empty dashboards show empty
+  states, not demo numbers.
 
-**Best For:** Healthcare/medical landing pages, financial services, enterprise software, premium/luxury products, legal services
+## 8. Pre-flight
 
-**Key Effects:** Badge hover effects, metric pulse animations, certificate carousel, smooth stat reveal
-
-### Page Pattern
-
-**Pattern Name:** Feature-Rich Showcase + Trust
-
-- **CTA Placement:** Above fold
-- **Section Order:** Hero > Features > CTA
-
----
-
-## Anti-Patterns (Do NOT Use)
-
-- ❌ Playful design
-- ❌ Hidden credentials
-- ❌ AI purple/pink gradients
-
-### Additional Forbidden Patterns
-
-- ❌ **Emojis as icons** — Use SVG icons (Heroicons, Lucide, Simple Icons)
-- ❌ **Missing cursor:pointer** — All clickable elements must have cursor:pointer
-- ❌ **Layout-shifting hovers** — Avoid scale transforms that shift layout
-- ❌ **Low contrast text** — Maintain 4.5:1 minimum contrast ratio
-- ❌ **Instant state changes** — Always use transitions (150-300ms)
-- ❌ **Invisible focus states** — Focus states must be visible for a11y
-
----
-
-## Pre-Delivery Checklist
-
-Before delivering any UI code, verify:
-
-- [ ] No emojis used as icons (use SVG instead)
-- [ ] All icons from consistent icon set (Heroicons/Lucide)
-- [ ] `cursor-pointer` on all clickable elements
-- [ ] Hover states with smooth transitions (150-300ms)
-- [ ] Light mode: text contrast 4.5:1 minimum
-- [ ] Focus states visible for keyboard navigation
-- [ ] `prefers-reduced-motion` respected
-- [ ] Responsive: 375px, 768px, 1024px, 1440px
-- [ ] No content hidden behind fixed navbars
-- [ ] No horizontal scroll on mobile
+- [ ] Tokens only (except night-blue stage), one accent
+- [ ] Both themes checked; contrast AA
+- [ ] Mobile 360-390px checked, no horizontal scroll, no clipped hero
+- [ ] Reduced motion respected
+- [ ] `npx tsc --noEmit` and `npx eslint` clean; `npm run build` before merging
