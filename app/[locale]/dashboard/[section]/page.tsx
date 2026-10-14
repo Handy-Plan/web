@@ -1,34 +1,77 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { dashboardNav } from "@/lib/content";
+import { dashboardNav, type DashboardRole } from "@/lib/content";
 import { readRole } from "@/lib/session";
-import SectionPlaceholder from "@/components/dashboard/SectionPlaceholder";
+import {
+  AiPage,
+  CalendarPage,
+  CallsPage,
+  CustomersPage,
+  JobsPage,
+  MessagesPage,
+  ProfilePage,
+  SettingsPage,
+} from "@/components/dashboard/pages/BusinessPages";
+import {
+  BookingsPage,
+  CustomerMessagesPage,
+  CustomerSettingsPage,
+  FindPage,
+} from "@/components/dashboard/pages/CustomerPages";
 
-type PageProps = { params: Promise<{ locale: string; section: string }> };
+type PageProps = {
+  params: Promise<{ locale: string; section: string }>;
+  searchParams: Promise<{ job?: string }>;
+};
+
+type Render = (args: { locale: string; job?: string }) => React.ReactNode;
+
+/** Which page each nav item renders, per dashboard. */
+const pages: Record<DashboardRole, Record<string, Render>> = {
+  business: {
+    jobs: ({ locale, job }) => <JobsPage locale={locale} jobId={job} />,
+    calls: ({ locale }) => <CallsPage locale={locale} />,
+    calendar: ({ locale }) => <CalendarPage locale={locale} />,
+    customers: ({ locale }) => <CustomersPage locale={locale} />,
+    messages: ({ locale }) => <MessagesPage locale={locale} />,
+    profile: ({ locale }) => <ProfilePage locale={locale} />,
+    ai: ({ locale }) => <AiPage locale={locale} />,
+    settings: ({ locale }) => <SettingsPage locale={locale} />,
+  },
+  customer: {
+    find: ({ locale }) => <FindPage locale={locale} />,
+    bookings: ({ locale }) => <BookingsPage locale={locale} />,
+    messages: ({ locale }) => <CustomerMessagesPage locale={locale} />,
+    settings: () => <CustomerSettingsPage />,
+  },
+};
 
 /** The nav item for this section, if the current role has it. */
 async function findSection(section: string) {
   const role = await readRole();
-  return dashboardNav[role]
+  const item = dashboardNav[role]
     .flatMap((group) => group.items)
-    .find((item) => item.key === section && item.key !== "overview");
+    .find((it) => it.key === section && it.key !== "overview");
+  const render = item ? pages[role][item.key] : undefined;
+  return item && render ? { item, render } : undefined;
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: PageProps["params"] }): Promise<Metadata> {
   const { locale, section } = await params;
-  const item = await findSection(section);
-  if (!item) return {};
+  const found = await findSection(section);
+  if (!found) return {};
   const t = await getTranslations({ locale, namespace: "dashboard" });
-  return { title: t(`nav.${item.key}`) };
+  return { title: t(`nav.${found.item.key}`) };
 }
 
-export default async function DashboardSectionPage({ params }: PageProps) {
+export default async function DashboardSectionPage({ params, searchParams }: PageProps) {
   const { locale, section } = await params;
   setRequestLocale(locale);
 
-  const item = await findSection(section);
-  if (!item) notFound();
+  const found = await findSection(section);
+  if (!found) notFound();
+  const { job } = await searchParams;
 
-  return <SectionPlaceholder section={item.key} icon={item.icon} />;
+  return found.render({ locale, job });
 }

@@ -92,6 +92,9 @@ code hex in components except inside the night-blue stage (see below).
 | Empty state | Honest: no fake numbers. Icon tile + one line + one action; "ghost" skeleton shapes allowed as illustration |
 | Sticky action bar | `sticky bottom-0 border-t border-line bg-canvas/85 backdrop-blur-xl` |
 | Icons | `components/ui/Icon.tsx` only (one stroke family). Add glyphs there |
+| Dashboard pieces | `components/dashboard/kit.tsx`: `PageHeader`, `Panel`, `Badge` (tone + icon, never colour alone), `Initials`, `Toggle`, `Segmented`, `EmptyState`, `DetailRow`, button classes |
+| List + detail | `DetailSheet`: sticky side panel on `lg`, bottom sheet on phones |
+| Overlays | Anything `position: fixed` inside a page goes through `createPortal(…, document.body)` gated by `useIsClient()`; `.auth-rise` ancestors (filter/transform) otherwise trap it |
 
 ## 6. Motion
 
@@ -122,8 +125,11 @@ Rules: animate only `transform`/`opacity`/`filter`/`clip-path`; ease
 - Every user-facing string lives in `messages/en.json` + `messages/de.json`
   (add both). Client components inside a separate React root (R3F, drei
   `<Html>`) can't use `useTranslations`: pass resolved strings as props.
-- No invented metrics, testimonials or logos. Empty dashboards show empty
-  states, not demo numbers.
+- No invented metrics, testimonials or logos on public pages.
+- Dashboard (until the backend exists): every page reads sample data from
+  `lib/mock/dashboard.ts`, flagged by the "Sample data" chip in the header.
+  Swap that module for real queries; don't hard-code demo values in pages.
+  Real empty states (`EmptyState` in `components/dashboard/kit.tsx`) stay.
 
 ## 8. Pre-flight
 

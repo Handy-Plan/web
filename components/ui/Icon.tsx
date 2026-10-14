@@ -53,7 +53,16 @@ export type IconName =
   | "logout"
   | "panel"
   | "chevron-down"
-  | "user";
+  | "chevron-left"
+  | "chevron-right"
+  | "user"
+  | "map-pin"
+  | "send"
+  | "mic"
+  | "note"
+  | "phone-out"
+  | "ban"
+  | "copy";
 
 const paths: Record<IconName, React.ReactNode> = {
   phone: (
@@ -258,6 +267,45 @@ const paths: Record<IconName, React.ReactNode> = {
     </>
   ),
   "chevron-down": <path d="m6 9 6 6 6-6" />,
+  "chevron-left": <path d="m15 6-6 6 6 6" />,
+  "chevron-right": <path d="m9 6 6 6-6 6" />,
+  "map-pin": (
+    <>
+      <path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z" />
+      <circle cx="12" cy="10" r="2.5" />
+    </>
+  ),
+  send: <path d="M20.5 3.5 10 14M20.5 3.5 14 20.5l-4-6.5-6.5-4 17-6.5Z" />,
+  mic: (
+    <>
+      <rect x="9" y="3" width="6" height="11" rx="3" />
+      <path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21" />
+    </>
+  ),
+  note: (
+    <>
+      <path d="M5 4.5A1.5 1.5 0 0 1 6.5 3h11A1.5 1.5 0 0 1 19 4.5V15l-6 6H6.5A1.5 1.5 0 0 1 5 19.5v-15Z" />
+      <path d="M13 21v-4.5a1.5 1.5 0 0 1 1.5-1.5H19M8.5 8h7M8.5 11.5h4" />
+    </>
+  ),
+  "phone-out": (
+    <>
+      <path d="M3 5.5C3 4.1 4.1 3 5.5 3H7l1.5 4.5L7 9c.8 1.7 2.3 3.2 4 4l1.5-1.5L17 13v1.5c0 1.4-1.1 2.5-2.5 2.5C8.6 17 3 11.4 3 5.5Z" />
+      <path d="M15 3h6v6M21 3l-6.5 6.5" />
+    </>
+  ),
+  ban: (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <path d="m5.6 5.6 12.8 12.8" />
+    </>
+  ),
+  copy: (
+    <>
+      <rect x="8.5" y="8.5" width="12" height="12" rx="2.5" />
+      <path d="M15.5 8.5V6a2.5 2.5 0 0 0-2.5-2.5H6A2.5 2.5 0 0 0 3.5 6v7A2.5 2.5 0 0 0 6 15.5h2.5" />
+    </>
+  ),
   user: (
     <>
       <circle cx="12" cy="8" r="3.5" />

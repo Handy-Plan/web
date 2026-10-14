@@ -562,7 +562,9 @@
       "profile": "Business profile",
       "settings": "Settings",
       "logout": "Log out",
-      "yourAccount": "Your account"
+      "yourAccount": "Your account",
+      "sample": "Sample data",
+      "sampleHint": "These pages show sample data until your account is connected."
     },
     "overview": {
       "greeting": "Welcome back.",
@@ -578,29 +580,360 @@
       "setupTitle": "Finish your profile",
       "setupBody": "Your profile is {percent}% complete. Your company name and emergency number go straight into the automatic reply.",
       "setupCta": "Continue setup",
-      "jobsTitle": "Latest job cards",
+      "jobsTitle": "Waiting for you",
       "viewAll": "View all",
-      "jobsEmptyTitle": "No job cards yet",
-      "jobsEmptyBody": "When you miss a call, the caller gets a text and their request shows up here as a job card.",
-      "jobsEmptyCta": "Set up call forwarding",
       "todayTitle": "Today",
-      "todayEmpty": "Nothing booked for today."
+      "todayEmpty": "Nothing booked for today.",
+      "newestTitle": "New job card, {ago}",
+      "pickTime": "Pick a time",
+      "seconds": "{count} s",
+      "statNotes": {
+        "missed": "{count, plural, =0 {None became a job card yet} one {# became a job card} other {# became job cards}}",
+        "cards": "{count, plural, =0 {All have a time} one {# still needs a time} other {# still need a time}}",
+        "booked": "Next: {when}",
+        "reply": "From missed call to text"
+      }
     },
-    "placeholder": {
-      "empty": "Nothing here yet.",
-      "back": "Back to overview",
-      "editProfile": "Edit company details",
-      "overview": "Your bookings and messages in one place.",
+    "common": {
+      "close": "Close"
+    },
+    "intro": {
       "jobs": "Every missed call becomes a job card here, with name, address, problem and urgency.",
-      "calls": "Every call you missed, and whether it turned into a job.",
+      "calls": "Every call you missed, and what happened next.",
       "calendar": "Your booked jobs, day by day, inside your working hours.",
       "customers": "Everyone who has called or booked you, with their history.",
       "messages": "The texts HandyPlan sent for you and the replies you got.",
-      "profile": "Your company details. You can change them any time.",
-      "ai": "The AI calling agent and other paid features. You only pay for what you switch on.",
-      "settings": "Account, notifications, call forwarding and language.",
+      "profile": "Your company details. Callers see some of them in the automatic reply.",
+      "ai": "Paid add-ons. You only pay for what you switch on.",
+      "settings": "Call forwarding, the automatic reply, notifications and your account.",
       "find": "Search by trade and see tradespeople nearby with real free slots.",
-      "bookings": "Your upcoming and past bookings."
+      "bookings": "Your upcoming and past bookings.",
+      "customerMessages": "Your conversations with tradespeople.",
+      "customerSettings": "Notifications, language and your account."
+    },
+    "jobs": {
+      "filterLabel": "Filter job cards",
+      "filters": {
+        "all": "All",
+        "new": "New",
+        "proposed": "Time sent",
+        "booked": "Booked",
+        "done": "Done"
+      },
+      "emptyTitle": "Nothing in this list",
+      "emptyBody": "Job cards move here as their status changes.",
+      "detailLabel": "Job card details",
+      "status": {
+        "new": "New",
+        "proposed": "Time sent",
+        "booked": "Booked",
+        "done": "Done"
+      },
+      "urgency": {
+        "today": "Today",
+        "week": "This week",
+        "flexible": "Flexible"
+      },
+      "source": {
+        "sms": "Via text",
+        "voice": "Via AI agent"
+      },
+      "callerWrote": "The caller wrote",
+      "address": "Address",
+      "received": "Received",
+      "pickTime": "Pick a time",
+      "pickTimeHint": "Free slots inside your working hours. The customer gets a text to confirm.",
+      "sendTime": "Send time",
+      "callBack": "Call back",
+      "waiting": "Waiting for {name} to confirm {when}.",
+      "markBooked": "Mark as booked",
+      "changeTime": "Change time",
+      "bookedFor": "Booked for {when}. The customer gets a reminder the day before.",
+      "markDone": "Mark as done",
+      "openCalendar": "Calendar",
+      "doneNote": "Done. Visited {when}."
+    },
+    "calls": {
+      "filterLabel": "Filter calls",
+      "filters": {
+        "all": "All",
+        "job": "Job card",
+        "waiting": "No reply yet",
+        "calledBack": "Called back"
+      },
+      "empty": "No calls in this list.",
+      "earlier": "Earlier this week",
+      "unknown": "Unknown number",
+      "rang": "rang {seconds} s",
+      "viaVoice": "Answered by the AI agent",
+      "outcome": {
+        "job": "Job card",
+        "waiting": "No reply yet",
+        "calledBack": "Called back"
+      },
+      "openJob": "Open job card",
+      "callBack": "Call back",
+      "summary": {
+        "week": "Missed in 7 days",
+        "weekNote": "Each one got a text within seconds",
+        "jobs": "Became job cards",
+        "jobsNote": "{count, plural, one {# call} other {# calls}} you didn't lose",
+        "waiting": "No reply yet",
+        "waitingNote": "They got the text but haven't answered"
+      }
+    },
+    "calendar": {
+      "prevWeek": "Previous week",
+      "nextWeek": "Next week",
+      "weeks": {
+        "0": "Last week",
+        "1": "This week",
+        "2": "Next week"
+      },
+      "thisWeek": "Today",
+      "count": "{count, plural, =0 {Nothing booked} one {# booking} other {# bookings}}",
+      "emptyDay": "Nothing booked on this day.",
+      "legendJob": "From a job card",
+      "legendOther": "Other bookings",
+      "legendClosed": "Outside working hours",
+      "now": "Now",
+      "done": "Done"
+    },
+    "customers": {
+      "count": "{count, plural, one {# customer} other {# customers}}",
+      "search": "Search by name, street or number",
+      "noMatch": "No customer matches \"{query}\".",
+      "cols": {
+        "name": "Name",
+        "address": "Address",
+        "jobs": "Jobs",
+        "last": "Last contact"
+      },
+      "new": "New",
+      "openCount": "{count} open",
+      "detailLabel": "Customer details",
+      "jobsTotal": "{count, plural, one {# job} other {# jobs}} with you",
+      "call": "Call",
+      "message": "Message",
+      "phone": "Phone",
+      "note": "Note",
+      "history": "History"
+    },
+    "messages": {
+      "justNow": "Just now",
+      "unread": "Unread messages:",
+      "empty": "No conversations yet.",
+      "back": "Back to conversations",
+      "openJob": "Job card",
+      "autoBusiness": "Sent automatically",
+      "autoCustomer": "Automatic message",
+      "quick": {
+        "onWay": "I'm on my way.",
+        "callSoon": "I'll call you in a few minutes.",
+        "photo": "Could you send me a photo of it?",
+        "thanks": "Thank you!",
+        "parking": "There's parking in front of the house.",
+        "reschedule": "Could we find another time?"
+      },
+      "placeholder": "Write a message",
+      "send": "Send",
+      "confirmTemplate": "Booked: {when}. You'll get a reminder the day before."
+    },
+    "ai": {
+      "agentTitle": "AI calling agent",
+      "agentBody": "For callers who won't use a link. It answers when you can't, asks what's wrong, where and how urgent, and writes the same job card as the text.",
+      "rules": {
+        "announce": "Says it's a digital assistant and asks for consent first",
+        "noRecording": "No recordings. Only a written note of the call",
+        "emergency": "Real emergencies get your emergency number, not the bot"
+      },
+      "agentToggle": "Answer my missed calls",
+      "agentOffNote": "Off. Callers get the text as usual.",
+      "agentOnNote": "Requested. We'll show the price before anything starts.",
+      "sampleCall": "Sample call",
+      "agent": "Assistant",
+      "caller": "Caller",
+      "transcript": {
+        "agent1": "Hello, this is the digital assistant of {name}. This call isn't recorded, I'm only taking notes. Is that okay?",
+        "caller1": "Yes, fine.",
+        "agent2": "What's the problem, and where?",
+        "caller2": "Old fuse box with screw-in fuses, I need a quote. Lindenstraße 5, Spremberg.",
+        "agent3": "Is it urgent today, or is this week fine?",
+        "caller3": "This week is fine.",
+        "agent4": "Thanks. {name} will text you a time."
+      },
+      "cardCreated": "Job card created: Quote for a new fuse box",
+      "moreTitle": "Coming next",
+      "moreBody": "Turn on a notification and we'll tell you when it's ready.",
+      "soon": "Coming soon",
+      "extras": {
+        "scheduling": {
+          "title": "Scheduling suggestions",
+          "body": "Proposes times that fit your route and the jobs already booked."
+        },
+        "voiceNotes": {
+          "title": "Voice notes",
+          "body": "Say what you did on site. It turns into a tidy note on the job card."
+        },
+        "summary": {
+          "title": "Evening summary",
+          "body": "One short text at the end of the day: new job cards and what's booked tomorrow."
+        }
+      },
+      "notify": "Notify me",
+      "notifyOn": "We'll let you know",
+      "pricingTitle": "Missed-call texts and job cards stay free",
+      "pricingBody": "The AI features are paid add-ons. You see the price before you switch anything on, and you can switch it off any time."
+    },
+    "settings": {
+      "copy": "Copy",
+      "copied": "Copied",
+      "save": "Save",
+      "saved": "Saved",
+      "forwarding": {
+        "title": "Call forwarding",
+        "body": "Calls you don't pick up go to HandyPlan, which texts the caller. Your number stays the same.",
+        "active": "Active",
+        "since": "After 20 seconds without an answer",
+        "step1": "On your business phone, open the keypad.",
+        "step2": "Dial this code and press call:",
+        "step3": "Done. To switch it off, dial ##61# the same way.",
+        "test": "Send a test call",
+        "tested": "Test text sent to your mobile."
+      },
+      "reply": {
+        "title": "Automatic reply",
+        "body": "The text every caller gets when you miss their call.",
+        "label": "Message",
+        "tooLong": "Longer than one text message",
+        "reset": "Reset"
+      },
+      "notifications": {
+        "title": "Notifications",
+        "newJob": {
+          "title": "New job card",
+          "body": "A text to your mobile for every new job card"
+        },
+        "replies": {
+          "title": "Replies",
+          "body": "When a customer answers you"
+        },
+        "summary": {
+          "title": "Daily summary",
+          "body": "One email in the evening"
+        },
+        "confirmations": {
+          "title": "Booking confirmations",
+          "body": "A text when a time is confirmed"
+        },
+        "reminders": {
+          "title": "Reminders",
+          "body": "A text the day before a visit"
+        }
+      },
+      "display": {
+        "title": "Language and display",
+        "language": "Language",
+        "theme": "Dark mode"
+      },
+      "account": {
+        "title": "Account",
+        "email": "Email",
+        "password": "Change password",
+        "deleteTitle": "Delete account",
+        "deleteBody": "Removes your account, job cards and customer data. This can't be undone.",
+        "delete": "Delete account",
+        "deleteConfirm": "Really delete your account and all its data?",
+        "cancel": "Keep my account",
+        "deleteNow": "Delete for good",
+        "deleteSample": "Not available while the dashboard shows sample data."
+      }
+    },
+    "profile": {
+      "sections": {
+        "company": "Company",
+        "contact": "Contact and area",
+        "hours": "Hours and services"
+      },
+      "fields": {
+        "name": "Company name",
+        "trade": "Trade",
+        "team": "Team size",
+        "website": "Website",
+        "phone": "Business phone",
+        "mobile": "Mobile for job cards",
+        "emergency": "Emergency number",
+        "address": "Address",
+        "radius": "Service area",
+        "days": "Working days",
+        "hours": "Working hours",
+        "services": "Jobs you take"
+      },
+      "km": "{km} km around you",
+      "edit": "Edit",
+      "notSet": "Not set",
+      "editReply": "Edit the automatic reply"
+    },
+    "find": {
+      "priorityLabel": "Priority match",
+      "priorityTitle": "Need someone soon?",
+      "priorityBody": "We match you with the nearest free slot. One flat fee, shown before you book. It never goes up because it's urgent.",
+      "priorityCta": "Find the fastest slot",
+      "search": "Search by name, trade or area",
+      "sortLabel": "Sort",
+      "soonest": "Soonest",
+      "closest": "Closest",
+      "allTrades": "All trades",
+      "results": "{count, plural, =0 {No tradespeople found} one {# tradesperson nearby} other {# tradespeople nearby}}",
+      "emptyTitle": "Nobody matches",
+      "emptyBody": "Try another trade or a shorter search.",
+      "km": "{km} km",
+      "master": "Master craftsman",
+      "bookedNote": "Booked for {slot}. You'll get a confirmation by text.",
+      "seeBookings": "My bookings",
+      "freeSlots": "Free slots",
+      "feeNote": "Priority match has one flat fee, shown here before you confirm. The amount isn't set in this sample.",
+      "freeNote": "Booking is free. You'll get a confirmation by text.",
+      "cancel": "Cancel",
+      "confirm": "Book"
+    },
+    "bookings": {
+      "tabsLabel": "Bookings",
+      "upcoming": "Upcoming",
+      "past": "Past",
+      "empty": "No bookings here.",
+      "find": "Find a tradesperson",
+      "status": {
+        "confirmed": "Confirmed",
+        "requested": "Time proposed",
+        "done": "Done",
+        "cancelled": "Cancelled"
+      },
+      "priority": "Priority",
+      "requestedNote": "{pro} proposed this time. Does it work for you?",
+      "confirmTime": "Confirm time",
+      "askOther": "Ask for another",
+      "cancelConfirm": "Cancel this booking? The tradesperson gets a text.",
+      "keep": "Keep it",
+      "cancelYes": "Cancel booking",
+      "message": "Message",
+      "cancel": "Cancel",
+      "again": "Book again"
+    },
+    "customerHome": {
+      "greeting": "Hello, {name}.",
+      "subtitle": "Your bookings and messages in one place.",
+      "nextTitle": "Your next visit",
+      "allBookings": "All bookings",
+      "noNext": "No visit booked.",
+      "findTitle": "Something broken?",
+      "findBody": "See who nearby has a free slot and book it in a minute.",
+      "findCta": "Find a tradesperson",
+      "todoTitle": "For you to do",
+      "confirmTodo": "Confirm the time from {pro}",
+      "unread": "{count, plural, one {# unread message} other {# unread messages}}",
+      "seeAll": "See all",
+      "nearbyTitle": "Free soon, nearby"
     }
   }
 }

@@ -35,6 +35,14 @@ export default function DashboardHeader({ role, title, user, menuOpen, onOpenMen
         </button>
 
         <p key={title} className="hp-pop min-w-0 truncate text-[17px] font-semibold tracking-[-0.02em] text-ink">{title}</p>
+        {/* Everything shown comes from lib/mock until the backend exists. */}
+        <span
+          title={t("header.sampleHint")}
+          className="hidden shrink-0 items-center gap-1 rounded-full bg-warning/15 px-2.5 py-1 text-[12px] font-medium text-graphite sm:inline-flex"
+        >
+          <Icon name="alert" size={12} className="text-warning" />
+          {t("header.sample")}
+        </span>
 
         <div className="ml-auto flex items-center gap-1.5 sm:gap-2">
           <div className="relative hidden md:block">
