@@ -20,9 +20,10 @@ type Props = {
 };
 
 /**
- * App frame for both dashboards (business and customer): a collapsible
- * desktop sidebar, an off-canvas drawer on mobile, and a sticky header.
- * The role only changes which navigation groups are passed in.
+ * App frame for both dashboards (business and customer): a floating,
+ * collapsible desktop rail inset from the window edge, an off-canvas drawer
+ * on mobile, and a sticky glass header. The role only changes which
+ * navigation groups are passed in.
  */
 export default function DashboardShell({
   role,
@@ -70,8 +71,8 @@ export default function DashboardShell({
       {/* Desktop rail */}
       <aside
         className={cn(
-          "fixed inset-y-0 left-0 z-40 hidden border-r border-line bg-surface transition-[width] duration-300 ease-[var(--ease-out-expo)] lg:block",
-          collapsed ? "w-[76px]" : "w-[264px]",
+          "fixed inset-y-3 left-3 z-40 hidden overflow-hidden rounded-[24px] bg-surface ring-1 ring-line transition-[width] duration-500 ease-[var(--ease-out-expo)] lg:block",
+          collapsed ? "w-[72px]" : "w-[252px]",
         )}
       >
         <Sidebar
@@ -89,15 +90,15 @@ export default function DashboardShell({
           aria-hidden
           onClick={closeMobile}
           className={cn(
-            "absolute inset-0 bg-navy/50 backdrop-blur-sm transition-opacity duration-300",
+            "absolute inset-0 bg-canvas/70 backdrop-blur-md transition-opacity duration-500",
             mobileOpen ? "opacity-100" : "opacity-0",
           )}
         />
         <aside
           inert={!mobileOpen}
           className={cn(
-            "absolute inset-y-0 left-0 w-[280px] max-w-[85vw] bg-surface shadow-[var(--shadow-float)] transition-transform duration-300 ease-[var(--ease-out-expo)]",
-            mobileOpen ? "translate-x-0" : "-translate-x-full",
+            "absolute inset-y-3 left-3 w-[284px] max-w-[calc(100vw-1.5rem)] overflow-hidden rounded-[24px] bg-surface shadow-[var(--shadow-float)] ring-1 ring-line transition-transform duration-500 ease-[var(--ease-out-expo)]",
+            mobileOpen ? "translate-x-0" : "-translate-x-[calc(100%+1rem)]",
           )}
         >
           <Sidebar
@@ -113,8 +114,8 @@ export default function DashboardShell({
       {/* Content */}
       <div
         className={cn(
-          "flex min-h-svh flex-col transition-[padding] duration-300 ease-[var(--ease-out-expo)]",
-          collapsed ? "lg:pl-[76px]" : "lg:pl-[264px]",
+          "flex min-h-svh flex-col transition-[padding] duration-500 ease-[var(--ease-out-expo)]",
+          collapsed ? "lg:pl-[84px]" : "lg:pl-[264px]",
         )}
       >
         <DashboardHeader
@@ -124,7 +125,7 @@ export default function DashboardShell({
           menuOpen={mobileOpen}
           onOpenMenu={() => setMobileOpen(true)}
         />
-        <main className="mx-auto w-full max-w-7xl flex-1 px-4 py-6 sm:px-6 lg:px-8 lg:py-8">
+        <main className="mx-auto w-full max-w-[1240px] flex-1 px-4 pb-10 pt-4 sm:px-6 lg:px-8 lg:pt-6">
           {children}
         </main>
       </div>

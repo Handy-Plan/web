@@ -22,40 +22,43 @@ export default function DashboardHeader({ role, title, user, menuOpen, onOpenMen
   const t = useTranslations("dashboard");
 
   return (
-    <header className="sticky top-0 z-30 border-b border-line bg-canvas/85 backdrop-blur-xl">
-      <div className="mx-auto flex h-16 w-full max-w-7xl items-center gap-3 px-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-30 px-3 pt-3 sm:px-4 lg:px-5">
+      <div className="glass mx-auto flex h-16 w-full max-w-[1240px] items-center gap-2 rounded-[20px] pl-3 pr-2 sm:gap-3 sm:pl-5">
         <button
           type="button"
           onClick={onOpenMenu}
           aria-label={t("sidebar.open")}
           aria-expanded={menuOpen}
-          className="-ml-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-graphite transition-colors hover:bg-cloud lg:hidden"
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-ink transition-colors hover:bg-ink/5 lg:hidden"
         >
           <Icon name="menu" size={22} />
         </button>
 
-        <p className="min-w-0 truncate text-lg font-bold tracking-tight text-ink">{title}</p>
+        <p key={title} className="hp-pop min-w-0 truncate text-[17px] font-semibold tracking-[-0.02em] text-ink">{title}</p>
 
         <div className="ml-auto flex items-center gap-1.5 sm:gap-2">
           <div className="relative hidden md:block">
-            <Icon
-              name="search"
-              size={17}
-              className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-slate"
-            />
             <input
               type="search"
               aria-label={t("header.search")}
               placeholder={t("header.search")}
-              className="h-10 w-56 rounded-xl border border-line bg-surface pl-9 pr-3 text-sm text-ink shadow-[var(--shadow-subtle)] transition-colors placeholder:text-slate focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/25 lg:w-72"
+              className="peer h-10 w-56 rounded-full border border-line bg-surface pl-10 pr-4 text-[14px] text-ink transition-[border-color,box-shadow,width] duration-300 ease-[var(--ease-out-expo)] placeholder:text-muted focus:w-80 focus:border-primary focus:outline-none focus:ring-4 focus:ring-primary/15 lg:w-64"
+            />
+            <Icon
+              name="search"
+              size={16}
+              className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-muted transition-colors peer-focus:text-primary"
             />
           </div>
-          <LocaleSwitcher className="hidden sm:inline-flex" />
+          {/* Phones: the language switch lives in the drawer instead */}
+          <div className="hidden sm:block">
+            <LocaleSwitcher />
+          </div>
           <ThemeToggle className="h-10 w-10" />
           <button
             type="button"
             aria-label={t("header.notifications")}
-            className="flex h-10 w-10 items-center justify-center rounded-xl text-graphite transition-colors hover:bg-cloud hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            className="relative flex h-10 w-10 items-center justify-center rounded-full text-graphite transition-colors hover:bg-ink/5 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
           >
             <Icon name="bell" size={20} />
           </button>
@@ -90,7 +93,7 @@ function UserMenu({ role, user }: { role: DashboardRole; user: DashboardUser }) 
 
   const close = () => setOpen(false);
   const itemClass =
-    "flex w-full items-center gap-2.5 rounded-lg px-3 py-2 text-sm font-medium text-graphite transition-colors hover:bg-cloud hover:text-ink";
+    "flex w-full items-center gap-2.5 rounded-[12px] px-3 py-2.5 text-[14px] font-medium text-graphite transition-colors hover:bg-ink/5 hover:text-ink";
 
   return (
     <div ref={ref} className="relative">
@@ -100,7 +103,7 @@ function UserMenu({ role, user }: { role: DashboardRole; user: DashboardUser }) 
         aria-haspopup="menu"
         aria-expanded={open}
         aria-label={t("userMenu")}
-        className="flex items-center gap-1.5 rounded-xl p-1 transition-colors hover:bg-cloud focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary sm:pr-2"
+        className="flex items-center gap-1.5 rounded-full p-1 transition-colors hover:bg-ink/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary sm:pr-2"
       >
         <Avatar initials={user.initials} size="sm" />
         <Icon
@@ -113,7 +116,7 @@ function UserMenu({ role, user }: { role: DashboardRole; user: DashboardUser }) 
       {open && (
         <div
           role="menu"
-          className="absolute right-0 mt-2 w-64 overflow-hidden rounded-2xl border border-line bg-surface shadow-[var(--shadow-lift)]"
+          className="hp-pop absolute right-0 mt-3 w-64 origin-top-right overflow-hidden rounded-[20px] border border-line bg-surface shadow-[var(--shadow-float)]"
         >
           <div className="flex items-center gap-3 border-b border-line px-4 py-3">
             <Avatar initials={user.initials} />
