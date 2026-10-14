@@ -42,7 +42,7 @@ export default function Reveal({
   id,
 }: Props) {
   const ref = useRef<HTMLElement>(null);
-  const Tag = (as ?? "div") as ElementType;
+  const Tag = (as ?? "div") as "div";
 
   useGSAP(
     () => {
@@ -61,18 +61,20 @@ export default function Reveal({
         return;
       }
 
-      // Hidden start state (applied before paint).
-      gsap.set(targets, { autoAlpha: 0, y });
+      // Hidden start state (applied before paint): lowered, soft-focus.
+      gsap.set(targets, { autoAlpha: 0, y, filter: "blur(8px)" });
 
       const reveal = () =>
         gsap.to(targets, {
           autoAlpha: 1,
           y: 0,
-          duration: 0.8,
+          filter: "blur(0px)",
+          duration: 1.1,
           delay,
-          ease: "power3.out",
+          ease: "expo.out",
           stagger: stagger || undefined,
-          overwrite: true,
+          overwrite: "auto",
+          clearProps: "filter",
         });
 
       if (trigger === "load") {
@@ -101,7 +103,7 @@ export default function Reveal({
   );
 
   return (
-    <Tag ref={ref} id={id} data-reveal className={cn(className)}>
+    <Tag ref={ref as React.Ref<HTMLDivElement>} id={id} data-reveal className={cn(className)}>
       {children}
     </Tag>
   );

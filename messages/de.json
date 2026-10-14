@@ -24,7 +24,11 @@
     ],
     "primaryCta": "Kostenlos starten",
     "secondaryCta": "So funktioniert's",
-    "trust": ["Kostenlos nutzbar", "Ihre Nummer bleibt", "Daten bleiben in der EU"]
+    "trust": [
+      "Kostenlos nutzbar",
+      "Ihre Nummer bleibt",
+      "Daten bleiben in der EU"
+    ]
   },
   "mockup": {
     "missedCall": "Verpasster Anruf",
@@ -45,16 +49,28 @@
       "problem": "Kein Warmwasser, Heizung laut",
       "urgency": "Heute"
     },
-    "slots": ["Heute 16:00", "Morgen 08:00"],
+    "slots": [
+      "Heute 16:00",
+      "Morgen 08:00"
+    ],
     "book": "Buchen",
     "booked": "Termin gebucht",
     "bookedSub": "Bestätigung an den Kunden gesendet"
   },
   "trustBar": {
     "items": [
-      { "label": "DSGVO-konform", "sublabel": "AVV vorhanden" },
-      { "label": "Hosting in Frankfurt", "sublabel": "AWS EU-Region" },
-      { "label": "Deutsch und Englisch", "sublabel": "Arabisch folgt in Kürze" }
+      {
+        "label": "DSGVO-konform",
+        "sublabel": "AVV vorhanden"
+      },
+      {
+        "label": "Hosting in Frankfurt",
+        "sublabel": "AWS EU-Region"
+      },
+      {
+        "label": "Deutsch und Englisch",
+        "sublabel": "Arabisch folgt in Kürze"
+      }
     ]
   },
   "problem": {
@@ -80,10 +96,22 @@
     "title": "Ein Problem in sehr vielen Betrieben",
     "subtitle": "So viele Betriebe betrifft das.",
     "items": [
-      { "suffix": "+", "label": "Handwerksbetriebe allein im Kammerbezirk Cottbus (Dez. 2025)" },
-      { "suffix": "", "label": "Beschäftigte im südbrandenburgischen Handwerk" },
-      { "suffix": " Mio.", "label": "Handwerksbetriebe in Deutschland, in 53 Kammern" },
-      { "suffix": " %", "label": "der Handwerksbetriebe nennen Digitalisierung eine Top-5-Herausforderung" }
+      {
+        "suffix": "+",
+        "label": "Handwerksbetriebe allein im Kammerbezirk Cottbus (Dez. 2025)"
+      },
+      {
+        "suffix": "",
+        "label": "Beschäftigte im südbrandenburgischen Handwerk"
+      },
+      {
+        "suffix": " Mio.",
+        "label": "Handwerksbetriebe in Deutschland, in 53 Kammern"
+      },
+      {
+        "suffix": " %",
+        "label": "der Handwerksbetriebe nennen Digitalisierung eine Top-5-Herausforderung"
+      }
     ],
     "source": "Quellen: Handwerkskammer Cottbus, Zahlen Daten Fakten (Stand 31.12.2025); ZDH; Bitkom Research (504 Handwerksbetriebe)."
   },
@@ -94,16 +122,40 @@
     "craftsmanLabel": "Für Ihren Betrieb",
     "customerLabel": "Für Ihre Kunden",
     "craftsman": [
-      { "title": "Sie verpassen einen Anruf", "body": "Sie sind beschäftigt und können nicht rangehen. Kein Problem, machen Sie weiter." },
-      { "title": "Wir schreiben zurück", "body": "Der Anrufer bekommt in Sekunden eine SMS und wird gefragt, was los ist und wo." },
-      { "title": "Sie bekommen eine Job-Karte", "body": "Name, Adresse, Problem, Dringlichkeit und Nummer, alles auf Ihrem Handy." },
-      { "title": "Sie wählen einen Termin", "body": "Ein Tipp, und der Kunde bekommt eine Bestätigung. Auftrag gebucht." }
+      {
+        "title": "Sie verpassen einen Anruf",
+        "body": "Sie sind beschäftigt und können nicht rangehen. Kein Problem, machen Sie weiter."
+      },
+      {
+        "title": "Wir schreiben zurück",
+        "body": "Der Anrufer bekommt in Sekunden eine SMS und wird gefragt, was los ist und wo."
+      },
+      {
+        "title": "Sie bekommen eine Job-Karte",
+        "body": "Name, Adresse, Problem, Dringlichkeit und Nummer, alles auf Ihrem Handy."
+      },
+      {
+        "title": "Sie wählen einen Termin",
+        "body": "Ein Tipp, und der Kunde bekommt eine Bestätigung. Auftrag gebucht."
+      }
     ],
     "customer": [
-      { "title": "In der Nähe suchen", "body": "Kunden suchen nach Gewerk und sehen Handwerker in der Nähe mit echten freien Terminen." },
-      { "title": "Vergleichen", "body": "Vor der Buchung sehen sie, wer am schnellsten kann und wer am nächsten ist." },
-      { "title": "Prioritäts-Vermittlung (optional)", "body": "Für eine feste Gebühr, die vorher angezeigt wird, vermitteln wir den nächsten freien Termin. Der Preis steigt nie, nur weil es eilig ist." },
-      { "title": "Bestätigt", "body": "Ein Tipp. Der Kunde hat einen Termin, Sie haben den Auftrag." }
+      {
+        "title": "In der Nähe suchen",
+        "body": "Kunden suchen nach Gewerk und sehen Handwerker in der Nähe mit echten freien Terminen."
+      },
+      {
+        "title": "Vergleichen",
+        "body": "Vor der Buchung sehen sie, wer am schnellsten kann und wer am nächsten ist."
+      },
+      {
+        "title": "Prioritäts-Vermittlung (optional)",
+        "body": "Für eine feste Gebühr, die vorher angezeigt wird, vermitteln wir den nächsten freien Termin. Der Preis steigt nie, nur weil es eilig ist."
+      },
+      {
+        "title": "Bestätigt",
+        "body": "Ein Tipp. Der Kunde hat einen Termin, Sie haben den Auftrag."
+      }
     ],
     "footnote": "Demnächst: Kalender, Kundenhistorie, Erinnerungen und die Übergabe an Ihr Rechnungsprogramm."
   },
@@ -112,9 +164,18 @@
     "title": "Für Betriebe, die keine große Branchensoftware wollen",
     "subtitle": "Um ans Telefon zu gehen, brauchen Sie kein Büroprogramm.",
     "cards": [
-      { "title": "Ihre Nummer bleibt", "body": "Keine Website, kein Widget, kein neues Handy. Sie richten eine Rufumleitung auf Ihrer Nummer ein, das war's." },
-      { "title": "Macht eine Sache richtig", "body": "Große Branchenlösungen kosten 49 bis 75 € im Monat und wollen alles können. Marktplätze sind kostenlos, laufen aber nur in ihrer App. HandyPlan sorgt einfach dafür, dass aus verpassten Anrufen Aufträge werden." },
-      { "title": "Fair zu Ihren Kunden", "body": "Niemand zahlt drauf, nur weil die Heizung am Sonntag ausfällt. Die Prioritätsgebühr ist ein fester Betrag und wird vor der Buchung angezeigt." }
+      {
+        "title": "Ihre Nummer bleibt",
+        "body": "Keine Website, kein Widget, kein neues Handy. Sie richten eine Rufumleitung auf Ihrer Nummer ein, das war's."
+      },
+      {
+        "title": "Macht eine Sache richtig",
+        "body": "Große Branchenlösungen kosten 49 bis 75 € im Monat und wollen alles können. Marktplätze sind kostenlos, laufen aber nur in ihrer App. HandyPlan sorgt einfach dafür, dass aus verpassten Anrufen Aufträge werden."
+      },
+      {
+        "title": "Fair zu Ihren Kunden",
+        "body": "Niemand zahlt drauf, nur weil die Heizung am Sonntag ausfällt. Die Prioritätsgebühr ist ein fester Betrag und wird vor der Buchung angezeigt."
+      }
     ]
   },
   "model": {
@@ -149,9 +210,18 @@
     "title": "In Ihrer Sprache",
     "subtitle": "Auf Deutsch und Englisch verfügbar. Arabisch folgt in Kürze.",
     "items": [
-      { "name": "Deutsch", "status": "Verfügbar" },
-      { "name": "English", "status": "Verfügbar" },
-      { "name": "العربية", "status": "Demnächst" }
+      {
+        "name": "Deutsch",
+        "status": "Verfügbar"
+      },
+      {
+        "name": "English",
+        "status": "Verfügbar"
+      },
+      {
+        "name": "العربية",
+        "status": "Demnächst"
+      }
     ],
     "whyLabel": "Warum das wichtig ist:",
     "why": "Viele Menschen im Handwerk sind mit einer anderen Sprache aufgewachsen. In Gewerken wie Elektrotechnik und Metallbau sind es rund 30 %. Eine andere Plattform, die die Betriebsseite nicht nur auf Deutsch anbietet, haben wir nicht gefunden.",
@@ -161,29 +231,60 @@
     "eyebrow": "Gut zu wissen",
     "title": "Häufig gestellte Fragen",
     "items": [
-      { "q": "Wie fange ich an?", "a": "Registrieren Sie sich kostenlos und tragen Sie Ihre Betriebsdaten ein. Dann richten Sie auf Ihrem Handy eine Rufumleitung für Anrufe ein, die Sie nicht annehmen können. Ab dann bekommt jeder verpasste Anruf eine SMS zurück." },
-      { "q": "Ist das wirklich kostenlos?", "a": "Ja. SMS-Antworten, Job-Karten und Buchungen kosten nichts. Sie zahlen nur, wenn Sie eine KI-Funktion einschalten, zum Beispiel den KI-Telefonassistenten." },
-      { "q": "Brauche ich eine Website oder neue Software?", "a": "Nein. HandyPlan funktioniert mit der Nummer, die Sie schon haben. Website, Buchungs-Widget oder Bürosoftware brauchen Sie nicht." },
-      { "q": "Brauchen meine Kunden eine App?", "a": "Nein. Anrufer bekommen eine SMS mit einem kurzen Formular, das in jedem Browser aufgeht. Die Kunden-App ist freiwillig, für alle, die Handwerker in der Nähe suchen und vergleichen wollen." },
-      { "q": "Was ist mit Notfällen?", "a": "Echte Notfälle brauchen einen Menschen am Telefon. Die bleiben auf Ihrer Notdienstnummer. HandyPlan ist für normale Anrufe da, etwa eine Angebotsanfrage oder eine Reparatur." },
-      { "q": "Für welche Gewerke passt HandyPlan?", "a": "Für jeden Betrieb, der bei der Arbeit Anrufe verpasst. Besonders gut passt es, wo viele Reparaturen und Wartungen anfallen, zum Beispiel bei Heizung, Sanitär und Elektro." },
-      { "q": "Wo liegen meine Daten?", "a": "Auf AWS-Servern in Frankfurt. HandyPlan ist DSGVO-konform, einen Auftragsverarbeitungsvertrag (AVV) gibt es, und Kunden- oder Auftragsdaten werden nicht in den USA gespeichert." },
-      { "q": "Welche Sprachen gibt es?", "a": "Deutsch und Englisch. Arabisch folgt in Kürze, auch für Ihre Seite der App und nicht nur für Kunden." }
+      {
+        "q": "Wie fange ich an?",
+        "a": "Registrieren Sie sich kostenlos und tragen Sie Ihre Betriebsdaten ein. Dann richten Sie auf Ihrem Handy eine Rufumleitung für Anrufe ein, die Sie nicht annehmen können. Ab dann bekommt jeder verpasste Anruf eine SMS zurück."
+      },
+      {
+        "q": "Ist das wirklich kostenlos?",
+        "a": "Ja. SMS-Antworten, Job-Karten und Buchungen kosten nichts. Sie zahlen nur, wenn Sie eine KI-Funktion einschalten, zum Beispiel den KI-Telefonassistenten."
+      },
+      {
+        "q": "Brauche ich eine Website oder neue Software?",
+        "a": "Nein. HandyPlan funktioniert mit der Nummer, die Sie schon haben. Website, Buchungs-Widget oder Bürosoftware brauchen Sie nicht."
+      },
+      {
+        "q": "Brauchen meine Kunden eine App?",
+        "a": "Nein. Anrufer bekommen eine SMS mit einem kurzen Formular, das in jedem Browser aufgeht. Die Kunden-App ist freiwillig, für alle, die Handwerker in der Nähe suchen und vergleichen wollen."
+      },
+      {
+        "q": "Was ist mit Notfällen?",
+        "a": "Echte Notfälle brauchen einen Menschen am Telefon. Die bleiben auf Ihrer Notdienstnummer. HandyPlan ist für normale Anrufe da, etwa eine Angebotsanfrage oder eine Reparatur."
+      },
+      {
+        "q": "Für welche Gewerke passt HandyPlan?",
+        "a": "Für jeden Betrieb, der bei der Arbeit Anrufe verpasst. Besonders gut passt es, wo viele Reparaturen und Wartungen anfallen, zum Beispiel bei Heizung, Sanitär und Elektro."
+      },
+      {
+        "q": "Wo liegen meine Daten?",
+        "a": "Auf AWS-Servern in Frankfurt. HandyPlan ist DSGVO-konform, einen Auftragsverarbeitungsvertrag (AVV) gibt es, und Kunden- oder Auftragsdaten werden nicht in den USA gespeichert."
+      },
+      {
+        "q": "Welche Sprachen gibt es?",
+        "a": "Deutsch und Englisch. Arabisch folgt in Kürze, auch für Ihre Seite der App und nicht nur für Kunden."
+      }
     ]
   },
   "finalCta": {
     "title": "Schluss mit verlorenen Aufträgen durch verpasste Anrufe.",
     "subtitle": "Kostenlos registrieren, Nummer behalten und HandyPlan antworten lassen, wenn Sie nicht können.",
     "cta": "Kostenlos starten",
-    "trust": ["Kostenlos nutzbar", "Keine Kreditkarte", "Ihre Nummer bleibt"]
+    "trust": [
+      "Kostenlos nutzbar",
+      "Keine Kreditkarte",
+      "Ihre Nummer bleibt"
+    ]
   },
   "footer": {
     "tagline": "HandyPlan macht aus verpassten Anrufen gebuchte Aufträge, für Handwerksbetriebe.",
     "explore": "Entdecken",
     "legal": "Rechtliches",
-    "legalLinks": ["Impressum", "Datenschutz"],
+    "legalLinks": [
+      "Impressum",
+      "Datenschutz"
+    ],
     "rights": "© {year} HandyPlan. Alle Rechte vorbehalten.",
-    "madeWith": "Gemacht in Cottbus"
+    "backToTop": "Nach oben"
   },
   "a11y": {
     "home": "HandyPlan Startseite",
