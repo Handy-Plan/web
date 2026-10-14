@@ -576,3 +576,84 @@ html.lenis {
     animation: none !important;
   }
 }
+
+/* ── Onboarding live preview ────────────────────────────────── */
+/* Brief highlight when a live value changes (keyed re-mount restarts it) */
+@keyframes hp-flash {
+  from {
+    background-color: rgb(56 189 248 / 0.45);
+  }
+  to {
+    background-color: transparent;
+  }
+}
+.hp-flash {
+  animation: hp-flash 0.9s ease-out both;
+}
+@keyframes hp-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.hp-pop {
+  animation: hp-pop 0.5s var(--ease-spring) both;
+}
+@keyframes hp-rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: blur(0);
+  }
+}
+.hp-rise-in {
+  animation: hp-rise-in 0.8s var(--ease-out-expo) 0.2s both;
+}
+/* Progress segment fill (stepper) */
+@keyframes hp-fill {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+.hp-fill {
+  transform-origin: left;
+  animation: hp-fill 0.9s var(--ease-out-expo) 0.15s both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hp-flash,
+  .hp-pop,
+  .hp-rise-in,
+  .hp-fill {
+    animation: none !important;
+  }
+}
+@keyframes hp-draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.hp-draw {
+  stroke-dasharray: 1;
+  animation: hp-draw 0.7s var(--ease-out-expo) 0.45s both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hp-draw {
+    animation: none !important;
+    stroke-dashoffset: 0;
+  }
+}
