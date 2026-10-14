@@ -20,7 +20,8 @@
     "model": "Pricing",
     "faq": "FAQ",
     "cta": "Get started",
-    "login": "Log in"
+    "login": "Log in",
+    "directory": "Find a tradesperson"
   },
   "hero": {
     "badge": "Made for trade businesses",
@@ -339,7 +340,8 @@
         "Book with one tap"
       ],
       "note": "GDPR-compliant and hosted in Frankfurt. Your data stays in the EU."
-    }
+    },
+    "continueNotice": "Log in to book or contact a tradesperson. We'll bring you right back."
   },
   "signup": {
     "backHome": "Back to home",
@@ -376,7 +378,19 @@
       "stat": "GDPR-compliant and hosted in Frankfurt."
     },
     "metaDescription": "Create your free HandyPlan account. Every call you miss gets a text back and becomes a job card on your phone. No credit card needed.",
-    "shareDescription": "Free HandyPlan account: every missed call gets a text back and becomes a job card on your phone."
+    "shareDescription": "Free HandyPlan account: every missed call gets a text back and becomes a job card on your phone.",
+    "continueNotice": "Create a free account to book or contact a tradesperson. We'll bring you right back.",
+    "role": {
+      "label": "I want to",
+      "business": {
+        "title": "Get jobs from missed calls",
+        "body": "I run a trade business"
+      },
+      "customer": {
+        "title": "Find a tradesperson",
+        "body": "I need something fixed"
+      }
+    }
   },
   "onboarding": {
     "stepLabel": "Step {current} of {total}",
@@ -958,5 +972,110 @@
     "jobCard": "New job card",
     "jobTitle": "Power out after the storm",
     "jobMeta": "Sandower Str. 14, Cottbus · Today"
+  },
+  "directory": {
+    "metaTitle": "Find a tradesperson near you",
+    "metaDescription": "Electricians, plumbers, heating engineers and more around Cottbus, with real free slots. Compare who is soonest and closest, then book in a minute.",
+    "shareDescription": "Tradespeople near you with real free slots. Compare and book in a minute.",
+    "title": "Find a tradesperson near you",
+    "subtitle": "See who has a free slot soon and how far away they are. Browsing is open to everyone; you only need an account to book.",
+    "search": "What needs fixing?",
+    "allTrades": "All trades",
+    "results": "{count, plural, =0 {No tradespeople found} one {# tradesperson} other {# tradespeople}}",
+    "sample": "Sample listings",
+    "sampleHint": "These listings are examples until businesses join HandyPlan.",
+    "emptyTitle": "Nobody matches these filters",
+    "emptyBody": "Try another trade, a wider distance or a shorter search.",
+    "filters": {
+      "title": "Filters",
+      "active": "Active filters",
+      "remove": "Remove filter: {label}",
+      "clear": "Reset",
+      "clearAll": "Clear all",
+      "show": "{count, plural, =0 {No results} one {Show # result} other {Show # results}}",
+      "distance": "Distance",
+      "upTo": "Up to",
+      "km": "{km} km",
+      "anyDistance": "Any distance",
+      "when": "Free slot",
+      "whenOptions": {
+        "any": "Any time",
+        "today": "Today",
+        "tomorrow": "Tomorrow",
+        "week": "Next 7 days",
+        "weekend": "Weekend"
+      },
+      "time": "Time of day",
+      "timeOptions": {
+        "morning": "Morning",
+        "afternoon": "Afternoon",
+        "evening": "Evening"
+      },
+      "timeHints": {
+        "morning": "before 12",
+        "afternoon": "12 - 17",
+        "evening": "after 17"
+      },
+      "services": "Services",
+      "languages": "Languages spoken",
+      "more": "More",
+      "master": "Master craftsman",
+      "masterHint": "Registered Meisterbetrieb",
+      "emergency": "Emergency call-outs",
+      "emergencyHint": "Also comes out for urgent jobs",
+      "fast": "Fast replies",
+      "fastHint": "Usually answers within an hour"
+    },
+    "prompt": {
+      "close": "Close",
+      "bookTitle": "Create a free account to book this time",
+      "contactTitle": "Create a free account to contact {name}",
+      "body": "It takes a minute and costs nothing. Afterwards we bring you straight back here.",
+      "signup": "Create free account",
+      "login": "I already have an account",
+      "note": "No credit card. Your data stays in the EU."
+    },
+    "listed": {
+      "label": "For tradespeople",
+      "title": "Want to be listed here?",
+      "body": "Customers see your free slots and book you directly. Every call you miss gets a text back. Free to use.",
+      "cta": "Get listed free"
+    },
+    "hero": {
+      "area": "Cottbus and Lusatia",
+      "searchCta": "Search"
+    },
+    "browseTitle": "Browse by trade",
+    "sort": {
+      "label": "Sort by",
+      "soonest": "Soonest free slot",
+      "closest": "Closest first",
+      "replies": "Fastest replies"
+    },
+    "card": {
+      "nextFree": "Next free slot",
+      "since": "since {year}",
+      "km": "{km} km",
+      "master": "Master craftsman",
+      "emergency": "Emergencies",
+      "repliesMin": "Replies in ~{m} min",
+      "repliesHour": "Replies in ~{h} h",
+      "area": "Area",
+      "languages": "Languages",
+      "services": "Services",
+      "moreTimes": "More times",
+      "bookSlot": "Book {slot} with {name}",
+      "moreSlots": "+{count} more",
+      "book": "Book",
+      "contact": "Contact",
+      "contactLabel": "Contact {name}"
+    },
+    "languageNames": {
+      "de": "German",
+      "en": "English",
+      "pl": "Polish",
+      "ar": "Arabic",
+      "ru": "Russian"
+    }
   }
 }

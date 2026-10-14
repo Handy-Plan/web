@@ -22,10 +22,10 @@ import {
 
 type PageProps = {
   params: Promise<{ locale: string; section: string }>;
-  searchParams: Promise<{ job?: string }>;
+  searchParams: Promise<{ job?: string; pro?: string; slot?: string }>;
 };
 
-type Render = (args: { locale: string; job?: string }) => React.ReactNode;
+type Render = (args: { locale: string; job?: string; pro?: string; slot?: string }) => React.ReactNode;
 
 /** Which page each nav item renders, per dashboard. */
 const pages: Record<DashboardRole, Record<string, Render>> = {
@@ -40,7 +40,7 @@ const pages: Record<DashboardRole, Record<string, Render>> = {
     settings: ({ locale }) => <SettingsPage locale={locale} />,
   },
   customer: {
-    find: ({ locale }) => <FindPage locale={locale} />,
+    find: ({ locale, pro, slot }) => <FindPage locale={locale} pro={pro} slot={slot} />,
     bookings: ({ locale }) => <BookingsPage locale={locale} />,
     messages: ({ locale }) => <CustomerMessagesPage locale={locale} />,
     settings: () => <CustomerSettingsPage />,
@@ -71,7 +71,7 @@ export default async function DashboardSectionPage({ params, searchParams }: Pag
 
   const found = await findSection(section);
   if (!found) notFound();
-  const { job } = await searchParams;
+  const { job, pro, slot } = await searchParams;
 
-  return found.render({ locale, job });
+  return found.render({ locale, job, pro, slot });
 }

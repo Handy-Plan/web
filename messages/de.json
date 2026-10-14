@@ -22,7 +22,8 @@
     "model": "Preise",
     "faq": "FAQ",
     "cta": "Kostenlos starten",
-    "login": "Anmelden"
+    "login": "Anmelden",
+    "directory": "Handwerker finden"
   },
   "hero": {
     "badge": "Für Handwerksbetriebe gemacht",
@@ -341,7 +342,8 @@
         "Termine mit einem Tipp buchen"
       ],
       "note": "DSGVO-konform und in Frankfurt gehostet. Ihre Daten bleiben in der EU."
-    }
+    },
+    "continueNotice": "Melden Sie sich an, um einen Handwerker zu buchen oder zu kontaktieren. Danach geht es direkt zurück."
   },
   "signup": {
     "backHome": "Zurück zur Startseite",
@@ -378,7 +380,19 @@
       "stat": "DSGVO-konform und in Frankfurt gehostet."
     },
     "metaDescription": "Kostenloses HandyPlan-Konto erstellen. Jeder verpasste Anruf bekommt eine SMS zurück und landet als Job-Karte auf Ihrem Handy. Ohne Kreditkarte.",
-    "shareDescription": "Kostenloses HandyPlan-Konto: Jeder verpasste Anruf bekommt eine SMS und wird zur Job-Karte."
+    "shareDescription": "Kostenloses HandyPlan-Konto: Jeder verpasste Anruf bekommt eine SMS und wird zur Job-Karte.",
+    "continueNotice": "Erstellen Sie ein kostenloses Konto, um einen Handwerker zu buchen oder zu kontaktieren. Danach geht es direkt zurück.",
+    "role": {
+      "label": "Ich möchte",
+      "business": {
+        "title": "Aufträge aus verpassten Anrufen",
+        "body": "Ich habe einen Handwerksbetrieb"
+      },
+      "customer": {
+        "title": "Einen Handwerker finden",
+        "body": "Bei mir muss etwas repariert werden"
+      }
+    }
   },
   "onboarding": {
     "stepLabel": "Schritt {current} von {total}",
@@ -960,5 +974,110 @@
     "jobCard": "Neue Job-Karte",
     "jobTitle": "Stromausfall nach Gewitter",
     "jobMeta": "Sandower Str. 14, Cottbus · Heute"
+  },
+  "directory": {
+    "metaTitle": "Handwerker in Ihrer Nähe finden",
+    "metaDescription": "Elektriker, Installateure, Heizungsbauer und mehr rund um Cottbus, mit echten freien Terminen. Vergleichen, wer am schnellsten und nächsten ist, und buchen.",
+    "shareDescription": "Handwerker in Ihrer Nähe mit echten freien Terminen. Vergleichen und in einer Minute buchen.",
+    "title": "Handwerker in Ihrer Nähe finden",
+    "subtitle": "Sehen Sie, wer bald einen freien Termin hat und wie weit entfernt er ist. Stöbern kann jeder, nur zum Buchen brauchen Sie ein Konto.",
+    "search": "Was ist kaputt?",
+    "allTrades": "Alle Gewerke",
+    "results": "{count, plural, =0 {Keine Handwerker gefunden} one {# Handwerker} other {# Handwerker}}",
+    "sample": "Beispieleinträge",
+    "sampleHint": "Diese Einträge sind Beispiele, bis Betriebe HandyPlan beitreten.",
+    "emptyTitle": "Niemand passt zu diesen Filtern",
+    "emptyBody": "Versuchen Sie ein anderes Gewerk, eine größere Entfernung oder eine kürzere Suche.",
+    "filters": {
+      "title": "Filter",
+      "active": "Aktive Filter",
+      "remove": "Filter entfernen: {label}",
+      "clear": "Zurücksetzen",
+      "clearAll": "Alle entfernen",
+      "show": "{count, plural, =0 {Keine Ergebnisse} one {# Ergebnis anzeigen} other {# Ergebnisse anzeigen}}",
+      "distance": "Entfernung",
+      "upTo": "Bis",
+      "km": "{km} km",
+      "anyDistance": "Egal wie weit",
+      "when": "Freier Termin",
+      "whenOptions": {
+        "any": "Jederzeit",
+        "today": "Heute",
+        "tomorrow": "Morgen",
+        "week": "Nächste 7 Tage",
+        "weekend": "Wochenende"
+      },
+      "time": "Tageszeit",
+      "timeOptions": {
+        "morning": "Vormittag",
+        "afternoon": "Nachmittag",
+        "evening": "Abend"
+      },
+      "timeHints": {
+        "morning": "vor 12",
+        "afternoon": "12 - 17",
+        "evening": "nach 17"
+      },
+      "services": "Leistungen",
+      "languages": "Gesprochene Sprachen",
+      "more": "Weitere",
+      "master": "Meisterbetrieb",
+      "masterHint": "Eingetragener Meisterbetrieb",
+      "emergency": "Notdienst",
+      "emergencyHint": "Kommt auch bei dringenden Fällen",
+      "fast": "Schnelle Antwort",
+      "fastHint": "Antwortet meist innerhalb einer Stunde"
+    },
+    "prompt": {
+      "close": "Schließen",
+      "bookTitle": "Kostenloses Konto erstellen und diesen Termin buchen",
+      "contactTitle": "Kostenloses Konto erstellen und {name} kontaktieren",
+      "body": "Dauert eine Minute und kostet nichts. Danach bringen wir Sie direkt hierher zurück.",
+      "signup": "Kostenloses Konto erstellen",
+      "login": "Ich habe schon ein Konto",
+      "note": "Keine Kreditkarte. Ihre Daten bleiben in der EU."
+    },
+    "listed": {
+      "label": "Für Handwerker",
+      "title": "Möchten Sie hier gelistet werden?",
+      "body": "Kunden sehen Ihre freien Termine und buchen Sie direkt. Jeder verpasste Anruf bekommt eine SMS zurück. Kostenlos nutzbar.",
+      "cta": "Kostenlos eintragen"
+    },
+    "hero": {
+      "area": "Cottbus und Lausitz",
+      "searchCta": "Suchen"
+    },
+    "browseTitle": "Nach Gewerk stöbern",
+    "sort": {
+      "label": "Sortieren nach",
+      "soonest": "Frühester freier Termin",
+      "closest": "Nächste zuerst",
+      "replies": "Schnellste Antwort"
+    },
+    "card": {
+      "nextFree": "Nächster freier Termin",
+      "since": "seit {year}",
+      "km": "{km} km",
+      "master": "Meisterbetrieb",
+      "emergency": "Notdienst",
+      "repliesMin": "Antwortet in ~{m} Min.",
+      "repliesHour": "Antwortet in ~{h} Std.",
+      "area": "Gebiet",
+      "languages": "Sprachen",
+      "services": "Leistungen",
+      "moreTimes": "Weitere Termine",
+      "bookSlot": "{slot} bei {name} buchen",
+      "moreSlots": "+{count} weitere",
+      "book": "Buchen",
+      "contact": "Kontakt",
+      "contactLabel": "{name} kontaktieren"
+    },
+    "languageNames": {
+      "de": "Deutsch",
+      "en": "Englisch",
+      "pl": "Polnisch",
+      "ar": "Arabisch",
+      "ru": "Russisch"
+    }
   }
 }

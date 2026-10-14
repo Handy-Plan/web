@@ -20,6 +20,8 @@ export const navConfig = {
     { key: "faq", href: "#faq" },
   ],
   /** Locale-relative routes — render with the i18n Link or prefix the locale. */
+  /** Separate pages shown next to the section links. */
+  pages: [{ key: "directory", href: "/handwerker" }],
   cta: { href: "/signup" },
   login: { href: "/login" },
 } as const;

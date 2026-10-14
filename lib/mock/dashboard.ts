@@ -748,22 +748,62 @@ type RawPro = {
   km: number;
   district: L;
   master: boolean;
+  about: L;
   slots: { offset: number; time: string }[];
 };
 
 const pros: RawPro[] = [
-  { id: "p1", name: "Elektro Krüger", trade: "electrician", km: 2.1, district: { en: "Cottbus-Sandow", de: "Cottbus-Sandow" }, master: true, slots: [{ offset: 0, time: "16:00" }, { offset: 1, time: "10:30" }, { offset: 2, time: "08:00" }, { offset: 3, time: "15:00" }] },
-  { id: "p2", name: "Haustechnik Wendisch", trade: "plumber", km: 3.4, district: { en: "Cottbus-Ströbitz", de: "Cottbus-Ströbitz" }, master: true, slots: [{ offset: 1, time: "09:00" }, { offset: 1, time: "14:00" }, { offset: 3, time: "08:30" }] },
-  { id: "p3", name: "SHK Mielke", trade: "hvac", km: 2.9, district: { en: "Cottbus-Schmellwitz", de: "Cottbus-Schmellwitz" }, master: true, slots: [{ offset: 0, time: "17:30" }, { offset: 2, time: "11:00" }] },
-  { id: "p4", name: "Schlüsseldienst Kahle", trade: "locksmith", km: 1.3, district: { en: "Cottbus-Mitte", de: "Cottbus-Mitte" }, master: false, slots: [{ offset: 0, time: "15:00" }, { offset: 0, time: "18:30" }, { offset: 1, time: "08:00" }] },
-  { id: "p5", name: "Malerbetrieb Seidel", trade: "painter", km: 4.6, district: { en: "Kolkwitz", de: "Kolkwitz" }, master: true, slots: [{ offset: 4, time: "07:30" }, { offset: 6, time: "07:30" }] },
-  { id: "p6", name: "Dachdeckerei Lubosch", trade: "roofer", km: 7.8, district: { en: "Neuhausen/Spree", de: "Neuhausen/Spree" }, master: true, slots: [{ offset: 5, time: "08:00" }] },
-  { id: "p7", name: "Tischlerei Graf", trade: "carpenter", km: 9.2, district: { en: "Burg (Spreewald)", de: "Burg (Spreewald)" }, master: true, slots: [{ offset: 2, time: "13:00" }, { offset: 7, time: "09:00" }] },
-  { id: "p8", name: "Fliesen Matuschek", trade: "tiler", km: 12.4, district: { en: "Drebkau", de: "Drebkau" }, master: false, slots: [{ offset: 3, time: "10:00" }] },
-  { id: "p9", name: "Schornsteinfeger Rösler", trade: "chimneySweep", km: 5.5, district: { en: "Cottbus-Sachsendorf", de: "Cottbus-Sachsendorf" }, master: true, slots: [{ offset: 1, time: "11:30" }, { offset: 4, time: "09:00" }] },
-  { id: "p10", name: "Kfz-Werkstatt Noack", trade: "mechanic", km: 6.1, district: { en: "Cottbus-Madlow", de: "Cottbus-Madlow" }, master: true, slots: [{ offset: 1, time: "07:30" }, { offset: 2, time: "12:00" }] },
-  { id: "p11", name: "Elektro Pohl & Sohn", trade: "electrician", km: 8.7, district: { en: "Peitz", de: "Peitz" }, master: true, slots: [{ offset: 2, time: "09:30" }, { offset: 5, time: "13:00" }] },
+  { id: "p1", name: "Elektro Krüger", trade: "electrician", km: 2.1, district: { en: "Cottbus-Sandow", de: "Cottbus-Sandow" }, master: true, about: { en: "Electrical installations, e-checks and wallboxes.", de: "Elektroinstallation, E-Check und Wallboxen." }, slots: [{ offset: 0, time: "16:00" }, { offset: 1, time: "10:30" }, { offset: 2, time: "08:00" }, { offset: 3, time: "15:00" }] },
+  { id: "p2", name: "Haustechnik Wendisch", trade: "plumber", km: 3.4, district: { en: "Cottbus-Ströbitz", de: "Cottbus-Ströbitz" }, master: true, about: { en: "Bathrooms, taps and drains. Small repairs welcome.", de: "Bäder, Armaturen und Abflüsse. Auch kleine Reparaturen." }, slots: [{ offset: 1, time: "09:00" }, { offset: 1, time: "14:00" }, { offset: 3, time: "08:30" }] },
+  { id: "p3", name: "SHK Mielke", trade: "hvac", km: 2.9, district: { en: "Cottbus-Schmellwitz", de: "Cottbus-Schmellwitz" }, master: true, about: { en: "Heating service, boilers and heat pumps.", de: "Heizungswartung, Thermen und Wärmepumpen." }, slots: [{ offset: 0, time: "17:30" }, { offset: 2, time: "11:00" }] },
+  { id: "p4", name: "Schlüsseldienst Kahle", trade: "locksmith", km: 1.3, district: { en: "Cottbus-Mitte", de: "Cottbus-Mitte" }, master: false, about: { en: "Lock-outs, new cylinders and door security.", de: "Türöffnungen, neue Zylinder und Einbruchschutz." }, slots: [{ offset: 0, time: "15:00" }, { offset: 0, time: "18:30" }, { offset: 1, time: "08:00" }] },
+  { id: "p5", name: "Malerbetrieb Seidel", trade: "painter", km: 4.6, district: { en: "Kolkwitz", de: "Kolkwitz" }, master: true, about: { en: "Interior painting, wallpaper and facades.", de: "Innenanstrich, Tapeten und Fassaden." }, slots: [{ offset: 4, time: "07:30" }, { offset: 6, time: "07:30" }] },
+  { id: "p6", name: "Dachdeckerei Lubosch", trade: "roofer", km: 7.8, district: { en: "Neuhausen/Spree", de: "Neuhausen/Spree" }, master: true, about: { en: "Roof repairs, gutters and storm damage.", de: "Dachreparaturen, Dachrinnen und Sturmschäden." }, slots: [{ offset: 5, time: "08:00" }] },
+  { id: "p7", name: "Tischlerei Graf", trade: "carpenter", km: 9.2, district: { en: "Burg (Spreewald)", de: "Burg (Spreewald)" }, master: true, about: { en: "Doors, stairs and built-in furniture.", de: "Türen, Treppen und Einbauschränke." }, slots: [{ offset: 2, time: "13:00" }, { offset: 7, time: "09:00" }] },
+  { id: "p8", name: "Fliesen Matuschek", trade: "tiler", km: 12.4, district: { en: "Drebkau", de: "Drebkau" }, master: false, about: { en: "Bathroom and kitchen tiling, repairs.", de: "Fliesen für Bad und Küche, Reparaturen." }, slots: [{ offset: 3, time: "10:00" }] },
+  { id: "p9", name: "Schornsteinfeger Rösler", trade: "chimneySweep", km: 5.5, district: { en: "Cottbus-Sachsendorf", de: "Cottbus-Sachsendorf" }, master: true, about: { en: "Chimney sweeping, emission checks, fire safety.", de: "Kehren, Abgasmessung und Brandschutz." }, slots: [{ offset: 1, time: "11:30" }, { offset: 4, time: "09:00" }] },
+  { id: "p10", name: "Kfz-Werkstatt Noack", trade: "mechanic", km: 6.1, district: { en: "Cottbus-Madlow", de: "Cottbus-Madlow" }, master: true, about: { en: "Service, inspections and tyre changes.", de: "Inspektion, HU-Vorbereitung und Reifenwechsel." }, slots: [{ offset: 1, time: "07:30" }, { offset: 2, time: "12:00" }] },
+  { id: "p11", name: "Elektro Pohl & Sohn", trade: "electrician", km: 8.7, district: { en: "Peitz", de: "Peitz" }, master: true, about: { en: "Electrical repairs and smart-home wiring.", de: "Elektroreparaturen und Smart-Home-Verkabelung." }, slots: [{ offset: 2, time: "09:30" }, { offset: 5, time: "13:00" }] },
+  { id: "p12", name: "Heizung & Sanitär Domaschk", trade: "plumber", km: 14.8, district: { en: "Spremberg", de: "Spremberg" }, master: true, about: { en: "Heating and plumbing, emergency repairs on weekdays.", de: "Heizung und Sanitär, Notreparaturen an Werktagen." }, slots: [{ offset: 1, time: "13:00" }, { offset: 3, time: "09:00" }] },
+  { id: "p13", name: "Elektro Mattick", trade: "electrician", km: 21.5, district: { en: "Senftenberg", de: "Senftenberg" }, master: true, about: { en: "Commercial and home wiring, photovoltaics.", de: "Gewerbe- und Hausinstallation, Photovoltaik." }, slots: [{ offset: 4, time: "08:00" }] },
+  { id: "p14", name: "Tischlerei Bulla", trade: "carpenter", km: 4.1, district: { en: "Cottbus-Sielow", de: "Cottbus-Sielow" }, master: false, about: { en: "Windows, floors and small carpentry jobs.", de: "Fenster, Böden und kleine Tischlerarbeiten." }, slots: [{ offset: 0, time: "16:30" }, { offset: 2, time: "08:00" }] },
+  { id: "p15", name: "Malermeister Jurk", trade: "painter", km: 18.2, district: { en: "Forst (Lausitz)", de: "Forst (Lausitz)" }, master: true, about: { en: "Painting, plastering and damp-damage repair.", de: "Malerarbeiten, Putz und Feuchteschäden." }, slots: [{ offset: 2, time: "07:30" }, { offset: 5, time: "07:30" }] },
+  { id: "p16", name: "Dachbau Kschenka", trade: "roofer", km: 11.3, district: { en: "Peitz", de: "Peitz" }, master: true, about: { en: "Flat and pitched roofs, skylights.", de: "Flach- und Steildächer, Dachfenster." }, slots: [{ offset: 3, time: "07:00" }] },
 ];
+
+/** Directory details per tradesperson (services use the onboarding service keys). */
+const proExtras: Record<
+  string,
+  { services: string[]; languages: string[]; emergency: boolean; replyMinutes: number; founded: number; extraSlots?: { offset: number; time: string }[] }
+> = {
+  p1: { services: ["installation", "repair", "inspection", "consultation"], languages: ["de", "en"], emergency: true, replyMinutes: 25, founded: 2009, extraSlots: [{ offset: 1, time: "17:30" }, { offset: 5, time: "09:00" }] },
+  p2: { services: ["repair", "installation", "maintenance"], languages: ["de", "pl"], emergency: true, replyMinutes: 40, founded: 1998, extraSlots: [{ offset: 2, time: "18:00" }] },
+  p3: { services: ["maintenance", "repair", "inspection", "emergency"], languages: ["de"], emergency: true, replyMinutes: 15, founded: 2004 },
+  p4: { services: ["emergency", "installation", "repair"], languages: ["de", "en", "ru"], emergency: true, replyMinutes: 10, founded: 2015, extraSlots: [{ offset: 5, time: "11:00" }, { offset: 6, time: "12:00" }] },
+  p5: { services: ["consultation", "installation"], languages: ["de"], emergency: false, replyMinutes: 180, founded: 1992 },
+  p6: { services: ["repair", "inspection", "emergency"], languages: ["de", "pl"], emergency: true, replyMinutes: 120, founded: 2001 },
+  p7: { services: ["consultation", "installation", "repair"], languages: ["de", "en"], emergency: false, replyMinutes: 90, founded: 2011, extraSlots: [{ offset: 5, time: "10:00" }] },
+  p8: { services: ["installation", "repair"], languages: ["de", "ar"], emergency: false, replyMinutes: 60, founded: 2019, extraSlots: [{ offset: 1, time: "15:30" }] },
+  p9: { services: ["inspection", "maintenance"], languages: ["de"], emergency: false, replyMinutes: 240, founded: 1987 },
+  p10: { services: ["maintenance", "repair", "inspection"], languages: ["de", "en"], emergency: false, replyMinutes: 30, founded: 2007, extraSlots: [{ offset: 5, time: "08:00" }] },
+  p11: { services: ["installation", "repair", "consultation"], languages: ["de", "en", "ar"], emergency: true, replyMinutes: 45, founded: 2013, extraSlots: [{ offset: 0, time: "18:00" }] },
+  p12: { services: ["repair", "maintenance", "emergency"], languages: ["de", "ru"], emergency: true, replyMinutes: 20, founded: 1996, extraSlots: [{ offset: 6, time: "10:00" }] },
+  p13: { services: ["installation", "inspection", "consultation"], languages: ["de", "en"], emergency: false, replyMinutes: 150, founded: 2010 },
+  p14: { services: ["repair", "installation"], languages: ["de", "pl"], emergency: false, replyMinutes: 35, founded: 2020 },
+  p15: { services: ["consultation", "repair"], languages: ["de"], emergency: false, replyMinutes: 300, founded: 1985 },
+  p16: { services: ["repair", "inspection", "emergency"], languages: ["de"], emergency: true, replyMinutes: 75, founded: 2003, extraSlots: [{ offset: 5, time: "08:00" }] },
+};
+
+export type ProSlot = {
+  id: string;
+  label: string;
+  today: boolean;
+  /** Days from today (0 = today). */
+  offset: number;
+  /** Start time, minutes after midnight. */
+  minutes: number;
+  weekend: boolean;
+};
 
 export type Pro = {
   id: string;
@@ -773,9 +813,16 @@ export type Pro = {
   km: number;
   district: string;
   master: boolean;
+  about: string;
+  services: string[];
+  languages: string[];
+  emergency: boolean;
+  /** Typical time to answer a request, in minutes. */
+  replyMinutes: number;
+  founded: number;
   /** Minutes from now to the first free slot (for sorting). */
   soonest: number;
-  slots: { id: string; label: string; today: boolean }[];
+  slots: ProSlot[];
 };
 
 export type Booking = {
@@ -790,13 +837,20 @@ export type Booking = {
   priority: boolean;
 };
 
+/** Public directory listing (same sample tradespeople as the customer dashboard). */
+export function getDirectory(locale: Locale) {
+  return getCustomerData(locale, { reply: "", confirm: () => "" }).pros;
+}
+
 export function getCustomerData(locale: Locale, templates: MessageTemplates) {
   const c = createClock(locale);
 
   const proList: Pro[] = pros
     .map((p) => {
-      const open = p.slots.filter((s) => !c.isPast(s.offset, s.time));
-      const first = open[0] ?? p.slots[p.slots.length - 1];
+      const x = proExtras[p.id];
+      const all = [...p.slots, ...(x.extraSlots ?? [])].sort((a, b) => a.offset - b.offset || toMinutes(a.time) - toMinutes(b.time));
+      const open = all.filter((s) => !c.isPast(s.offset, s.time));
+      const first = open[0] ?? all[all.length - 1];
       return {
         id: p.id,
         name: p.name,
@@ -805,8 +859,21 @@ export function getCustomerData(locale: Locale, templates: MessageTemplates) {
         km: p.km,
         district: pick(p.district, locale),
         master: p.master,
+        about: pick(p.about, locale),
+        services: x.services,
+        languages: x.languages,
+        emergency: x.emergency,
+        replyMinutes: x.replyMinutes,
+        founded: x.founded,
         soonest: first.offset * DAY + toMinutes(first.time) - c.today.minutes,
-        slots: (open.length ? open : [first]).map((s, n) => ({ id: `${p.id}-${n}`, label: c.slot(s.offset, s.time), today: s.offset === 0 })),
+        slots: (open.length ? open : [first]).map((s, n) => ({
+          id: `${p.id}-${n}`,
+          label: c.slot(s.offset, s.time),
+          today: s.offset === 0,
+          offset: s.offset,
+          minutes: toMinutes(s.time),
+          weekend: (c.today.weekday + s.offset) % 7 >= 5,
+        })),
       };
     })
     .sort((a, b) => a.soonest - b.soonest);
