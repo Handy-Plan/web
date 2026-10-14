@@ -562,7 +562,9 @@
       "profile": "Firmenprofil",
       "settings": "Einstellungen",
       "logout": "Abmelden",
-      "yourAccount": "Ihr Konto"
+      "yourAccount": "Ihr Konto",
+      "sample": "Beispieldaten",
+      "sampleHint": "Diese Seiten zeigen Beispieldaten, bis Ihr Konto verbunden ist."
     },
     "overview": {
       "greeting": "Willkommen zurück.",
@@ -578,29 +580,360 @@
       "setupTitle": "Profil vervollständigen",
       "setupBody": "Ihr Profil ist zu {percent} % vollständig. Firmenname und Notdienstnummer stehen direkt in der automatischen Antwort.",
       "setupCta": "Weiter einrichten",
-      "jobsTitle": "Neueste Job-Karten",
+      "jobsTitle": "Wartet auf Sie",
       "viewAll": "Alle ansehen",
-      "jobsEmptyTitle": "Noch keine Job-Karten",
-      "jobsEmptyBody": "Wenn Sie einen Anruf verpassen, bekommt der Anrufer eine SMS, und seine Anfrage erscheint hier als Job-Karte.",
-      "jobsEmptyCta": "Rufumleitung einrichten",
       "todayTitle": "Heute",
-      "todayEmpty": "Für heute ist nichts gebucht."
+      "todayEmpty": "Für heute ist nichts gebucht.",
+      "newestTitle": "Neue Auftragskarte, {ago}",
+      "pickTime": "Termin wählen",
+      "seconds": "{count} s",
+      "statNotes": {
+        "missed": "{count, plural, =0 {Noch keine Auftragskarte} one {# wurde zur Auftragskarte} other {# wurden zu Auftragskarten}}",
+        "cards": "{count, plural, =0 {Alle haben einen Termin} one {# braucht noch einen Termin} other {# brauchen noch einen Termin}}",
+        "booked": "Nächster: {when}",
+        "reply": "Vom verpassten Anruf bis zur SMS"
+      }
     },
-    "placeholder": {
-      "empty": "Hier ist noch nichts.",
-      "back": "Zurück zur Übersicht",
-      "editProfile": "Firmendaten bearbeiten",
-      "overview": "Ihre Buchungen und Nachrichten an einem Ort.",
-      "jobs": "Jeder verpasste Anruf wird hier zur Job-Karte, mit Name, Adresse, Problem und Dringlichkeit.",
-      "calls": "Alle verpassten Anrufe und ob daraus ein Auftrag wurde.",
+    "common": {
+      "close": "Schließen"
+    },
+    "intro": {
+      "jobs": "Jeder verpasste Anruf wird hier zur Auftragskarte, mit Name, Adresse, Problem und Dringlichkeit.",
+      "calls": "Jeder Anruf, den Sie verpasst haben, und was danach passiert ist.",
       "calendar": "Ihre gebuchten Aufträge, Tag für Tag, innerhalb Ihrer Arbeitszeiten.",
-      "customers": "Alle, die Sie angerufen oder gebucht haben, mit ihrer Historie.",
+      "customers": "Alle, die Sie angerufen oder gebucht haben, mit ihrem Verlauf.",
       "messages": "Die SMS, die HandyPlan für Sie verschickt hat, und die Antworten darauf.",
-      "profile": "Ihre Firmendaten. Sie können sie jederzeit ändern.",
-      "ai": "Der KI-Telefonassistent und weitere kostenpflichtige Funktionen. Sie zahlen nur, was Sie einschalten.",
-      "settings": "Konto, Benachrichtigungen, Rufumleitung und Sprache.",
+      "profile": "Ihre Firmendaten. Einiges davon sehen Anrufer in der automatischen Antwort.",
+      "ai": "Kostenpflichtige Zusatzfunktionen. Sie zahlen nur, was Sie einschalten.",
+      "settings": "Rufumleitung, automatische Antwort, Benachrichtigungen und Ihr Konto.",
       "find": "Nach Gewerk suchen und Handwerker in der Nähe mit echten freien Terminen sehen.",
-      "bookings": "Ihre kommenden und vergangenen Buchungen."
+      "bookings": "Ihre kommenden und vergangenen Buchungen.",
+      "customerMessages": "Ihre Unterhaltungen mit Handwerkern.",
+      "customerSettings": "Benachrichtigungen, Sprache und Ihr Konto."
+    },
+    "jobs": {
+      "filterLabel": "Auftragskarten filtern",
+      "filters": {
+        "all": "Alle",
+        "new": "Neu",
+        "proposed": "Termin gesendet",
+        "booked": "Gebucht",
+        "done": "Erledigt"
+      },
+      "emptyTitle": "Hier ist nichts",
+      "emptyBody": "Auftragskarten landen hier, sobald sich ihr Status ändert.",
+      "detailLabel": "Details der Auftragskarte",
+      "status": {
+        "new": "Neu",
+        "proposed": "Termin gesendet",
+        "booked": "Gebucht",
+        "done": "Erledigt"
+      },
+      "urgency": {
+        "today": "Heute",
+        "week": "Diese Woche",
+        "flexible": "Flexibel"
+      },
+      "source": {
+        "sms": "Per SMS",
+        "voice": "Per KI-Assistent"
+      },
+      "callerWrote": "Der Anrufer schreibt",
+      "address": "Adresse",
+      "received": "Eingegangen",
+      "pickTime": "Termin wählen",
+      "pickTimeHint": "Freie Termine in Ihren Arbeitszeiten. Der Kunde bestätigt per SMS.",
+      "sendTime": "Termin senden",
+      "callBack": "Zurückrufen",
+      "waiting": "Warten auf Bestätigung von {name} für {when}.",
+      "markBooked": "Als gebucht markieren",
+      "changeTime": "Termin ändern",
+      "bookedFor": "Gebucht für {when}. Der Kunde bekommt am Vortag eine Erinnerung.",
+      "markDone": "Als erledigt markieren",
+      "openCalendar": "Kalender",
+      "doneNote": "Erledigt. Besuch am {when}."
+    },
+    "calls": {
+      "filterLabel": "Anrufe filtern",
+      "filters": {
+        "all": "Alle",
+        "job": "Auftragskarte",
+        "waiting": "Noch keine Antwort",
+        "calledBack": "Zurückgerufen"
+      },
+      "empty": "Keine Anrufe in dieser Liste.",
+      "earlier": "Früher in dieser Woche",
+      "unknown": "Unbekannte Nummer",
+      "rang": "{seconds} s geklingelt",
+      "viaVoice": "Vom KI-Assistenten angenommen",
+      "outcome": {
+        "job": "Auftragskarte",
+        "waiting": "Noch keine Antwort",
+        "calledBack": "Zurückgerufen"
+      },
+      "openJob": "Auftragskarte öffnen",
+      "callBack": "Zurückrufen",
+      "summary": {
+        "week": "Verpasst in 7 Tagen",
+        "weekNote": "Jeder bekam innerhalb von Sekunden eine SMS",
+        "jobs": "Zu Auftragskarten geworden",
+        "jobsNote": "{count, plural, one {# Anruf} other {# Anrufe}}, die Sie nicht verloren haben",
+        "waiting": "Noch keine Antwort",
+        "waitingNote": "SMS erhalten, aber noch nicht geantwortet"
+      }
+    },
+    "calendar": {
+      "prevWeek": "Vorherige Woche",
+      "nextWeek": "Nächste Woche",
+      "weeks": {
+        "0": "Letzte Woche",
+        "1": "Diese Woche",
+        "2": "Nächste Woche"
+      },
+      "thisWeek": "Heute",
+      "count": "{count, plural, =0 {Nichts gebucht} one {# Termin} other {# Termine}}",
+      "emptyDay": "An diesem Tag ist nichts gebucht.",
+      "legendJob": "Aus einer Auftragskarte",
+      "legendOther": "Andere Termine",
+      "legendClosed": "Außerhalb der Arbeitszeit",
+      "now": "Jetzt",
+      "done": "Erledigt"
+    },
+    "customers": {
+      "count": "{count, plural, one {# Kunde} other {# Kunden}}",
+      "search": "Nach Name, Straße oder Nummer suchen",
+      "noMatch": "Kein Kunde passt zu „{query}“.",
+      "cols": {
+        "name": "Name",
+        "address": "Adresse",
+        "jobs": "Aufträge",
+        "last": "Letzter Kontakt"
+      },
+      "new": "Neu",
+      "openCount": "{count} offen",
+      "detailLabel": "Kundendetails",
+      "jobsTotal": "{count, plural, one {# Auftrag} other {# Aufträge}} bei Ihnen",
+      "call": "Anrufen",
+      "message": "Nachricht",
+      "phone": "Telefon",
+      "note": "Notiz",
+      "history": "Verlauf"
+    },
+    "messages": {
+      "justNow": "Gerade eben",
+      "unread": "Ungelesene Nachrichten:",
+      "empty": "Noch keine Unterhaltungen.",
+      "back": "Zurück zu den Unterhaltungen",
+      "openJob": "Auftragskarte",
+      "autoBusiness": "Automatisch gesendet",
+      "autoCustomer": "Automatische Nachricht",
+      "quick": {
+        "onWay": "Ich bin unterwegs.",
+        "callSoon": "Ich rufe Sie in ein paar Minuten an.",
+        "photo": "Können Sie mir ein Foto davon schicken?",
+        "thanks": "Vielen Dank!",
+        "parking": "Vor dem Haus kann man parken.",
+        "reschedule": "Können wir einen anderen Termin finden?"
+      },
+      "placeholder": "Nachricht schreiben",
+      "send": "Senden",
+      "confirmTemplate": "Termin bestätigt: {when}. Sie bekommen am Vortag eine Erinnerung."
+    },
+    "ai": {
+      "agentTitle": "KI-Telefonassistent",
+      "agentBody": "Für Anrufer, die keinen Link nutzen. Er nimmt ab, wenn Sie nicht können, fragt, was kaputt ist, wo und wie dringend, und schreibt dieselbe Auftragskarte wie die SMS.",
+      "rules": {
+        "announce": "Sagt, dass er ein digitaler Assistent ist, und fragt zuerst nach Zustimmung",
+        "noRecording": "Keine Aufnahmen. Nur eine schriftliche Notiz des Gesprächs",
+        "emergency": "Echte Notfälle bekommen Ihre Notfallnummer, nicht den Assistenten"
+      },
+      "agentToggle": "Verpasste Anrufe annehmen",
+      "agentOffNote": "Aus. Anrufer bekommen wie gewohnt die SMS.",
+      "agentOnNote": "Angefragt. Wir zeigen den Preis, bevor etwas startet.",
+      "sampleCall": "Beispielanruf",
+      "agent": "Assistent",
+      "caller": "Anrufer",
+      "transcript": {
+        "agent1": "Hallo, hier ist der digitale Assistent von {name}. Das Gespräch wird nicht aufgezeichnet, ich notiere nur. Ist das okay?",
+        "caller1": "Ja, passt.",
+        "agent2": "Worum geht es, und wo?",
+        "caller2": "Alter Sicherungskasten mit Schraubsicherungen, ich brauche ein Angebot. Lindenstraße 5, Spremberg.",
+        "agent3": "Ist es heute dringend, oder reicht diese Woche?",
+        "caller3": "Diese Woche reicht.",
+        "agent4": "Danke. {name} schickt Ihnen einen Termin per SMS."
+      },
+      "cardCreated": "Auftragskarte erstellt: Angebot für neuen Verteiler",
+      "moreTitle": "Als Nächstes",
+      "moreBody": "Benachrichtigung einschalten, und wir sagen Bescheid, sobald es so weit ist.",
+      "soon": "Bald verfügbar",
+      "extras": {
+        "scheduling": {
+          "title": "Terminvorschläge",
+          "body": "Schlägt Zeiten vor, die zu Ihrer Route und den gebuchten Aufträgen passen."
+        },
+        "voiceNotes": {
+          "title": "Sprachnotizen",
+          "body": "Sagen Sie, was Sie vor Ort gemacht haben. Daraus wird eine saubere Notiz auf der Auftragskarte."
+        },
+        "summary": {
+          "title": "Abendübersicht",
+          "body": "Eine kurze SMS am Feierabend: neue Auftragskarten und was morgen gebucht ist."
+        }
+      },
+      "notify": "Benachrichtigen",
+      "notifyOn": "Wir sagen Bescheid",
+      "pricingTitle": "SMS bei verpassten Anrufen und Auftragskarten bleiben kostenlos",
+      "pricingBody": "Die KI-Funktionen sind kostenpflichtige Zusätze. Sie sehen den Preis, bevor Sie etwas einschalten, und können es jederzeit wieder ausschalten."
+    },
+    "settings": {
+      "copy": "Kopieren",
+      "copied": "Kopiert",
+      "save": "Speichern",
+      "saved": "Gespeichert",
+      "forwarding": {
+        "title": "Rufumleitung",
+        "body": "Anrufe, die Sie nicht annehmen, gehen an HandyPlan und der Anrufer bekommt eine SMS. Ihre Nummer bleibt gleich.",
+        "active": "Aktiv",
+        "since": "Nach 20 Sekunden ohne Antwort",
+        "step1": "Öffnen Sie auf Ihrem Geschäftstelefon die Tastatur.",
+        "step2": "Wählen Sie diesen Code und drücken Sie Anrufen:",
+        "step3": "Fertig. Zum Ausschalten wählen Sie auf dieselbe Weise ##61#.",
+        "test": "Testanruf senden",
+        "tested": "Test-SMS an Ihr Handy gesendet."
+      },
+      "reply": {
+        "title": "Automatische Antwort",
+        "body": "Die SMS, die jeder Anrufer bekommt, wenn Sie seinen Anruf verpassen.",
+        "label": "Nachricht",
+        "tooLong": "Länger als eine SMS",
+        "reset": "Zurücksetzen"
+      },
+      "notifications": {
+        "title": "Benachrichtigungen",
+        "newJob": {
+          "title": "Neue Auftragskarte",
+          "body": "Eine SMS an Ihr Handy für jede neue Auftragskarte"
+        },
+        "replies": {
+          "title": "Antworten",
+          "body": "Wenn ein Kunde Ihnen antwortet"
+        },
+        "summary": {
+          "title": "Tagesübersicht",
+          "body": "Eine E-Mail am Abend"
+        },
+        "confirmations": {
+          "title": "Terminbestätigungen",
+          "body": "Eine SMS, wenn ein Termin bestätigt ist"
+        },
+        "reminders": {
+          "title": "Erinnerungen",
+          "body": "Eine SMS am Tag vor dem Besuch"
+        }
+      },
+      "display": {
+        "title": "Sprache und Darstellung",
+        "language": "Sprache",
+        "theme": "Dunkelmodus"
+      },
+      "account": {
+        "title": "Konto",
+        "email": "E-Mail",
+        "password": "Passwort ändern",
+        "deleteTitle": "Konto löschen",
+        "deleteBody": "Entfernt Ihr Konto, Auftragskarten und Kundendaten. Das lässt sich nicht rückgängig machen.",
+        "delete": "Konto löschen",
+        "deleteConfirm": "Konto und alle Daten wirklich löschen?",
+        "cancel": "Konto behalten",
+        "deleteNow": "Endgültig löschen",
+        "deleteSample": "Nicht verfügbar, solange das Dashboard Beispieldaten zeigt."
+      }
+    },
+    "profile": {
+      "sections": {
+        "company": "Firma",
+        "contact": "Kontakt und Gebiet",
+        "hours": "Zeiten und Leistungen"
+      },
+      "fields": {
+        "name": "Firmenname",
+        "trade": "Gewerk",
+        "team": "Teamgröße",
+        "website": "Website",
+        "phone": "Geschäftsnummer",
+        "mobile": "Handy für Auftragskarten",
+        "emergency": "Notfallnummer",
+        "address": "Adresse",
+        "radius": "Einsatzgebiet",
+        "days": "Arbeitstage",
+        "hours": "Arbeitszeiten",
+        "services": "Ihre Leistungen"
+      },
+      "km": "{km} km um Sie herum",
+      "edit": "Bearbeiten",
+      "notSet": "Nicht angegeben",
+      "editReply": "Automatische Antwort bearbeiten"
+    },
+    "find": {
+      "priorityLabel": "Priority Match",
+      "priorityTitle": "Brauchen Sie schnell jemanden?",
+      "priorityBody": "Wir finden den nächsten freien Termin in Ihrer Nähe. Eine feste Gebühr, angezeigt vor der Buchung. Sie steigt nie, nur weil es dringend ist.",
+      "priorityCta": "Schnellsten Termin finden",
+      "search": "Nach Name, Gewerk oder Ort suchen",
+      "sortLabel": "Sortieren",
+      "soonest": "Früheste",
+      "closest": "Nächste",
+      "allTrades": "Alle Gewerke",
+      "results": "{count, plural, =0 {Keine Handwerker gefunden} one {# Handwerker in der Nähe} other {# Handwerker in der Nähe}}",
+      "emptyTitle": "Niemand passt",
+      "emptyBody": "Versuchen Sie ein anderes Gewerk oder eine kürzere Suche.",
+      "km": "{km} km",
+      "master": "Meisterbetrieb",
+      "bookedNote": "Gebucht für {slot}. Sie bekommen eine Bestätigung per SMS.",
+      "seeBookings": "Meine Buchungen",
+      "freeSlots": "Freie Termine",
+      "feeNote": "Priority Match kostet eine feste Gebühr, die hier vor der Bestätigung steht. Der Betrag ist in diesem Beispiel noch nicht festgelegt.",
+      "freeNote": "Die Buchung ist kostenlos. Sie bekommen eine Bestätigung per SMS.",
+      "cancel": "Abbrechen",
+      "confirm": "Buchen"
+    },
+    "bookings": {
+      "tabsLabel": "Buchungen",
+      "upcoming": "Kommend",
+      "past": "Vergangen",
+      "empty": "Hier gibt es keine Buchungen.",
+      "find": "Handwerker finden",
+      "status": {
+        "confirmed": "Bestätigt",
+        "requested": "Termin vorgeschlagen",
+        "done": "Erledigt",
+        "cancelled": "Storniert"
+      },
+      "priority": "Priority",
+      "requestedNote": "{pro} hat diesen Termin vorgeschlagen. Passt er Ihnen?",
+      "confirmTime": "Termin bestätigen",
+      "askOther": "Anderen Termin erfragen",
+      "cancelConfirm": "Diese Buchung stornieren? Der Handwerker bekommt eine SMS.",
+      "keep": "Behalten",
+      "cancelYes": "Buchung stornieren",
+      "message": "Nachricht",
+      "cancel": "Stornieren",
+      "again": "Erneut buchen"
+    },
+    "customerHome": {
+      "greeting": "Hallo, {name}.",
+      "subtitle": "Ihre Buchungen und Nachrichten an einem Ort.",
+      "nextTitle": "Ihr nächster Besuch",
+      "allBookings": "Alle Buchungen",
+      "noNext": "Kein Besuch gebucht.",
+      "findTitle": "Etwas kaputt?",
+      "findBody": "Sehen Sie, wer in der Nähe einen freien Termin hat, und buchen Sie in einer Minute.",
+      "findCta": "Handwerker finden",
+      "todoTitle": "Für Sie zu tun",
+      "confirmTodo": "Termin von {pro} bestätigen",
+      "unread": "{count, plural, one {# ungelesene Nachricht} other {# ungelesene Nachrichten}}",
+      "seeAll": "Alle ansehen",
+      "nearbyTitle": "Bald frei, in der Nähe"
     }
   }
 }
