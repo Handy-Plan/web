@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { noIndex } from "@/lib/site";
 import Icon from "@/components/ui/Icon";
 import PasswordInput from "@/components/ui/PasswordInput";
 import AuthShell from "@/components/auth/AuthShell";
@@ -20,7 +21,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "nav" });
-  return { title: t("login") };
+  return { title: t("login"), robots: noIndex };
 }
 
 /** `--i` drives the staggered entrance (see .auth-rise in globals.css). */

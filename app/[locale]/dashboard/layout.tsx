@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { dashboardNav, tradeOptions } from "@/lib/content";
 import { isOneOf, readOnboarding } from "@/lib/onboarding";
 import { readRole } from "@/lib/session";
+import { noIndex } from "@/lib/site";
 import DashboardShell from "@/components/dashboard/DashboardShell";
 
 type LayoutProps = {
@@ -18,7 +19,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "dashboard" });
-  return { title: t("meta"), robots: { index: false, follow: false } };
+  return { title: t("meta"), robots: noIndex };
 }
 
 function initialsOf(name: string) {
