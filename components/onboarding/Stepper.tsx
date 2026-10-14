@@ -9,93 +9,65 @@ type Props = {
   hrefs?: string[];
   /** Zero-based index of the active step. */
   current: number;
-  /** Pre-formatted "Step X of N" label (mobile). */
+  /** Pre-formatted "Step X of N" label. */
   stepLabel: string;
 };
 
-/** Progress stepper, styled to sit on the blue onboarding header band. */
+/**
+ * Segmented progress: one bar per step. Done steps are full, the current
+ * one fills in as the page arrives, upcoming ones are empty tracks. Each
+ * label links back to its step.
+ */
 export default function Stepper({ steps, hrefs, current, stepLabel }: Props) {
-  const pct = Math.round(((current + 1) / steps.length) * 100);
-
   return (
-    <div className="mb-8">
-      {/* Mobile: label + progress bar */}
-      <div className="sm:hidden">
-        <div className="mb-2 flex items-center justify-between">
-          <span className="text-sm font-semibold text-white">
-            {steps[current]}
-          </span>
-          <span className="text-sm font-medium text-white/80">{stepLabel}</span>
-        </div>
-        <div className="h-1.5 w-full overflow-hidden rounded-full bg-white/25">
-          <div
-            className="h-full rounded-full bg-white transition-all duration-500"
-            style={{ width: `${pct}%` }}
-          />
-        </div>
-      </div>
-
-      {/* Desktop: numbered stepper */}
-      <ol className="hidden items-center sm:flex">
+    <nav aria-label={stepLabel}>
+      <p className="mb-3 text-[13px] font-medium text-slate">{stepLabel}</p>
+      <ol className="grid gap-2" style={{ gridTemplateColumns: `repeat(${steps.length}, minmax(0, 1fr))` }}>
         {steps.map((label, i) => {
-          const state =
-            i < current ? "complete" : i === current ? "current" : "upcoming";
+          const state = i < current ? "complete" : i === current ? "current" : "upcoming";
           const href = hrefs?.[i];
-          const content = (
+          const inner = (
             <>
-              <span
-                className={cn(
-                  "flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm font-bold transition-colors",
-                  state === "complete" &&
-                    "bg-white/20 text-white ring-1 ring-inset ring-white/40",
-                  state === "current" && "bg-white text-primary ring-4 ring-white/25",
-                  state === "upcoming" && "text-white/85 ring-1 ring-inset ring-white/40",
+              <span className="relative block h-[5px] overflow-hidden rounded-full bg-line">
+                {state !== "upcoming" && (
+                  <span
+                    className={cn("absolute inset-0 rounded-full bg-primary", state === "current" && "hp-fill")}
+                  />
                 )}
-              >
-                {state === "complete" ? <Icon name="check" size={16} /> : i + 1}
               </span>
               <span
                 className={cn(
-                  "text-sm font-medium",
-                  state === "upcoming" ? "text-white/80" : "text-white",
+                  "mt-2.5 flex items-center gap-1.5 text-[13px] font-medium transition-colors",
+                  state === "upcoming" ? "text-muted" : "text-ink",
                 )}
               >
-                {label}
+                {state === "complete" ? (
+                  <Icon name="check" size={13} className="text-primary" />
+                ) : (
+                  <span className="font-mono text-[11px] text-muted">{i + 1}</span>
+                )}
+                <span className="truncate">{label}</span>
               </span>
             </>
           );
-
-          return [
+          return (
             <li key={label}>
               {href && state !== "current" ? (
                 <Link
                   href={href}
-                  className="flex items-center gap-2.5 rounded-full pr-2 transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                  className="block rounded-md transition-opacity hover:opacity-75 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                 >
-                  {content}
+                  {inner}
                 </Link>
               ) : (
-                <span
-                  className="flex items-center gap-2.5"
-                  aria-current={state === "current" ? "step" : undefined}
-                >
-                  {content}
+                <span className="block" aria-current={state === "current" ? "step" : undefined}>
+                  {inner}
                 </span>
               )}
-            </li>,
-            i < steps.length - 1 && (
-              <li
-                key={`${label}-line`}
-                aria-hidden
-                className={cn(
-                  "mx-3 h-px flex-1 rounded-full",
-                  i < current ? "bg-white/70" : "bg-white/30",
-                )}
-              />
-            ),
-          ];
+            </li>
+          );
         })}
       </ol>
-    </div>
+    </nav>
   );
 }

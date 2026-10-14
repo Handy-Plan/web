@@ -11,6 +11,10 @@ import {
 import { isOneOf, profileChecklist, readOnboarding } from "@/lib/onboarding";
 import Icon from "@/components/ui/Icon";
 import OnboardingShell from "@/components/onboarding/OnboardingShell";
+import LivePreview from "@/components/onboarding/LivePreview";
+
+/** `--i` drives the staggered entrance (see .auth-rise in globals.css). */
+const i = (n: number) => ({ ["--i" as string]: n }) as React.CSSProperties;
 
 type PageProps = { params: Promise<{ locale: string }> };
 
@@ -75,7 +79,7 @@ export default async function OnboardingDonePage({ params }: PageProps) {
     {
       label: t("done.labels.hours"),
       value: days.length
-        ? `${days.join(", ")}${data.start && data.end ? ` · ${data.start}–${data.end}` : ""}`
+        ? `${days.join(", ")}${data.start && data.end ? ` · ${data.start} - ${data.end}` : ""}`
         : undefined,
     },
     {
@@ -85,128 +89,108 @@ export default async function OnboardingDonePage({ params }: PageProps) {
   ].filter((r) => r.value);
 
   return (
-    <OnboardingShell current="done">
-      <section className="relative overflow-hidden rounded-3xl border border-line bg-surface p-8 text-center shadow-[var(--shadow-soft)] sm:p-10">
-        {/* celebratory accents */}
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -top-16 left-1/2 h-48 w-48 -translate-x-1/2 rounded-full bg-primary/15 blur-3xl"
-        />
+    <OnboardingShell current="done" stage={<LivePreview step="done" initial={data} />}>
+      <section className="auth-rise flex flex-col pb-10">
+        {/* Check that draws itself */}
+        <span
+          style={i(0)}
+          className="flex h-16 w-16 items-center justify-center rounded-full bg-success text-white shadow-[0_18px_40px_-10px_rgba(16,185,129,0.6)]"
+        >
+          <svg viewBox="0 0 24 24" className="h-8 w-8" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+            <path d="m5 12.5 4.5 4.5L19 7.5" pathLength={1} className="hp-draw" />
+          </svg>
+        </span>
 
-        <div className="relative">
-          <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-indigo text-white shadow-[var(--shadow-glow)]">
-            <Icon name="check" size={32} />
-          </span>
+        <p style={i(1)} className="mt-6 text-[13px] font-semibold text-success">
+          {t("done.badge")}
+        </p>
+        <h1
+          style={i(2)}
+          className="mt-2 text-balance text-[32px] font-semibold leading-[1.05] tracking-[-0.045em] text-ink sm:text-[44px]"
+        >
+          {data.businessName ? t("done.title", { name: data.businessName }) : t("done.titleNoName")}
+        </h1>
+        <p style={i(3)} className="mt-3 text-pretty text-[16px] leading-relaxed text-slate">
+          {t("done.subtitle")}
+        </p>
 
-          <span className="mt-6 inline-flex items-center gap-1.5 rounded-full bg-success/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-success">
-            <Icon name="check" size={12} />
-            {t("done.badge")}
-          </span>
+        {/* Phones: the message callers will now get */}
+        <div style={i(4)} className="mt-6 lg:hidden">
+          <LivePreview step="done" initial={data} compact />
+        </div>
 
-          <h1 className="mt-4 text-balance text-3xl font-extrabold tracking-tight text-ink">
-            {data.businessName
-              ? t("done.title", { name: data.businessName })
-              : t("done.titleNoName")}
-          </h1>
-          <p className="mx-auto mt-3 max-w-md text-pretty text-slate">
-            {t("done.subtitle")}
-          </p>
-
-          {/* Profile completeness */}
-          <div className="mx-auto mt-8 max-w-md text-left">
-            <p className="text-sm font-semibold text-ink">
-              {t("done.progress", { percent })}
-            </p>
-            <div
-              className="mt-2 h-2 w-full overflow-hidden rounded-full bg-line"
-              role="progressbar"
-              aria-valuenow={percent}
-              aria-valuemin={0}
-              aria-valuemax={100}
-              aria-label={t("done.progress", { percent })}
-            >
-              <div
-                className="h-full rounded-full bg-gradient-to-r from-primary to-indigo"
-                style={{ width: `${percent}%` }}
-              />
-            </div>
+        {/* Profile completeness */}
+        <div style={i(4)} className="mt-8">
+          <p className="text-[14px] font-semibold text-ink">{t("done.progress", { percent })}</p>
+          <div
+            className="mt-2.5 h-[6px] w-full overflow-hidden rounded-full bg-line"
+            role="progressbar"
+            aria-valuenow={percent}
+            aria-valuemin={0}
+            aria-valuemax={100}
+            aria-label={t("done.progress", { percent })}
+          >
+            <div className="hp-fill h-full rounded-full bg-primary" style={{ width: `${percent}%` }} />
           </div>
+        </div>
 
-          {missing.length > 0 && (
-            <div className="mx-auto mt-6 max-w-md rounded-2xl border border-dashed border-primary/40 bg-primary-soft/40 p-5 text-left">
-              <p className="text-xs font-semibold uppercase tracking-wide text-slate">
-                {t("done.missingTitle")}
-              </p>
-              <ul className="mt-3 flex flex-col divide-y divide-line">
-                {missing.map((item) => (
-                  <li
-                    key={item.key}
-                    className="flex items-center justify-between gap-4 py-2.5 text-sm"
+        {missing.length > 0 && (
+          <div style={i(5)} className="mt-8">
+            <p className="text-[13px] font-medium text-slate">{t("done.missingTitle")}</p>
+            <ul className="mt-3 flex flex-col gap-2">
+              {missing.map((item) => (
+                <li key={item.key}>
+                  <Link
+                    href={`/onboarding/${item.step}`}
+                    className="group flex items-center justify-between gap-4 rounded-[16px] border border-dashed border-line px-4 py-3.5 text-[15px] transition-colors hover:border-primary/50 hover:bg-primary-soft/40"
                   >
-                    <span className="font-medium text-graphite">
+                    <span className="flex items-center gap-3 font-medium text-graphite">
+                      <span className="flex h-6 w-6 items-center justify-center rounded-full border border-line text-muted">
+                        <Icon name="plus" size={13} />
+                      </span>
                       {t(`done.missing.${item.key}`)}
                     </span>
-                    <Link
-                      href={`/onboarding/${item.step}`}
-                      className="inline-flex shrink-0 items-center gap-1 font-semibold text-primary transition-colors hover:text-primary-dark"
-                    >
+                    <span className="inline-flex items-center gap-1 text-[13px] font-semibold text-primary">
                       {t("done.add")}
-                      <Icon name="arrow-right" size={14} />
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {rows.length > 0 && (
-            <div className="mx-auto mt-6 max-w-md rounded-2xl border border-line bg-mist/60 p-5 text-left">
-              <div className="flex items-center justify-between">
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate">
-                  {t("done.summaryTitle")}
-                </p>
-                <Link
-                  href="/onboarding/business"
-                  className="text-xs font-semibold text-primary transition-colors hover:text-primary-dark"
-                >
-                  {t("done.edit")}
-                </Link>
-              </div>
-              <dl className="mt-3 flex flex-col divide-y divide-line">
-                {rows.map((r) => (
-                  <div
-                    key={r.label}
-                    className="flex items-start justify-between gap-6 py-2.5 text-sm"
-                  >
-                    <dt className="shrink-0 font-medium text-slate">{r.label}</dt>
-                    <dd className="break-words text-right font-semibold text-ink">
-                      {r.value}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
-          )}
-
-          <div className="mt-8 flex flex-col items-center gap-3">
-            <Link
-              href="/dashboard"
-              className="group inline-flex h-12 w-full max-w-xs items-center justify-center gap-2 rounded-xl bg-gradient-to-br from-primary to-indigo px-7 text-[15px] font-semibold text-white shadow-[0_4px_14px_rgba(3,105,161,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[var(--shadow-glow)] hover:brightness-[1.05] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-            >
-              {t("done.cta")}
-              <Icon
-                name="arrow-right"
-                size={18}
-                className="transition-transform duration-300 group-hover:translate-x-1"
-              />
-            </Link>
-            <Link
-              href="/"
-              className="text-sm font-medium text-slate transition-colors hover:text-primary"
-            >
-              {t("done.secondary")}
-            </Link>
+                      <Icon name="arrow-right" size={14} className="transition-transform duration-300 group-hover:translate-x-0.5" />
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
+        )}
+
+        {rows.length > 0 && (
+          <div style={i(6)} className="mt-8 rounded-[22px] border border-line bg-surface p-5">
+            <div className="flex items-center justify-between">
+              <p className="text-[13px] font-medium text-slate">{t("done.summaryTitle")}</p>
+              <Link href="/onboarding/business" className="text-[13px] font-semibold text-primary transition-colors hover:text-primary-dark">
+                {t("done.edit")}
+              </Link>
+            </div>
+            <dl className="mt-3 flex flex-col divide-y divide-line">
+              {rows.map((r) => (
+                <div key={r.label} className="flex items-start justify-between gap-6 py-2.5 text-[14px]">
+                  <dt className="shrink-0 text-slate">{r.label}</dt>
+                  <dd className="break-words text-right font-medium text-ink">{r.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        )}
+
+        <div style={i(7)} className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <Link
+            href="/dashboard"
+            className="group inline-flex h-[52px] items-center justify-center gap-2 rounded-full bg-ink px-7 text-[15px] font-semibold text-canvas transition-[transform,background-color] duration-200 hover:bg-primary hover:text-white active:scale-[0.97]"
+          >
+            {t("done.cta")}
+            <Icon name="arrow-right" size={17} className="transition-transform duration-300 group-hover:translate-x-1" />
+          </Link>
+          <Link href="/" className="inline-flex h-[52px] items-center justify-center px-4 text-[14px] font-medium text-slate transition-colors hover:text-ink">
+            {t("done.secondary")}
+          </Link>
         </div>
       </section>
     </OnboardingShell>
