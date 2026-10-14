@@ -21,7 +21,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "signup" });
-  return pageMeta({ locale, path: "/signup", title: t("title"), description: t("metaDescription") });
+  return pageMeta({ locale, path: "/signup", title: t("title"), description: t("metaDescription"), shareDescription: t("shareDescription") });
 }
 
 /** `--i` drives the staggered entrance (see .auth-rise in globals.css). */

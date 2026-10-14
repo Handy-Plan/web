@@ -377,7 +377,8 @@
       ],
       "stat": "DSGVO-konform und in Frankfurt gehostet."
     },
-    "metaDescription": "Kostenloses HandyPlan-Konto erstellen. Jeder verpasste Anruf bekommt eine SMS zurück und landet als Job-Karte auf Ihrem Handy. Ohne Kreditkarte."
+    "metaDescription": "Kostenloses HandyPlan-Konto erstellen. Jeder verpasste Anruf bekommt eine SMS zurück und landet als Job-Karte auf Ihrem Handy. Ohne Kreditkarte.",
+    "shareDescription": "Kostenloses HandyPlan-Konto: Jeder verpasste Anruf bekommt eine SMS und wird zur Job-Karte."
   },
   "onboarding": {
     "stepLabel": "Schritt {current} von {total}",

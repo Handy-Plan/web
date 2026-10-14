@@ -21,7 +21,13 @@ type Params = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
-  return pageMeta({ locale, home: true, title: t("title"), description: t("description") });
+  return pageMeta({
+    locale,
+    home: true,
+    title: t("title"),
+    description: t("description"),
+    shareDescription: t("ogDescription"),
+  });
 }
 
 /**
