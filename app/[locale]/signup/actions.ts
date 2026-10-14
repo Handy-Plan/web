@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import { hasLocale } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { onboardingSteps } from "@/lib/content";
+import { safeNext, setRole } from "@/lib/auth-redirect";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -24,12 +25,16 @@ export async function signup(formData: FormData): Promise<void> {
   const email = String(formData.get("email") ?? "").trim();
   const password = String(formData.get("password") ?? "");
   const terms = formData.get("terms") != null;
+  const role = formData.get("role") === "customer" ? "customer" : "business";
+  const next = safeNext(formData.get("next"));
 
   const back = (error: string) =>
     redirect(
       `/${locale}/signup?error=${error}&name=${encodeURIComponent(
         name,
-      )}&email=${encodeURIComponent(email)}`,
+      )}&email=${encodeURIComponent(email)}&as=${role}${
+        next ? `&next=${encodeURIComponent(next)}` : ""
+      }`,
     );
 
   if (!name || !email || !password) back("required");
@@ -38,7 +43,13 @@ export async function signup(formData: FormData): Promise<void> {
   if (!terms) back("terms");
 
   // TODO: create the account & session here.
-  // Go straight to the first step: redirecting to /onboarding (a prerendered
+  await setRole(role);
+
+  // Customers skip the business wizard: back to the tradesperson they picked
+  // in the directory, or to their dashboard.
+  if (role === "customer") redirect(`/${locale}${next ?? "/dashboard"}`);
+
+  // Businesses: go straight to the first step: redirecting to /onboarding (a prerendered
   // page that itself redirects) crashed the client on Netlify, whose cache
   // served a stale redirect for the action response.
   redirect(`/${locale}/onboarding/${onboardingSteps[0]}`);

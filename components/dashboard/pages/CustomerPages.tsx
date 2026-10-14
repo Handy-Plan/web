@@ -156,13 +156,20 @@ export async function CustomerOverview({ locale }: Props) {
   );
 }
 
-export async function FindPage({ locale }: Props) {
+export async function FindPage({ locale, pro, slot }: Props & { pro?: string; slot?: string }) {
   const data = await loadCustomer(locale);
+  // Show the chosen tradesperson first when coming back from the directory.
+  const pros = pro ? [...data.pros].sort((a, b) => Number(b.id === pro) - Number(a.id === pro)) : data.pros;
   return (
     <div className="auth-rise flex flex-col gap-6">
       <PageHeader style={rise(0)} {...await intro("find")} />
       <div style={rise(1)}>
-        <FindView pros={data.pros} trades={tradeOptions.filter((x) => x !== "other")} />
+        <FindView
+          pros={pros}
+          trades={tradeOptions.filter((x) => x !== "other")}
+          initialPro={pro}
+          initialSlot={slot !== undefined && /^\d+$/.test(slot) ? Number(slot) : undefined}
+        />
       </div>
     </div>
   );

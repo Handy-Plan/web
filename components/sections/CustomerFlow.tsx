@@ -136,9 +136,11 @@ export default function CustomerFlow() {
           </article>
         ))}
 
-        {/* Outro: what's next */}
-        <div className="mt-4 flex items-center lg:mt-0 lg:w-[420px] lg:shrink-0 lg:pl-6 lg:pr-[max(2rem,calc((100vw-1180px)/2))]">
-          <p className="text-pretty text-lg leading-relaxed text-slate">
+        {/* Outro: what's next. box-content: the trailing page gutter (pr) is
+            added to the 360px text column instead of eating into it, which
+            squeezed the text to a sliver on wide screens. */}
+        <div className="mt-4 flex items-center lg:mt-0 lg:box-content lg:w-[360px] lg:shrink-0 lg:pl-8 lg:pr-[max(2rem,calc((100vw-1180px)/2))]">
+          <p className="text-pretty text-lg leading-relaxed text-slate lg:text-[22px] lg:leading-snug lg:tracking-[-0.015em] lg:text-graphite">
             <Icon name="sparkle" size={20} className="mb-3 block text-primary" />
             {t("footnote")}
           </p>

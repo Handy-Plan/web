@@ -16,14 +16,29 @@ type Pick = { proId: string; slotId: string; priority: boolean };
  * Customer search: trade filter, soonest/closest sort, live free slots, and
  * the flat-fee priority match. Booking only updates local state (sample).
  */
-export default function FindView({ pros, trades }: { pros: Pro[]; trades: readonly string[] }) {
+export default function FindView({
+  pros,
+  trades,
+  initialPro,
+  initialSlot,
+}: {
+  pros: Pro[];
+  trades: readonly string[];
+  /** From the public directory (?pro=&slot=): open the confirm bar right away. */
+  initialPro?: string;
+  initialSlot?: number;
+}) {
   const t = useTranslations("dashboard.find");
   const tTrades = useTranslations("onboarding.business.trades");
   const locale = useLocale();
   const [trade, setTrade] = useState("all");
   const [sort, setSort] = useState<"soonest" | "closest">("soonest");
   const [query, setQuery] = useState("");
-  const [pick, setPick] = useState<Pick>();
+  const [pick, setPick] = useState<Pick | undefined>(() => {
+    const pro = pros.find((p) => p.id === initialPro);
+    const slot = pro?.slots[initialSlot ?? 0];
+    return pro && slot ? { proId: pro.id, slotId: slot.id, priority: false } : undefined;
+  });
   const [booked, setBooked] = useState<Pick[]>([]);
   const isClient = useIsClient();
 

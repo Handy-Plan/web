@@ -62,7 +62,17 @@ export type IconName =
   | "note"
   | "phone-out"
   | "ban"
-  | "copy";
+  | "copy"
+  | "drop"
+  | "flame"
+  | "hammer"
+  | "brush"
+  | "grid"
+  | "key"
+  | "car"
+  | "wrench"
+  | "sliders"
+  | "languages";
 
 const paths: Record<IconName, React.ReactNode> = {
   phone: (
@@ -298,6 +308,51 @@ const paths: Record<IconName, React.ReactNode> = {
     <>
       <circle cx="12" cy="12" r="9" />
       <path d="m5.6 5.6 12.8 12.8" />
+    </>
+  ),
+  drop: <path d="M12 3.5s-6 6.6-6 11a6 6 0 0 0 12 0c0-4.4-6-11-6-11Z" />,
+  flame: <path d="M12 21c-3.9 0-6.5-2.7-6.5-6.3 0-3.7 3-5.8 3.8-9.2 2 1.4 3 3.3 3 5.2 1-.9 1.6-2 1.8-3.2 2.3 1.9 4.4 4.5 4.4 7.3 0 3.5-2.6 6.2-6.5 6.2Z" />,
+  hammer: (
+    <>
+      <path d="M13.5 6.5 4 16a2.1 2.1 0 0 0 3 3l9.5-9.5" />
+      <path d="m12 5 2.5-2.5L21 9l-2.5 2.5L12 5Z" />
+    </>
+  ),
+  brush: (
+    <>
+      <path d="M18.5 3.5 10 12" />
+      <path d="M9.5 12.5c-2.5-.2-4.5 1.5-4.5 4 0 1.7-1 2.6-2 3 3.6 1.4 8.5 0 8.5-4 0-1.1-.7-2.4-2-3Z" />
+      <path d="m16.5 2.5 5 5" />
+    </>
+  ),
+  grid: (
+    <>
+      <rect x="3.5" y="3.5" width="7" height="7" rx="1.5" />
+      <rect x="13.5" y="3.5" width="7" height="7" rx="1.5" />
+      <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" />
+      <rect x="13.5" y="13.5" width="7" height="7" rx="1.5" />
+    </>
+  ),
+  key: (
+    <>
+      <circle cx="8" cy="15" r="4.5" />
+      <path d="m11.2 11.8 9.3-9.3M17 6l2.5 2.5M14.5 8.5 16.5 10.5" />
+    </>
+  ),
+  car: (
+    <>
+      <path d="M4 16.5V12l2-5.5h12L20 12v4.5" />
+      <path d="M3 16.5h18v2H3zM4 12h16" />
+      <circle cx="7.5" cy="14.5" r="0.6" />
+      <circle cx="16.5" cy="14.5" r="0.6" />
+    </>
+  ),
+  wrench: <path d="M14.5 6.5a4 4 0 0 0 5.2 5.2l-8.6 8.6a2.1 2.1 0 0 1-3-3l8.6-8.6a4 4 0 0 0-2.2-2.2Zm0 0L18 3a4 4 0 0 0-3.5 3.5Z" />,
+  sliders: <path d="M4 7h10M18 7h2M4 17h4M12 17h8M14 4.5v5M8 14.5v5" />,
+  languages: (
+    <>
+      <path d="M3.5 5.5h9M8 3.5v2M10.5 5.5c-.8 3.5-3 6.2-6.5 8M6 9c1 1.8 2.6 3.2 4.5 4" />
+      <path d="m12 20.5 4-9 4 9M13.5 17.5h5" />
     </>
   ),
   copy: (

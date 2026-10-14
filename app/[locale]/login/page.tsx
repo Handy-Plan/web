@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { noIndex } from "@/lib/site";
+import { safeNext } from "@/lib/auth-redirect";
 import Icon from "@/components/ui/Icon";
 import PasswordInput from "@/components/ui/PasswordInput";
 import AuthShell from "@/components/auth/AuthShell";
@@ -11,7 +12,7 @@ import { login } from "./actions";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
-  searchParams: Promise<{ error?: string; email?: string }>;
+  searchParams: Promise<{ error?: string; email?: string; next?: string }>;
 };
 
 export async function generateMetadata({
@@ -31,7 +32,8 @@ export default async function LoginPage({ params, searchParams }: PageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const { error, email } = await searchParams;
+  const { error, email, next: nextParam } = await searchParams;
+  const next = safeNext(nextParam);
   const t = await getTranslations("login");
   const errorKey = error === "required" || error === "invalid" ? error : null;
 
@@ -51,6 +53,12 @@ export default async function LoginPage({ params, searchParams }: PageProps) {
       <p style={i(1)} className="mt-2 text-[16px] text-slate short:mt-1">
         {t("subtitle")}
       </p>
+      {next && (
+        <p style={i(1)} className="mt-4 flex items-start gap-2.5 rounded-[14px] bg-primary/10 px-4 py-3 text-[14px] text-graphite short:mt-3">
+          <Icon name="calendar-check" size={16} className="mt-0.5 shrink-0 text-primary" />
+          {t("continueNotice")}
+        </p>
+      )}
 
       <div style={i(2)} className="mt-9 short:mt-5 xshort:mt-4">
         <SocialButtons label={(provider) => t("continueWith", { provider })} />
@@ -75,6 +83,7 @@ export default async function LoginPage({ params, searchParams }: PageProps) {
 
       <form action={login} style={i(4)} className="flex flex-col gap-5 short:gap-3 xshort:gap-2.5">
         <input type="hidden" name="locale" value={locale} />
+        {next && <input type="hidden" name="next" value={next} />}
 
         <div className="flex flex-col gap-2 short:gap-1.5 xshort:gap-1">
           <label htmlFor="email" className={authLabel}>
@@ -122,7 +131,7 @@ export default async function LoginPage({ params, searchParams }: PageProps) {
 
       <p style={i(5)} className="mt-8 short:mt-4 xshort:mt-3 text-center text-[14px] text-slate">
         {t("noAccount")}{" "}
-        <Link href="/signup" className="font-semibold text-ink underline decoration-line underline-offset-4 transition-colors hover:text-primary hover:decoration-primary">
+        <Link href={next ? { pathname: "/signup", query: { next, as: "customer" } } : "/signup"} className="font-semibold text-ink underline decoration-line underline-offset-4 transition-colors hover:text-primary hover:decoration-primary">
           {t("signUp")}
         </Link>
       </p>

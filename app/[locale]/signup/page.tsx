@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { pageMeta } from "@/lib/site";
+import { safeNext } from "@/lib/auth-redirect";
 import Icon from "@/components/ui/Icon";
 import PasswordInput from "@/components/ui/PasswordInput";
 import AuthShell from "@/components/auth/AuthShell";
@@ -11,7 +12,7 @@ import { signup } from "./actions";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
-  searchParams: Promise<{ error?: string; name?: string; email?: string }>;
+  searchParams: Promise<{ error?: string; name?: string; email?: string; as?: string; next?: string }>;
 };
 
 export async function generateMetadata({
@@ -31,7 +32,10 @@ export default async function SignupPage({ params, searchParams }: PageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const { error, name, email } = await searchParams;
+  const { error, name, email, as, next: nextParam } = await searchParams;
+  const next = safeNext(nextParam);
+  // From the public directory (or ?as=customer): preselect "looking for a tradesperson".
+  const role = as === "customer" || (next && as !== "business") ? "customer" : "business";
   const t = await getTranslations("signup");
   const errorKey =
     error === "required" || error === "invalidEmail" || error === "weakPassword" || error === "terms"
@@ -55,6 +59,12 @@ export default async function SignupPage({ params, searchParams }: PageProps) {
       <p style={i(1)} className="mt-2 text-[16px] text-slate short:mt-1">
         {t("subtitle")}
       </p>
+      {next && (
+        <p style={i(1)} className="mt-4 flex items-start gap-2.5 rounded-[14px] bg-primary/10 px-4 py-3 text-[14px] text-graphite short:mt-3">
+          <Icon name="calendar-check" size={16} className="mt-0.5 shrink-0 text-primary" />
+          {t("continueNotice")}
+        </p>
+      )}
 
       <div style={i(2)} className="mt-9 short:mt-5 xshort:mt-4">
         <SocialButtons label={(provider) => t("continueWith", { provider })} />
@@ -79,6 +89,37 @@ export default async function SignupPage({ params, searchParams }: PageProps) {
 
       <form action={signup} style={i(4)} className="flex flex-col gap-5 short:gap-3 xshort:gap-2.5">
         <input type="hidden" name="locale" value={locale} />
+        {next && <input type="hidden" name="next" value={next} />}
+
+        {/* Account type: decides onboarding (business) vs. customer dashboard */}
+        <fieldset className="flex flex-col gap-2 short:gap-1.5">
+          <legend className={`${authLabel} mb-2 short:mb-1.5`}>{t("role.label")}</legend>
+          <div className="grid grid-cols-2 gap-2.5">
+            {(
+              [
+                { value: "business", icon: "building" },
+                { value: "customer", icon: "search" },
+              ] as const
+            ).map((r) => (
+              <label
+                key={r.value}
+                className="group relative flex cursor-pointer flex-col gap-2 rounded-[16px] border border-line bg-surface p-3.5 transition-[border-color,box-shadow,transform] duration-200 hover:border-ink/25 active:scale-[0.98] has-[:checked]:border-ink has-[:checked]:shadow-[0_0_0_1px_var(--color-ink)] has-[:focus-visible]:ring-4 has-[:focus-visible]:ring-primary/20 short:p-3"
+              >
+                <input type="radio" name="role" value={r.value} defaultChecked={role === r.value} className="sr-only" />
+                <span className="flex items-center justify-between">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-soft text-primary short:h-8 short:w-8">
+                    <Icon name={r.icon} size={17} />
+                  </span>
+                  <span className="flex h-5 w-5 items-center justify-center rounded-full border border-line text-transparent transition-colors group-has-[:checked]:border-ink group-has-[:checked]:bg-ink group-has-[:checked]:text-canvas">
+                    <Icon name="check" size={12} />
+                  </span>
+                </span>
+                <span className="text-[14px] font-semibold leading-snug text-ink">{t(`role.${r.value}.title`)}</span>
+                <span className="text-[12px] leading-snug text-slate xshort:hidden">{t(`role.${r.value}.body`)}</span>
+              </label>
+            ))}
+          </div>
+        </fieldset>
 
         <div className="flex flex-col gap-2 short:gap-1.5 xshort:gap-1">
           <label htmlFor="name" className={authLabel}>
@@ -143,7 +184,7 @@ export default async function SignupPage({ params, searchParams }: PageProps) {
 
       <p style={i(5)} className="mt-8 short:mt-4 xshort:mt-3 text-center text-[14px] text-slate">
         {t("haveAccount")}{" "}
-        <Link href="/login" className="font-semibold text-ink underline decoration-line underline-offset-4 transition-colors hover:text-primary hover:decoration-primary">
+        <Link href={next ? { pathname: "/login", query: { next } } : "/login"} className="font-semibold text-ink underline decoration-line underline-offset-4 transition-colors hover:text-primary hover:decoration-primary">
           {t("logIn")}
         </Link>
       </p>

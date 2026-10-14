@@ -1,11 +1,11 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { Link } from "@/i18n/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 import { navConfig } from "@/lib/content";
 import { cn } from "@/lib/cn";
 import { getLenis } from "@/lib/lenis";
@@ -30,6 +30,11 @@ export default function Navbar() {
   const t = useTranslations("nav");
   const a11y = useTranslations("a11y");
   const footer = useTranslations("footer");
+  const locale = useLocale();
+  const pathname = usePathname();
+  const onHome = pathname === "/";
+  /** Section anchors only exist on the home page; elsewhere link back to it. */
+  const sectionHref = (hash: string) => (onHome ? hash : `/${locale}${hash}`);
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const bar = useRef<HTMLElement>(null);
@@ -156,6 +161,10 @@ export default function Navbar() {
 
   // Section links: close first; the close timeline then scrolls there.
   const go = (href: string) => (e: React.MouseEvent) => {
+    if (!onHome) {
+      setOpen(false); // a normal navigation to /#section
+      return;
+    }
     e.preventDefault();
     pending.current = href;
     setOpen(false);
@@ -177,14 +186,29 @@ export default function Navbar() {
 
           {/* Desktop links */}
           <ul className="hidden items-center gap-1 lg:flex">
+            {/* Section links need the wider xl bar; the page link fits from lg. */}
             {navConfig.links.map((link) => (
-              <li key={link.key}>
+              <li key={link.key} className="hidden xl:block">
                 <a
-                  href={link.href}
-                  className="rounded-full px-4 py-2 text-[14px] font-medium text-slate transition-colors duration-200 hover:bg-ink/5 hover:text-ink"
+                  href={sectionHref(link.href)}
+                  className="whitespace-nowrap rounded-full px-3.5 py-2 text-[14px] font-medium text-slate transition-colors duration-200 hover:bg-ink/5 hover:text-ink"
                 >
                   {t(link.key)}
                 </a>
+              </li>
+            ))}
+            {navConfig.pages.map((page) => (
+              <li key={page.key}>
+                <Link
+                  href={page.href}
+                  aria-current={pathname === page.href ? "page" : undefined}
+                  className={cn(
+                    "whitespace-nowrap rounded-full px-3.5 py-2 text-[14px] font-medium transition-colors duration-200",
+                    pathname === page.href ? "bg-ink/5 text-ink" : "text-slate hover:bg-ink/5 hover:text-ink",
+                  )}
+                >
+                  {t(page.key)}
+                </Link>
               </li>
             ))}
           </ul>
@@ -270,7 +294,7 @@ export default function Navbar() {
               <li key={link.key} className="overflow-hidden border-b border-line">
                 <a
                   data-item
-                  href={link.href}
+                  href={sectionHref(link.href)}
                   onClick={go(link.href)}
                   className="group flex items-center gap-4 py-5 active:opacity-70"
                 >
@@ -282,6 +306,19 @@ export default function Navbar() {
                     <Icon name="arrow-right" size={18} className="-rotate-45" />
                   </span>
                 </a>
+              </li>
+            ))}
+            {navConfig.pages.map((page, i) => (
+              <li key={page.key} className="overflow-hidden border-b border-line">
+                <Link data-item href={page.href} onClick={() => setOpen(false)} className="group flex items-center gap-4 py-5 active:opacity-70">
+                  <span className="w-6 font-mono text-[12px] text-muted">{String(navConfig.links.length + i + 1).padStart(2, "0")}</span>
+                  <span className="flex-1 text-[38px] font-semibold leading-none tracking-[-0.045em] text-ink min-[400px]:text-[42px]">
+                    {t(page.key)}
+                  </span>
+                  <span className="flex h-11 w-11 items-center justify-center rounded-full border border-line text-ink transition-colors duration-300 group-active:border-primary group-active:bg-primary group-active:text-white">
+                    <Icon name="arrow-right" size={18} className="-rotate-45" />
+                  </span>
+                </Link>
               </li>
             ))}
           </ul>

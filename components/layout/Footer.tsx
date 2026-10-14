@@ -1,12 +1,12 @@
 "use client";
 
 import { useRef } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import { useGSAP } from "@gsap/react";
-import { Link } from "@/i18n/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 import { navConfig } from "@/lib/content";
 import Logo from "@/components/ui/Logo";
 import Icon from "@/components/ui/Icon";
@@ -26,6 +26,9 @@ const linkClass =
 export default function Footer() {
   const t = useTranslations("footer");
   const nav = useTranslations("nav");
+  const locale = useLocale();
+  const pathname = usePathname();
+  const sectionHref = (hash: string) => (pathname === "/" ? hash : `/${locale}${hash}`);
   const a11y = useTranslations("a11y");
   const legalLinks = t.raw("legalLinks") as string[];
   const root = useRef<HTMLElement>(null);
@@ -118,7 +121,7 @@ export default function Footer() {
             <ul className="mt-5 flex flex-col gap-3.5">
               {navConfig.links.map((link) => (
                 <li key={link.key}>
-                  <a href={link.href} className={linkClass}>
+                  <a href={sectionHref(link.href)} className={linkClass}>
                     {nav(link.key)}
                     <Icon
                       name="arrow-right"
@@ -126,6 +129,18 @@ export default function Footer() {
                       className="-translate-x-1 opacity-0 transition-[opacity,transform] duration-300 group-hover:translate-x-0 group-hover:opacity-100"
                     />
                   </a>
+                </li>
+              ))}
+              {navConfig.pages.map((page) => (
+                <li key={page.key}>
+                  <Link href={page.href} className={linkClass}>
+                    {nav(page.key)}
+                    <Icon
+                      name="arrow-right"
+                      size={14}
+                      className="-translate-x-1 opacity-0 transition-[opacity,transform] duration-300 group-hover:translate-x-0 group-hover:opacity-100"
+                    />
+                  </Link>
                 </li>
               ))}
             </ul>

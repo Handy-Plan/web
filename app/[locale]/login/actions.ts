@@ -3,6 +3,7 @@
 import { redirect } from "next/navigation";
 import { hasLocale } from "next-intl";
 import { routing } from "@/i18n/routing";
+import { safeNext, setRole } from "@/lib/auth-redirect";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -21,14 +22,22 @@ export async function login(formData: FormData): Promise<void> {
 
   const email = String(formData.get("email") ?? "").trim();
   const password = String(formData.get("password") ?? "");
+  const next = safeNext(formData.get("next"));
   const back = (error: string) =>
     redirect(
-      `/${locale}/login?error=${error}&email=${encodeURIComponent(email)}`,
+      `/${locale}/login?error=${error}&email=${encodeURIComponent(email)}${
+        next ? `&next=${encodeURIComponent(next)}` : ""
+      }`,
     );
 
   if (!email || !password) back("required");
   if (!EMAIL_RE.test(email) || password.length < 6) back("invalid");
 
   // TODO: verify credentials & create a session here.
+  // Coming from the public directory (book/contact): back to that tradesperson.
+  if (next) {
+    await setRole("customer");
+    redirect(`/${locale}${next}`);
+  }
   redirect(`/${locale}/dashboard`);
 }
