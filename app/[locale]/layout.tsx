@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins, Open_Sans } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -7,16 +7,16 @@ import { routing } from "@/i18n/routing";
 import ThemeSync from "@/components/ui/ThemeSync";
 import "../globals.css";
 
-// Poppins for headings, Open Sans for body — "Trust & Authority" pairing.
-const poppins = Poppins({
-  variable: "--font-poppins",
+// Geist for display and body (tight, engineered grotesk), Geist Mono for
+// figures, times and phone numbers.
+const geist = Geist({
+  variable: "--font-geist",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
-const openSans = Open_Sans({
-  variable: "--font-open-sans",
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
   subsets: ["latin"],
   display: "swap",
 });
@@ -89,13 +89,15 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${poppins.variable} ${openSans.variable}`}
+      className={`${geist.variable} ${geistMono.variable}`}
       suppressHydrationWarning
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body className="bg-canvas text-ink antialiased">
+      {/* Browser extensions (e.g. Grammarly) add attributes to <body> before
+          React hydrates; don't report those as mismatches. */}
+      <body className="bg-canvas text-ink antialiased" suppressHydrationWarning>
         <ThemeSync />
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>

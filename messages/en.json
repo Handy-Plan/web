@@ -24,7 +24,11 @@
     ],
     "primaryCta": "Get started free",
     "secondaryCta": "See how it works",
-    "trust": ["Free to use", "Keep your number", "Data stays in the EU"]
+    "trust": [
+      "Free to use",
+      "Keep your number",
+      "Data stays in the EU"
+    ]
   },
   "mockup": {
     "missedCall": "Missed call",
@@ -45,16 +49,28 @@
       "problem": "No hot water, boiler noise",
       "urgency": "Today"
     },
-    "slots": ["Today 16:00", "Tomorrow 08:00"],
+    "slots": [
+      "Today 16:00",
+      "Tomorrow 08:00"
+    ],
     "book": "Book",
     "booked": "Job booked",
     "bookedSub": "Confirmation sent to the customer"
   },
   "trustBar": {
     "items": [
-      { "label": "GDPR-compliant", "sublabel": "DPA available" },
-      { "label": "Hosted in Frankfurt", "sublabel": "AWS EU region" },
-      { "label": "German and English", "sublabel": "Arabic coming soon" }
+      {
+        "label": "GDPR-compliant",
+        "sublabel": "DPA available"
+      },
+      {
+        "label": "Hosted in Frankfurt",
+        "sublabel": "AWS EU region"
+      },
+      {
+        "label": "German and English",
+        "sublabel": "Arabic coming soon"
+      }
     ]
   },
   "problem": {
@@ -80,10 +96,22 @@
     "title": "A problem in a lot of workshops",
     "subtitle": "Here's how many businesses we're talking about.",
     "items": [
-      { "suffix": "+", "label": "trade businesses in the Cottbus Chamber of Crafts district alone (Dec 2025)" },
-      { "suffix": "", "label": "people working in South Brandenburg's skilled trades" },
-      { "suffix": "M", "label": "trade businesses across Germany, in 53 chambers" },
-      { "suffix": "%", "label": "of trade businesses name digitalisation a top-5 challenge" }
+      {
+        "suffix": "+",
+        "label": "trade businesses in the Cottbus Chamber of Crafts district alone (Dec 2025)"
+      },
+      {
+        "suffix": "",
+        "label": "people working in South Brandenburg's skilled trades"
+      },
+      {
+        "suffix": "M",
+        "label": "trade businesses across Germany, in 53 chambers"
+      },
+      {
+        "suffix": "%",
+        "label": "of trade businesses name digitalisation a top-5 challenge"
+      }
     ],
     "source": "Sources: Cottbus Chamber of Crafts, facts and figures (as of 31 Dec 2025); German Confederation of Skilled Crafts (ZDH); Bitkom Research (504 trade businesses)."
   },
@@ -94,16 +122,40 @@
     "craftsmanLabel": "For your business",
     "customerLabel": "For your customers",
     "craftsman": [
-      { "title": "You miss a call", "body": "You're busy and can't answer. That's fine, carry on." },
-      { "title": "We text them back", "body": "The caller gets a text within seconds asking what's wrong and where." },
-      { "title": "You get a job card", "body": "Name, address, problem, urgency and number, all on your phone." },
-      { "title": "You pick a time", "body": "One tap and the customer gets a confirmation. Job booked." }
+      {
+        "title": "You miss a call",
+        "body": "You're busy and can't answer. That's fine, carry on."
+      },
+      {
+        "title": "We text them back",
+        "body": "The caller gets a text within seconds asking what's wrong and where."
+      },
+      {
+        "title": "You get a job card",
+        "body": "Name, address, problem, urgency and number, all on your phone."
+      },
+      {
+        "title": "You pick a time",
+        "body": "One tap and the customer gets a confirmation. Job booked."
+      }
     ],
     "customer": [
-      { "title": "Search nearby", "body": "Customers search by trade and see tradespeople close by with real free slots." },
-      { "title": "Compare", "body": "They can see who's available soonest and who's closest before they book." },
-      { "title": "Priority match (optional)", "body": "For a flat fee shown upfront, we match them with the nearest free slot. The price never goes up because it's urgent." },
-      { "title": "Confirmed", "body": "One tap. They get a time, you get the job." }
+      {
+        "title": "Search nearby",
+        "body": "Customers search by trade and see tradespeople close by with real free slots."
+      },
+      {
+        "title": "Compare",
+        "body": "They can see who's available soonest and who's closest before they book."
+      },
+      {
+        "title": "Priority match (optional)",
+        "body": "For a flat fee shown upfront, we match them with the nearest free slot. The price never goes up because it's urgent."
+      },
+      {
+        "title": "Confirmed",
+        "body": "One tap. They get a time, you get the job."
+      }
     ],
     "footnote": "Coming soon: calendar, customer history, reminders, and sending jobs straight to the invoicing tool you already use."
   },
@@ -112,9 +164,18 @@
     "title": "Made for businesses that don't want another big software package",
     "subtitle": "You don't need an office suite to answer your phone.",
     "cards": [
-      { "title": "Keep your number", "body": "No website, no widget, no new phone. You set up call forwarding on the number you already have, and that's it." },
-      { "title": "Does one thing well", "body": "Big software packages cost €49 to €75 a month and try to do everything. Marketplaces are free but only work in their app. HandyPlan just makes sure missed calls turn into jobs." },
-      { "title": "Fair to your customers", "body": "Nobody pays extra because their heating broke on a Sunday. The priority fee is a fixed amount and is shown before they book." }
+      {
+        "title": "Keep your number",
+        "body": "No website, no widget, no new phone. You set up call forwarding on the number you already have, and that's it."
+      },
+      {
+        "title": "Does one thing well",
+        "body": "Big software packages cost €49 to €75 a month and try to do everything. Marketplaces are free but only work in their app. HandyPlan just makes sure missed calls turn into jobs."
+      },
+      {
+        "title": "Fair to your customers",
+        "body": "Nobody pays extra because their heating broke on a Sunday. The priority fee is a fixed amount and is shown before they book."
+      }
     ]
   },
   "model": {
@@ -149,9 +210,18 @@
     "title": "In your language",
     "subtitle": "Available in German and English. Arabic is coming soon.",
     "items": [
-      { "name": "German", "status": "Available" },
-      { "name": "English", "status": "Available" },
-      { "name": "Arabic", "status": "Coming soon" }
+      {
+        "name": "German",
+        "status": "Available"
+      },
+      {
+        "name": "English",
+        "status": "Available"
+      },
+      {
+        "name": "Arabic",
+        "status": "Coming soon"
+      }
     ],
     "whyLabel": "Why it matters:",
     "why": "A lot of people in the trades grew up speaking another language. In trades like electrical engineering and metalwork it's around 30%. We haven't found another platform that offers the business side in anything but German.",
@@ -161,29 +231,60 @@
     "eyebrow": "Good to know",
     "title": "Frequently asked questions",
     "items": [
-      { "q": "How do I get started?", "a": "Sign up for free and add your business details. Then set up call forwarding on your phone for the calls you can't take. From then on, every missed call gets a text back." },
-      { "q": "Is it really free?", "a": "Yes. Text replies, job cards and booking are free. You only pay if you turn on one of the AI features, like the AI calling agent." },
-      { "q": "Do I need a website or new software?", "a": "No. HandyPlan works with the phone number you already have. You don't need a website, a booking widget or office software." },
-      { "q": "Do my customers need an app?", "a": "No. Callers get a text with a short form that opens in any browser. The customer app is optional, for people who want to search and compare tradespeople nearby." },
-      { "q": "What about emergencies?", "a": "Real emergencies need a person on the phone, so keep those on your emergency number. HandyPlan is for everyday calls, like a quote request or a routine repair." },
-      { "q": "Which trades is it for?", "a": "Any business that misses calls while working. It fits especially well where there's a lot of repair and maintenance work, like heating, plumbing and electrical." },
-      { "q": "Where is my data stored?", "a": "On AWS servers in Frankfurt. HandyPlan is GDPR-compliant, we have a data processing agreement (DPA) ready for you, and no customer or job data is stored in the US." },
-      { "q": "Which languages are supported?", "a": "German and English. Arabic is coming soon, for your side of the app too, not only for customers." }
+      {
+        "q": "How do I get started?",
+        "a": "Sign up for free and add your business details. Then set up call forwarding on your phone for the calls you can't take. From then on, every missed call gets a text back."
+      },
+      {
+        "q": "Is it really free?",
+        "a": "Yes. Text replies, job cards and booking are free. You only pay if you turn on one of the AI features, like the AI calling agent."
+      },
+      {
+        "q": "Do I need a website or new software?",
+        "a": "No. HandyPlan works with the phone number you already have. You don't need a website, a booking widget or office software."
+      },
+      {
+        "q": "Do my customers need an app?",
+        "a": "No. Callers get a text with a short form that opens in any browser. The customer app is optional, for people who want to search and compare tradespeople nearby."
+      },
+      {
+        "q": "What about emergencies?",
+        "a": "Real emergencies need a person on the phone, so keep those on your emergency number. HandyPlan is for everyday calls, like a quote request or a routine repair."
+      },
+      {
+        "q": "Which trades is it for?",
+        "a": "Any business that misses calls while working. It fits especially well where there's a lot of repair and maintenance work, like heating, plumbing and electrical."
+      },
+      {
+        "q": "Where is my data stored?",
+        "a": "On AWS servers in Frankfurt. HandyPlan is GDPR-compliant, we have a data processing agreement (DPA) ready for you, and no customer or job data is stored in the US."
+      },
+      {
+        "q": "Which languages are supported?",
+        "a": "German and English. Arabic is coming soon, for your side of the app too, not only for customers."
+      }
     ]
   },
   "finalCta": {
     "title": "Stop losing jobs to missed calls.",
     "subtitle": "Sign up for free, keep your number, and let HandyPlan answer when you can't.",
     "cta": "Get started free",
-    "trust": ["Free to use", "No credit card", "Keep your number"]
+    "trust": [
+      "Free to use",
+      "No credit card",
+      "Keep your number"
+    ]
   },
   "footer": {
     "tagline": "HandyPlan turns missed calls into booked jobs for trade businesses.",
     "explore": "Explore",
     "legal": "Legal",
-    "legalLinks": ["Imprint", "Privacy"],
+    "legalLinks": [
+      "Imprint",
+      "Privacy"
+    ],
     "rights": "© {year} HandyPlan. All rights reserved.",
-    "madeWith": "Made in Cottbus"
+    "backToTop": "Back to top"
   },
   "a11y": {
     "home": "HandyPlan home",
