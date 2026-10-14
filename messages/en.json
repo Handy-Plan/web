@@ -375,7 +375,8 @@
       ],
       "stat": "GDPR-compliant and hosted in Frankfurt."
     },
-    "metaDescription": "Create your free HandyPlan account. Every call you miss gets a text back and becomes a job card on your phone. No credit card needed."
+    "metaDescription": "Create your free HandyPlan account. Every call you miss gets a text back and becomes a job card on your phone. No credit card needed.",
+    "shareDescription": "Free HandyPlan account: every missed call gets a text back and becomes a job card on your phone."
   },
   "onboarding": {
     "stepLabel": "Step {current} of {total}",

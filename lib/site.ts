@@ -26,12 +26,15 @@ export function pageMeta({
   path = "",
   title,
   description,
+  shareDescription = description,
   home = false,
 }: {
   locale: string;
   path?: string;
   title?: string;
   description?: string;
+  /** Shorter text for link previews (they cut off around 125 characters). */
+  shareDescription?: string;
   /** Home page: use the title as is (no "· HandyPlan" template). */
   home?: boolean;
 }): Metadata {
@@ -52,9 +55,13 @@ export function pageMeta({
       locale: ogLocale[locale as Locale] ?? ogLocale.en,
       alternateLocale: routing.locales.filter((l) => l !== locale).map((l) => ogLocale[l]),
       ...(shareTitle && { title: shareTitle }),
-      ...(description && { description }),
+      ...(shareDescription && { description: shareDescription }),
     },
-    twitter: { card: "summary_large_image", ...(shareTitle && { title: shareTitle }), ...(description && { description }) },
+    twitter: {
+      card: "summary_large_image",
+      ...(shareTitle && { title: shareTitle }),
+      ...(shareDescription && { description: shareDescription }),
+    },
   };
 }
 
