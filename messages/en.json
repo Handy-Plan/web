@@ -1,8 +1,18 @@
 {
   "meta": {
-    "title": "HandyPlan · Stop losing jobs to missed calls",
-    "description": "When you're on a job and can't pick up, HandyPlan texts the caller back right away, asks what they need, and sends it to your phone as a job card. You pick a time and the job is booked. Free to use.",
-    "ogDescription": "Missed calls turned into booked jobs. Free for trade businesses."
+    "title": "HandyPlan · Turn missed calls into booked jobs",
+    "description": "Can't pick up on the job? HandyPlan texts every missed caller back, turns the reply into a job card and lets you book it in one tap. Free for trades.",
+    "ogDescription": "Missed calls turned into booked jobs. Free for trade businesses.",
+    "keywords": [
+      "missed calls",
+      "tradespeople",
+      "trade business software",
+      "job booking",
+      "call answering for tradespeople",
+      "missed call text back",
+      "Handwerker",
+      "Germany"
+    ]
   },
   "nav": {
     "problem": "The problem",
@@ -364,7 +374,8 @@
         "Pay only for the AI features you switch on"
       ],
       "stat": "GDPR-compliant and hosted in Frankfurt."
-    }
+    },
+    "metaDescription": "Create your free HandyPlan account. Every call you miss gets a text back and becomes a job card on your phone. No credit card needed."
   },
   "onboarding": {
     "stepLabel": "Step {current} of {total}",
@@ -935,5 +946,16 @@
       "seeAll": "See all",
       "nearbyTitle": "Free soon, nearby"
     }
+  },
+  "share": {
+    "alt": "HandyPlan: a missed call becomes a text, then a job card you book in one tap.",
+    "headline": "You're up a ladder.",
+    "accent": "Your customer still gets an answer.",
+    "tagline": "Missed calls turned into booked jobs. Free for trade businesses.",
+    "missedCall": "Missed call, 0355 4718 220",
+    "reply": "Hi, we're on a job right now. Tell us briefly what's wrong and where, and we'll get back to you today.",
+    "jobCard": "New job card",
+    "jobTitle": "Power out after the storm",
+    "jobMeta": "Sandower Str. 14, Cottbus · Today"
   }
 }

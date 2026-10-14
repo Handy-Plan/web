@@ -1,8 +1,20 @@
 {
   "meta": {
-    "title": "HandyPlan · Keine Aufträge mehr durch verpasste Anrufe verlieren",
-    "description": "Wenn Sie auf der Baustelle nicht rangehen können, schreibt HandyPlan dem Anrufer sofort eine SMS, fragt nach, worum es geht, und schickt Ihnen alles als Job-Karte aufs Handy. Sie wählen einen Termin, fertig. Kostenlos nutzbar.",
-    "ogDescription": "Aus verpassten Anrufen werden gebuchte Aufträge. Kostenlos für Handwerksbetriebe."
+    "title": "HandyPlan · Verpasste Anrufe werden zu Aufträgen",
+    "description": "Auf der Baustelle nicht erreichbar? HandyPlan antwortet verpassten Anrufern sofort per SMS und macht daraus eine Job-Karte, die Sie mit einem Tipp buchen.",
+    "ogDescription": "Aus verpassten Anrufen werden gebuchte Aufträge. Kostenlos für Handwerksbetriebe.",
+    "keywords": [
+      "verpasste Anrufe",
+      "Handwerker",
+      "Handwerksbetrieb",
+      "Handwerker Software",
+      "Anrufbeantworter Handwerker",
+      "Rückruf SMS",
+      "Terminbuchung Handwerk",
+      "Erreichbarkeit",
+      "Cottbus",
+      "Brandenburg"
+    ]
   },
   "nav": {
     "problem": "Das Problem",
@@ -364,7 +376,8 @@
         "Sie zahlen nur für KI-Funktionen, die Sie einschalten"
       ],
       "stat": "DSGVO-konform und in Frankfurt gehostet."
-    }
+    },
+    "metaDescription": "Kostenloses HandyPlan-Konto erstellen. Jeder verpasste Anruf bekommt eine SMS zurück und landet als Job-Karte auf Ihrem Handy. Ohne Kreditkarte."
   },
   "onboarding": {
     "stepLabel": "Schritt {current} von {total}",
@@ -935,5 +948,16 @@
       "seeAll": "Alle ansehen",
       "nearbyTitle": "Bald frei, in der Nähe"
     }
+  },
+  "share": {
+    "alt": "HandyPlan: Aus einem verpassten Anruf wird eine SMS und dann eine Job-Karte, die Sie mit einem Tipp buchen.",
+    "headline": "Sie stehen auf der Leiter.",
+    "accent": "Ihr Kunde bekommt trotzdem eine Antwort.",
+    "tagline": "Aus verpassten Anrufen werden gebuchte Aufträge. Kostenlos für Handwerksbetriebe.",
+    "missedCall": "Verpasster Anruf, 0355 4718 220",
+    "reply": "Hallo, wir sind gerade im Einsatz. Schreiben Sie kurz, worum es geht und wo, wir melden uns heute.",
+    "jobCard": "Neue Job-Karte",
+    "jobTitle": "Stromausfall nach Gewitter",
+    "jobMeta": "Sandower Str. 14, Cottbus · Heute"
   }
 }
